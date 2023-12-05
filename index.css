@@ -1,0 +1,317 @@
+*{
+    background-color: snow;
+}
+@media screen and (max-width: 600px) {
+    .nav_btn_special{
+        position: absolute;
+        left: -9999px;
+      }
+        .nav_btn:not(:first-child){
+        display: none;
+    }
+    .menu_icon{
+       float: right;
+       padding-top: 15px;
+       padding-right: 10px;
+    }
+    .nav_btn{
+        display: none;
+    }
+    #intro_photo{
+        display: none;
+    }
+
+}
+@media screen and (min-width:767px) {
+    .menu_icon{
+        position: absolute;
+        visibility: hidden;
+    } 
+}
+.menu_icon{
+    color: brown;
+    cursor: pointer;
+}
+.topnav {
+    padding: 10px 20px;
+}
+.title{
+    font-family: 'Julius Sans One', sans-serif;
+    color: #984B4B;
+    cursor: pointer;
+    font-size: 45px;
+    text-align: center;
+}
+.logo{
+    font-family: 'Ysabeau Office', sans-serif;
+    color: #984B4B;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 25px;
+}
+.topnav a{
+    text-decoration: none;
+}
+.nav_btn{
+    color: #984B4B;
+    padding-right: 20px;
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 5px;
+    padding-left: 20px;
+}
+.nav_btn:hover{
+    color: black;
+    border-bottom:1px solid brown ;
+}
+#intro_descrption{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro_content{
+    font-family: 'Julius Sans One', sans-serif;
+    color: 		#C48888;
+    text-align: center;
+}
+#image_me{
+    width: 90%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+#about_layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about_content h1{
+    color: 	brown;
+    padding: 20px 0px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.about_content{
+    text-align: left;
+}
+#about_photo{
+    box-shadow: 15px 15px 10px gray;
+    border: 10px solid snow;
+}
+.experience_title{
+    color: white;
+    padding: 20px 10px;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    background-color: #C48888;
+}
+.experience_item{
+    padding: 10px;
+    background-color: transparent;
+}
+.experience_item p{
+    background-color: transparent;
+    padding: 0px 10px;
+}
+.experience_item a{
+    background-color: transparent;
+}
+ ul{
+    background-color: #F2E6E6;
+}
+li{
+    background-color: #F2E6E6;
+}
+.year{
+    display: inline-block; 
+    width: 50px;
+    vertical-align:top;
+    color: #AD5A5A;
+    font-family: 'Julius Sans One', sans-serif;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 20px;
+}
+.dot{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 35px solid brown;
+    background-color: transparent;
+    transform: rotate(45deg);
+    box-shadow: 10px 10px 5px gray;
+    display: inline-block;
+}
+.skill_item{
+    padding-top: 10px;
+    font-family: 'Julius Sans One', sans-serif;
+    background-color: transparent;
+    text-align: center;
+}
+#skill_html_css{
+    border-color:brown brown brown #FFF8D7;
+    background-color: transparent;
+    transform: rotate(45deg);
+    box-shadow: 10px 10px 5px gray;
+}
+.skill_content{
+    background-color: white;
+    width: 100%;
+    border: 1px solid brown;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px gray;
+} 
+.skill_chart{
+    background-color: #F2E6E6;
+    border-right: 1px solid brown;
+    padding: 20px;
+    border-radius: 10px 0px 0px 10px;
+    flex: 1;
+    text-align: center;
+}
+.skill_description{
+    flex: 1;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+}
+.skill_description ul {
+    background-color: white;
+}
+.skill_description li{
+    background-color: white;
+}
+#skill_js{
+    border-color:brown brown #FFF8D7 #FFF8D7;
+    background-color: transparent;
+    transform: rotate(45deg);
+    box-shadow: 10px 10px 5px gray;
+}
+#skill_vue{
+    border-color:brown #FFF8D7 #FFF8D7 #FFF8D7;
+    background-color: transparent;
+    transform: rotate(45deg);
+    box-shadow: 10px 10px 5px gray;
+}
+.works_content{
+    display: inline-block;
+    margin: 20px;
+}
+.works_content:hover{
+    cursor: pointer;
+}
+.works_content img{
+    box-shadow: 10px 10px 5px gray;
+}
+.works_title{
+    margin-top: 10px;
+    color: brown;
+    background-color: transparent;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.works_description{
+    background-color: transparent;
+    color: 	#C48888;
+    visibility: hidden;
+}
+.website_title{
+    margin: 200px auto 25px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: brown;
+    font-size: 65px;
+    text-align: center;
+    vertical-align: middle;
+}
+#footer{
+    padding: 8px;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    color: brown;
+}
+#show_menu_overlay{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #F2E6E6;
+    z-index: 2;
+    cursor: pointer;
+    color: brown;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.notes{
+    margin-bottom: 35px;
+}
+.works_content img{
+    width: 100%;
+}
+.works_content img:hover {
+    opacity: 0.3;
+}
+.works_content:hover .works_description {
+    visibility: visible;
+}
+.email_content{
+    padding: 20px ;
+    width: 100%;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+.email_content input:focus{
+    outline: none;
+    border: none;
+    position: relative;
+}
+.email_content input{
+    width: 95%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+}
+.end_message{
+    background-color: blanchedalmond;
+    width: 100%;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 150px;
+}
+.end_message h3{
+    background-color: blanchedalmond;
+    color: brown;
+}
+.end_message p{
+    background-color: blanchedalmond;
+    color: #C48888;
+    text-align: center;
+}
+.end_layout{
+    margin: 0px auto 0px;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+#sendBtn{
+    border: none;
+    background-color: transparent;
+    color: #984B4B;
+    padding: 10px 20px;
+    margin: 20px auto 10px;
+    width: 100%;
+    font-family: 'Julius Sans One', sans-serif;
+}
+#sendBtn:hover{
+    background-color:	#C48888;
+    color: snow;
+}
+#contact{
+    padding-bottom: 50px;
+}

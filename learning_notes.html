@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="learning_notes.css"> 
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery v1.9.1 -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <!-- Animate.css v3.5.2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
+    <!-- AOS animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- lettering.js v0.7.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+    <!-- Textillate.js v0.4.0 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+    </style>
+    <title>HJL's notes</title>
+</head>
+<body>
+    <div class="topnav fixed-top">
+        <div style="display: inline;">
+            <a href="index.html" class="logo">HJL</a>
+        </div>
+        <div style="display: inline;float: right;">
+            <a href="index.html#about" class="nav_btn">About</a>
+            <a href="index.html#experienxe" class="nav_btn">Experience</a>
+            <a href="index.html#skilll" class="nav_btn">Skill</a>
+            <a href="index.html#works" class="nav_btn">Works</a>
+            <a href="learning_notes.html" class="nav_btn">Learning notes</a>
+            <a href="index.html#contact" class="nav_btn">contact</a>
+        </div>
+        <span class="material-symbols-outlined menu_icon"  onclick="show_menu_items()" >
+            menu
+        </span>
+    </div>
+            <div id="show_menu_overlay">
+            <span class="material-symbols-outlined" style="float:right; display: block; color: brown; font-size: 50px;background-color: transparent; padding-right: 30px; padding-top: 100px;" onclick="off_menu_overlay()" >
+                close
+            </span>
+            <div style="margin: 170px auto 20px;text-align: center;background-color:  #F2E6E6; ">
+                <h1 style="background-color:  #F2E6E6; padding-bottom: 10px;" onclick="location.href='index.html'">homepage </h1>
+                <h1 style="background-color:  #F2E6E6; padding-bottom: 10px;" onclick="location.href='index.html#about'">About </h1>
+                <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="location.href='index.html#experience'" >Experience</h1>
+                <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="location.href='index.html#skill'" >Skill</h1>
+                <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="location.href='index.html#works'">Works</h1>
+                <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="location.href='learning_notes.html'">Learning notes</h1>
+                <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="location.href='index.html#contact'">contact</h1>
+            </div>
+            </div>
+    <section id="notes">
+        <h2>HJL'S NOTES</h2>
+        <div class="notes_layout">
+            <div class="notes">
+                <h3 class="note_title">我想要圖片跟文字各佔一半！-Grid Layout</h3>
+                <p class="description">
+                    當我想要讓圖片和文字在同個div裡，我希望它各佔一半時：
+                    <br>
+                    首先，圖片先設定寬度大小<br>
+                    其次，將它們所屬的那個div（父元素）設定為
+                </p>
+                <p class="description">
+                    display:grid;<br>
+                    grid-template-columns: 1fr 1fr;
+                    <p class="description">其中，fr表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
+                </p>
+            </div>
+            <div class="notes">
+                <h3 class="note_title">隨滑鼠滑到哪裡，div跟著動起來！</h3>
+                <p class="description">
+                    這個動畫叫做"AOS animation"，只要有以下步驟即可完成：
+                </p>
+                <p class="description">
+                    1.到<button>https://github.com/michalsnik/aos</button> ，複製安裝AOS的的程式碼到“標籤head裡“和“標籤body 結尾之前“。
+                    <br>
+                    2.在<button>https://michalsnik.github.io/aos/</button>裡，選擇你要的樣式，然後把data-aos那段複製貼上。
+                </p>
+            </div>
+            <div class="notes">
+                <h3 class="note_title">margin.padding.border</h3>
+                <p class="description">
+                    margin:使元素跟元素之間不要靠太近（外間距）<br>
+                    padding:使元素和內容不要靠太近（內間距）<br>
+                    border:外圍
+                    box-sizing:調整內距和標框的計算方式，又包含content-box（僅包含內容寬度）和border-box（包含padding和border）
+                </p>    
+                <p class="description">
+                    寫法：<br>
+                    上、右、下、左 ex. margin: 20px 15px 10px 30px;<br>
+                    上、左右、下 ex. padding: 100px auto 20px;<br>
+                    上下、左右 ex. margin: 20px 15px ;<br>
+                    上下左右 padding: 20px;
+                </p>
+                
+            </div>
+            <div class="notes">
+                <h3 class="note_title">＜script＞要放哪裡？</h3>
+                <p class="description">
+                    <h5 class="important">ANS:放在＜head＞＜body＞＜div＞都可以！取決於你「引入的JS功能」和「加載順序」！</h5>
+                </p>
+                <p class="description important" >
+                    先了解HTML的加載順序！由上而下，且遇到＜script＞就會先下載！
+                </p>
+            </div>
+            <div class="notes">
+                <h3 class="note_title">＜link＞要放哪裡？</h3>
+                <p class="description">
+                    <h5 class="important">ANS:放在＜head＞中！</h5>
+                </p>
+                <p class="description">
+                    原因在於，可以確保瀏覽器在選染網頁內容時，就已經載入需要的外部資源。倘若放在頁面底部，那麼瀏覽器在入時，使用者會看到沒有用css美化過的網頁才載入css
+                </p>   
+            </div>
+            <div class="notes">
+                <h3 class="note_title">RWD是什麼？</h3>
+                <p class="description">
+                    
+                </p>
+                
+            </div>
+            <div class="notes">
+                <h3 class="note_title">display:none v.s. visibility:hidden</h3>
+                <p class="description">
+                    display:none 隱藏且不佔空間
+                    <br>
+                    visibility:hidden 隱藏且佔空間
+                </p> 
+            </div>
+            <div class="notes">
+                <h5 class="note_title">一樣高的col(不受內容文字多寡影響)</h5>
+                <p class="description">
+                    父層：display: flex;<br>
+                    子元素：flex: 1; （使子元素擴展以填滿可用空間）
+                </p> 
+            </div>
+            <div class="notes">
+                <h3 class="note_title">用Grid Layout設計出3欄（行）2列，並且具RWD效果</h3>
+    
+                <p class="description">
+                    首先，欄位有三行，列有兩列，其中某一個item是佔了兩列。
+                    <br>
+                    所以利用Grid Layout時，display：grid; grid-template-columns利用百分比去寫你要的三欄佔比大小，並且利用grid-gap去調整間距。
+                    <br>
+                </p> 
+                <p class="description">
+                    其次，怎麼將其中一個item變成涵蓋兩列？
+                    <br>
+                    先找到「它是第幾欄」，比如是第三欄那就寫grid-column:3;然後要把這個item擴展把列變寬-- grid-row:1/span;
+                    <br>
+                    其中，因為只有那個item要調整，所以寫1;利用span進行擴展，擴展為兩列，則寫2;
+                </p>
+                <p class="description">
+                    再來，怎麼變成RWD？利用@media去調整。裡面寫：   
+                </p>
+                <p class="description">
+                    grid-template-columns:auto;<br>
+                    grid-column:1;
+                    <br>
+                    grid-row:5;
+                </p>    
+                <h5 class="important">放父層！！</h5>
+            </div>
+            <div class="notes">
+                <h3 class="note_title">置中！</h3>
+                <h4 class="subtitle">置中文字BY FLEX！</h4>
+                <p class="description">
+                    display:flex;<br>
+                    justify-content:center;<br>
+                    align-items:center;
+                </p> 
+                <h4 class="subtitle">置中div（only水平置中）</h4>
+                <h5 class="important">這會受到div上方有無文字或是div影響位置喔！</h5>
+                <p class="description">
+                    display:block;<br>
+                    margin:10px auto 15px;
+                </p>
+                <h4 class="subtitle">設定div裡面的文字水平垂直置中</h4>
+                <p class="description">
+                    假設父層（div）的寬是500px、高是500px;文字就設為：
+                    <br>
+                    text-align:center;
+                    line-height:500px;
+                </p>
+                <h4 class="subtitle">用flexbox水平垂直置中"div裡面的"文字</h4>
+                <h5 class="important">這超好用的！</h5>
+                <h5 class="important">放父層！！</h5>
+                <p class="description">
+                    display:flex;<br>
+                    justify-content:center;<br>
+                    align-items:center;
+                </p>
+            </div>
+            <div class="notes">
+                <h3 class="note_title">AJAX/XHR</h3>
+                <h5 class="important">就是利用JavaScript進行網路連線</h5>
+                <p class="description">最新取得資料的方法-fetch()</p>
+                <p class="description">
+                    fetch(”請求資料網址”).then(function(回應物件參數){
+                        console.log（回應物件參數）;
+                    });
+                    <br>
+                    fetch(URL).then(function(response){
+                       return response.json();}).then(function(data)){
+                        console.log（data）;
+                    });
+                </p>
+                <p class="description">
+                    return的地方，看你資料是哪種格式：純文字是text();陣列是json();其中，json較常見。意思是代表要把回應解讀成某個格式（text或是json）。
+                </p> 
+                <p class="description">
+                    .then(function(data){ })和promise有關。
+                </p>
+                <p class="description">
+                    參數data，則表示取得解讀後的text或是json資料
+                </p>
+                <p class="description">
+                    function(response){ }這個函數表示接收伺服器回應的物件
+                </p>
+            </div>
+            <div class="notes">
+                <h3 class="note_title">發生CORS，怎麼辦！？</h3>
+                
+            </div>
+        </div>
+        
+    </section>        
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
+            </div>
+        </div>
+    </div>
+    <script src="learning_notes.js"></script>
+</body>
+</html>
