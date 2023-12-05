@@ -261,7 +261,7 @@ li{
     padding: 20px ;
     width: 100%;
     text-align: center;
-    background-color: blanchedalmond;
+    background-color: #EBD6D6
 }
 .email_content input:focus{
     outline: none;
@@ -275,23 +275,23 @@ li{
     border-radius: 15px;
     border: none;
 }
-.end_message{
-    background-color: blanchedalmond;
+.bottom_message{
+    background-color:snow;
     width: 100%;
     text-align: center;
     font-family: 'Julius Sans One', sans-serif;
     padding-top: 150px;
 }
-.end_message h3{
-    background-color: blanchedalmond;
+.bottom_message h3{
+    background-color: snow;
     color: brown;
 }
-.end_message p{
-    background-color: blanchedalmond;
+.bottom_message p{
+    background-color: snow;
     color: #C48888;
     text-align: center;
 }
-.end_layout{
+.bottom_layout{
     margin: 0px auto 0px;
     width: 100%;
     max-width: 1200px;
