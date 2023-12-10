@@ -121,6 +121,11 @@
         grid-row: 2;
         grid-column: 1;
     }
+    .about_images{
+        grid-template-columns: auto;
+        grid-row: 3;
+        grid-column: 1;
+    }
     }
     
     @media (min-width:769px) {
@@ -196,12 +201,9 @@
     
     <!-- about -->
     <section id="about">
+        <div class="title">about</div>
         <div class="about_layout">
-            <div class="about_layout_left">
-                <img src="image/meme.jpg" width="100%" style="border-radius: 20px;">
-            </div>
-            <div class="about_layout_right">
-                <div class="title">about</div>
+            <div class="about_content">
                 <div class="experience" style="font-family: 'M PLUS Rounded 1c', sans-serif;text-align: center; padding-top: 20px;padding-bottom: 20px;">
                     <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
                     <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
@@ -221,8 +223,21 @@
                 <br>
                 雖然覺得過譽成分居多<br>
                 不過，遇上瓶頸時，只要想著朋友這句話，我就有繼續前進的動力了：）
-            </div>
+            </div>  
         </div> 
+        <div class="about_images">
+            <div class="about_img">
+                <img src="image/zoo.jpg">
+            </div>
+            <div class="about_img">
+                <img src="image/interest.jpg">
+            </div>
+            <div class="about_img">
+                <img src="image/notes_exam.jpg">
+            </div>       
+        </div>
+       
+        
     </section>
     <!-- experience -->
     <section id="experience">
@@ -315,15 +330,12 @@
         </div>
     </section>
     <!-- footer -->
-    <section id="footer">
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <footer class="footer fixed-bottom" >©Hsing jou lu 2023</footer>
+                    <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
                 </div>
             </div>
-        </div>
-    </section>
     
 <script>
     AOS.init({

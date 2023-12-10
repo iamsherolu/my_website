@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* 響應式網頁斷點 */
 @media (max-width:768px) {
     .topnav h2{
         position: relative;
@@ -13,8 +14,9 @@
         padding-left: 20px;
         text-align: left;
     } 
-   
 }
+
+/* 導覽列 */
 .topnav h2{
     color: 	#6C3365;
     font-family: 'Fira Sans', sans-serif;
@@ -55,116 +57,8 @@
     cursor: pointer;
     background-color: transparent;
 }
-.title{
-    font-family: 'Julius Sans One', sans-serif;
-    color: 	#6C3365;
-    cursor: pointer;
-    font-size: 45px;
-    text-align: center;
-}
-#works{
-    padding-top: 100px;
-}
-.works_layout{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    margin: 0px auto ;
-    width: 100%;
-    max-width: 960px;
-}
-.works_content{
-    display: inline-block;
-    padding: 20px;
-}
-.works_content:hover{
-    cursor: pointer;
-}
-.works_title{
-    color: 	#6C3365;
-    margin-top: 10px;
-    background-color: transparent;
-    font-family: 'Julius Sans One', sans-serif;
-}
-.works_description{
-    background-color: transparent;
-    color: 	#D2A2CC;
-    visibility: hidden;
-}
-.works_content img{
-    width: 100%;
-    box-shadow: 10px 10px 5px gray;
-}
-.works_content img:hover {
-    opacity: 0.3;
-}
-.works_content:hover .works_description {
-    visibility: visible;
-}
-.bottom_layout{
-    margin: 0px auto 0px;
-    width: 100%;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
-}
-.bottom_message{
-    background-color:snow;
-    width: 100%;
-    text-align: center;
-    font-family: 'Julius Sans One', sans-serif;
-    padding-top: 150px;
-}
-.email_content{
-    padding: 20px ;
-    width: 100%;
-    text-align: center;
-    background-color: 	#E2C2DE;
-}
-.email_content input:focus{
-    outline: none;
-    border: none;
-    position: relative;
-}
-.email_content input{
-    width: 95%;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-    border: none;
-    background-color: snow ;
-}
-.bottom_message h3{
-    background-color: snow;
-    color: #9F4D95;
-}
-.bottom_message p{
-    background-color: snow;
-    color: #D2A2CC;
-    text-align: center;
-}
-#sendBtn{
-    border: none;
-    background-color: transparent;
-    color: #9F4D95;
-    padding: 10px 20px;
-    margin: 20px auto 10px;
-    width: 100%;
-    font-family: 'Julius Sans One', sans-serif;
-}
-#sendBtn:hover{
-    background-color:#9F4D95;
-    color: snow;
-}
-#contact{
-    padding-top: 100px;
-}
-#footer{
-    padding: 8px;
-    font-family: 'Julius Sans One', sans-serif;
-    text-align: center;
-    color: #9F4D95;
-}
+
+/* menu overlay */
 #show_menu_overlay{
     position: fixed;
     display: none;
@@ -210,102 +104,17 @@
 #off_menu_overlay{
     padding-bottom: 50px;
 }
-#about{
-    padding:100px 20px 50px;
-    text-align: center;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-.about_title{
-    color: #6C3365;
+
+/* 各個section的標題 */
+.title{
     font-family: 'Julius Sans One', sans-serif;
+    color: 	#6C3365;
+    cursor: pointer;
+    font-size: 45px;
     text-align: center;
-    font-size: 35px;
-}
-.about_layout{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    max-width: 950px;
-    margin: 0px auto;
-    background-color: #E2C2DE;
-    border-radius: 20px;
-}
-.about_layout_right{
-    padding: 20px;
 }
 
-.university_record{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    margin: 0px auto ;
-    padding: 20px 20px 100px;
-    width: 100%;
-    max-width: 900px;
-}
-.records_title{
-    font-size: 22px;
-    color: #6C3365;
-}
-.text_by_friends{
-    box-shadow: 5px 5px 5px 2px gray; 
-    background-color:snow; 
-    padding: 10px; 
-    border-radius: 20px;
-    width: 100%;
-    max-width: 500px;
-    text-align: center;
-    margin: 20px auto;
-}
-.work_experience{
-    background-color: #E2C2DE;
-    border-bottom: 1px solid #6C3365;
-    border-right: 1px solid #6C3365;
-    padding: 20px;
-}
-.certificate{
-    background-color: snow;
-    border-bottom: 1px solid #6C3365;
-    padding: 20px;
-}
-.certificate>ul{
-    background-color:  snow;
-}
-.certificate li{
-    background-color:  snow;
-}
-.certificate>div{
-    background-color:  snow;
-}
-.awards_inside{
-    background-color: snow;
-    border-right: 1px solid #6C3365;
-    padding: 20px;
-}
-.awards_inside>div{
-    background-color:  snow;
-}
-.awards_outside{
-    background-color: #E2C2DE;
-    padding: 20px;
-}
-#introduce_myself{
-    margin: 50px 0px;
-}
-#experience{
-    padding-top: 100px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-#notes{
-    padding-top: 100px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
-#contact{
-    padding-top: 100px;
-}
-#skill{
-    padding-top: 100px;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-}
+/* section-intro */
 #intro{
     padding-left: 0;
     padding-right: 0;
@@ -329,8 +138,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    
-    /* background-color: blanchedalmond; */
 }
 .circle_text span{
     position: absolute;
@@ -484,3 +291,238 @@
     top:35%;
     /* 左邊的圓形 */
 }
+
+/* section-about */
+#about{
+    padding-top:100px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: blanchedalmond;
+}
+.about_title{
+    color: #6C3365;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    font-size: 35px;
+}
+.about_layout{
+    width: 100%;
+    max-width: 800px;
+    margin: 0px auto;
+    background-color: snow;
+    border-radius: 20px; 
+    padding: 20px 20px 0px;
+}
+.about_content{
+    padding: 20px;
+}
+.text_by_friends{
+    box-shadow: 5px 5px 5px 2px #E2C2DE	; 
+    background-color:	#F1E1FF; 
+    padding: 10px; 
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+.about_images{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100%;
+    max-width: 960px;
+    margin: 20px auto;
+}
+.about_img{
+    margin: 0px auto;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+}
+.about_img img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 0px auto;
+    border: 25px solid 	#FFD2D2;
+}
+
+/* section-experience */
+.university_record{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 0px auto ;
+    padding: 20px 20px 100px;
+    width: 100%;
+    max-width: 900px;
+}
+.records_title{
+    font-size: 22px;
+    color: #6C3365;
+}
+.work_experience{
+    background-color: #E2C2DE;
+    border-bottom: 1px solid #6C3365;
+    border-right: 1px solid #6C3365;
+    padding: 20px;
+}
+.certificate{
+    background-color: snow;
+    border-bottom: 1px solid #6C3365;
+    padding: 20px;
+}
+.certificate>ul{
+    background-color:  snow;
+}
+.certificate li{
+    background-color:  snow;
+}
+.certificate>div{
+    background-color:  snow;
+}
+.awards_inside{
+    background-color: snow;
+    border-right: 1px solid #6C3365;
+    padding: 20px;
+}
+.awards_inside>div{
+    background-color:  snow;
+}
+.awards_outside{
+    background-color: #E2C2DE;
+    padding: 20px;
+}
+#introduce_myself{
+    margin: 50px 0px;
+}
+#experience{
+    padding-top: 100px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* section-skill */
+
+
+/* section-works */
+#works{
+    padding-top: 100px;
+}
+.works_layout{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0px auto ;
+    width: 100%;
+    max-width: 960px;
+}
+.works_content{
+    display: inline-block;
+    padding: 20px;
+}
+.works_content:hover{
+    cursor: pointer;
+}
+.works_title{
+    color: 	#6C3365;
+    margin-top: 10px;
+    background-color: transparent;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.works_description{
+    background-color: transparent;
+    color: 	#D2A2CC;
+    visibility: hidden;
+}
+.works_content img{
+    width: 100%;
+    box-shadow: 10px 10px 5px gray;
+}
+.works_content img:hover {
+    opacity: 0.3;
+}
+.works_content:hover .works_description {
+    visibility: visible;
+}
+
+/* section-notes */
+#notes{
+    padding-top: 100px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* section-contact */
+.bottom_layout{
+    margin: 0px auto 0px;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+.bottom_message{
+    background-color:snow;
+    width: 100%;
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 150px;
+}
+.email_content{
+    padding: 20px ;
+    width: 100%;
+    text-align: center;
+    background-color: 	#E2C2DE;
+}
+.email_content input:focus{
+    outline: none;
+    border: none;
+    position: relative;
+}
+.email_content input{
+    width: 95%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: snow ;
+}
+.bottom_message h3{
+    background-color: snow;
+    color: #9F4D95;
+}
+.bottom_message p{
+    background-color: snow;
+    color: #D2A2CC;
+    text-align: center;
+}
+#sendBtn{
+    border: none;
+    background-color: transparent;
+    color: #9F4D95;
+    padding: 10px 20px;
+    margin: 20px auto 10px;
+    width: 100%;
+    font-family: 'Julius Sans One', sans-serif;
+}
+#sendBtn:hover{
+    background-color:#9F4D95;
+    color: snow;
+}
+#contact{
+    padding-top: 100px;
+}
+
+/* footer */
+#footer{
+    padding: 8px;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    color: #9F4D95;
+}
+
+
+
+
+
+
+
+
