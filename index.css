@@ -405,13 +405,13 @@
     /* 左邊的圓形 */
 }
 #dot_6{
-    width: 75px;
-    height: 75px;
+    width: 35px;
+    height: 35px;
     background-color: #FFD2D2;
-    border-radius: 75% ;
+    border-radius: 50% ;
     position: absolute;
-    right: 20%;
-    top: 20%;
+    left: 45%;
+    top: 8%;
     /* 右邊的圓形 */
 }
 #dot_7{
