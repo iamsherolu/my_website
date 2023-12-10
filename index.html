@@ -15,49 +15,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
     <!-- AOS animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- lettering.js v0.7.0 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
-    <!-- Textillate.js v0.4.0 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap');
+        /* 套用google font */
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Fira+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
-    </style>
-      <style>
-        .experience_layout{
-          width: 85%;
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          margin: 10px auto 0px;
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+        @media (max-width:768px) {
+            .nav_btn:not(:first-child){
+            display: none;
         }
-        .experience_content{
-          border: 1px solid brown;
-          margin: 10px;
-          background-color: #F2E6E6;
-          box-shadow: 5px 5px 3px gray;
+        .special{
+            position: absolute;
+            left: -9999px;
         }
-        .skill_layout{
-          width: 85%;
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr;
-          margin: 10px auto 0px;
-          grid-gap:20px
-        }
-        @media (max-width:600px) {
-          .experience_layout{
-            grid-template-columns: auto;
-            grid-row: 3;
-            grid-column: 1;
-          }
-          .skill_layout{
-            grid-template-columns: auto;
-            grid-row: 3;
-            grid-column: 1;
-          }
-          .bottom_layout{
+        .bottom_layout{
             grid-template-columns: auto;
             grid-column: 1;
             grid-row: 2;
@@ -65,232 +42,209 @@
            }
            .bottom_message{
             padding-top: 20px;
-           }   
+           } 
+           #text1{
+            height: 250px;
+            top: 20%;
+            left: 10%;
         }
-      </style>
-    <title>HJL is me!</title>
+        .works_layout{
+            grid-template-columns: auto;
+            grid-row: 4;
+            grid-column: 1;
+        }
+        .university_record{
+            grid-template-columns: auto;
+            grid-row: 4;
+            grid-column: 1;
+        }
+        .work_experience{
+            border: none;
+        }
+        .certificate{
+            border: none;
+            background-color:  snow;
+        }
+        .certificate>div{
+            background-color:  snow;
+        }
+        .awards_inside{
+            border: none;
+            background-color: #E2C2DE;
+        }
+        .awards_inside>div{
+            background-color: #E2C2DE;
+        }
+        .awards_outside{
+            background-color: snow;
+        }
+        .awards_outside>div{
+            background-color: snow;
+        }
+        #text_1{
+        position: absolute;
+        left: 65%;
+        top: 50%;
+        font-size: 15px;
+        background-color: transparent;
+        color: snow;
+       }
+    }
+    @media (min-width:769px) {
+    .menu_icon{
+        visibility: hidden;
+        position: absolute;
+        }
+    }
+    </style>
+    <title>HJL's website</title>
 </head>
 <body>
+     <!-- 導覽列 -->
     <div class="topnav fixed-top">
-        <div style="display: inline;">
-            <a href="index.html" class="logo">HJL</a>
-        </div>
-        <div style="display: inline;float: right;">
-            <a href="#about" class="nav_btn">About</a>
-            <a href="#experience" class="nav_btn">Experience</a>
-            <a href="#skill" class="nav_btn">Skill</a>
-            <a href="#works" class="nav_btn">Works</a>
-            <a href="learning_notes.html" class="nav_btn">Learning notes</a>
-            <a href="#contact" class="nav_btn">contact</a>
-        </div>
-        <span class="material-symbols-outlined menu_icon"  onclick="show_menu_items()" >
-            menu
-        </span>
+        <div class="nav_btn special" onclick="location.href='#about'">about</div>
+        <div class="nav_btn" onclick="location.href='#experience'">experience</div>
+        <div class="nav_btn" onclick="location.href='#skill'">skill</div>
+        <h2 onclick="location.href='index.html'">HJL</h2>
+        <div class="nav_btn" onclick="location.href='#works'">works</div>
+        <div class="nav_btn" onclick="location.href='#notes'">notes</div>
+        <div class="nav_btn" onclick="location.href='#contact'">contact</div>
+        <div class="menu_icon" onclick="show_menu_overlay()">menu</div>
     </div>
+        <!-- menu overlay -->
     <div id="show_menu_overlay">
-        <span class="material-symbols-outlined" style="float:right; display: block; color: brown; font-size: 50px;background-color: transparent; padding-right: 30px; padding-top: 100px;" onclick="off_menu_overlay()" >
-            close
-        </span>
-        <div style="margin: 170px auto 20px;text-align: center;background-color:  #F2E6E6; ">
-            <h1 style="background-color:  #F2E6E6; padding-bottom: 10px;" onclick="location.href='index.html'">homepage </h1>
-            <h1 style="background-color:  #F2E6E6; padding-bottom: 10px;" onclick="scrollToSection('about')">About </h1>
-            <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="scrollToSection('experience')" >Experience</h1>
-            <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="scrollToSection('skill')" >Skill</h1>
-            <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="scrollToSection('works')">Works</h1>
-            <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="location.href='learning_notes.html'">Learning notes</h1>
-            <h1 style="background-color:  #F2E6E6;padding-bottom: 10px" onclick="scrollToSection('contact')">contact</h1>
+        <div class="menu_overlay_layout">
+            <div class="menu_title">
+                <div class="title_content">
+                    WELCOME TO HJL'S website
+                </div>
+            </div>
+            <div class="menu_btns">
+                <div class="menu_btn" onclick="location.href='index.html'">homepage</div>
+                <div class="menu_btn" onclick="scrollToSection('about')">about</div>
+                <div class="menu_btn" onclick="scrollToSection('experience')">experience</div>
+                <div class="menu_btn" onclick="scrollToSection('skill')">skill</div>
+                <div class="menu_btn" onclick="scrollToSection('works')">works</div>
+                <div class="menu_btn" onclick="scrollToSection('notes')">notes</div>
+                <div class="menu_btn" onclick="scrollToSection('contact')">contact</div>
+            </div>
         </div>
-    </div>  
+            <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">close</div>
+    </div>
+
+    <!-- 網頁開始 -->
     <section id="intro">
         <div class="container-fluid">
-            <div class="row" id="intro_descrption">
-                <div class="col-sm-6">
-                    <div class="website_title" data-in-effect="fadeIn" >Hello , welcome!</div>
-                    <p class="intro_content" data-in-effect="fadeIn">I am HJL , this is my website.</p>
-                    <p class="intro_content" data-in-effect="fadeIn" style="padding-top: 50px;">「因為你是可以把不擅長的東西做得很好的人」</p>
-                    <p class="intro_content" data-in-effect="fadeIn">by my friend- Jill</p></p>
-                </div>
-                <div class="col-sm-6" id="intro_photo" style="padding-top: 100px;">
-                    <img src="image/me.jpg" id="image_me"  data-aos="fade-up">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about" style="padding-top: 120px;padding-bottom: 75px;">
-        <div class="container-fluid">
-            <div class="row" id="about_layout">
-                <div class="col-sm-6">
-                    <img src="image/myphoto.jpg" style="width: 95%;height: 95%;" id="about_photo" data-aos="fade-right">
-                </div>
-                <div class="col-sm-6 about_content" data-aos="fade-left">
-                    <div style="padding: 0px 20px;">
-                        <h1>Hello,I am Hsing Jou Lu!</h1>
-                    或者，你也可以叫我 SHERO ：）
-                    <br><br>
-                    2018年畢業於銘傳大學資訊管理學系。大學畢業專題和組員一起寫一個WebApp，名叫「食讚」，是一個結合食譜、冰箱（可輸入食材與有效日期）、以及購物清單等功能之webapp。當時負責項目是前端切版設計，以WebStorm系統環境為開發工具，利用Html5、Framework7、Javascript及CSS等技術與框架進行前端設計。
-                    <br>
-                    畢業後開始準備國家考試，現在正在求職中，想要朝前端工程師邁進，因此目前正一邊練習前端切版，一邊增進自己程式設計能力中。練習成果，詳見
-                    <a href="#works" style="text-decoration: none; color: brown;">WORKS</a>。    
-                    <br><br>
-                    自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。平時喜歡聽歌、唱歌、寫寫字、看柯南。
-                    雖然不算是多喜歡看書的人，但遇上一本感興趣的書總能讓我覺得心情格外放鬆與舒坦，例如從大學開始我就很喜歡一位叫做「張西」的作家，最喜歡她的一本書叫做「你走慢了我的時間」。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="experience">
-        <div class="title" style="padding-top: 50px;"data-aos="fade-down" >Experience</div>
-        <div class="experience_layout" data-aos="fade-up">
-            <div class="experience_content">
-              <h2 class="experience_title">2014.9-2018.6 university</h2>
-                <div class="experience_item">
-                    <div class="year">2014</div>
-                    <ul>
-                        <li>
-                            考取TQC中文輸入證照
-                        </li>
-                        <li>考取TQC英文輸入證照</li>
-                    </ul>
-              
-
-                    <div class="year">2015</div> 
-                    <ul>
-                        <li>
-                            考取Word2010實用級合格證書
-                        </li>
-                        <li>
-                            考取PPT2010實用級合格證書
-                        </li>
-                        <li>
-                            考取Excel2010實用級合格證書
-                        </li>
-                    </ul>       
-                    <div class="year">2016</div> 
-                    <ul>
-                        <li>
-                            擔任系上105學年度教學卓越計畫之計算機概論與視窗程式設計教學助理（2016.9-2017.1）
-                        </li>
-                    </ul>
-
-                    <div class="year">2017 </div> 
-                    <ul>
-                        <li>
-                            考取鼎新ERP配銷模組證照
-                        </li>
-                    </ul>
-                    <div class="year">2018 </div> 
-                    <ul>
-                        <li>
-                            考取鼎新ERP生產製造模組證照
-                        </li>
-                        <li>
-                            畢業專題榮獲系上優等獎、最佳介面獎、最佳實用獎
-                        </li>
-                        <li>
-                            參加中華中華企業資源規劃學會之2018E化系統創意競賽榮獲第三名
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="experience_content">
-              <h2 class="experience_title">2018.7-2023.7</h2>
-              <div class="experience_item">
-                <p >準備國家考試（教育行政）</p>
-              </div>
-            </div>
-            <div class="experience_content">
-              <h2 class="experience_title">2023.9-now</h2>
-              <div class="experience_item">
-                <p>
-                    求職中，同時在練習前端切版設計與補強程式設計能力，練習成果詳見<a href="#works" style="text-decoration: none;color: brown;">WORKS</a>。
-                </p>
-              </div>
-            </div>
-        </div>
-    </section>
-    <section id="skill" style="padding-top: 140px;">
-        <div class="title" data-aos="fade-down">Skill</div>
-        <div class="skill_layout">
-            <div class="skill_content">
-                <div class="skill_chart">
-                    <div class="dot" id="skill_html_css"></div>
-                    <p class="skill_item">HTML、CSS</p>
-                </div>
-                <div class="skill_description">
-                    <ul>
-                        <li>
-                          熟悉flex box  
-                        </li>
-                        <li>
-                            熟悉bootstrap框架
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="skill_content">
-                <div class="skill_chart">
-                    <div class="dot" id="skill_js"></div>
-                    <p class="skill_item">JavaScript</p>
-                </div>
-                <div class="skill_description">
-                
-                </div>
-            </div>
-            <div class="skill_content">
-                <div class="skill_chart">
-                    <div class="dot" id="skill_vue"></div>
-                    <p class="skill_item">Vue</p>
-                </div>
-                <div class="skill_description">
-                    
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="works" style="padding-top: 160px;padding-bottom: 50px;">
-        <div class="title" data-aos="fade-down" >Works</div>
-        <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="works_content" data-aos="fade-left">
-                        <img src="image/糖露坊-甜點網頁.png" onclick="location.href='https://iamshero.github.io/dessert_shop/dessert_shop/index.html'" title="點我查看Demo">
-                        <p class="works_title">糖露坊</p>
-                        <p class="works_description">
-                            利用vue完成購物車之功能
-                        </p>
-                    </div>
+                <div class="col" >
+                    <div class="circle">
+                        <div class="logo"></div>
+                        <div class="circle_text">
+                          <p>Hello,this is HJL's website.</p>
+                        </div>
+                      </div>
                 </div>
-                <!-- <div class="col-sm-3">
-                    <div class="works_content"data-aos="fade-left">
-                        <img src="image/yt_exercise.png"  onclick="location.href='https://iamshero.github.io/yt_exercise/yt_exercise/index.html'" title="點我查看Demo">
-                        <p class="works_title">YT首頁切版</p>
-                        <p class="works_description">
-                            純利用Html、Css、JavaScript完成之切版練習
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="works_content"data-aos="fade-left">
-                        <img src="image/to-do_list.png" onclick="location.href='https://iamshero.github.io/to-do_list/to-do_list/index.html'" title="點我查看Demo">
-                        <p class="works_title">TO DO LIST</p>
-                        <p class="works_description">
-                            包含新增、修改、刪除，並且能夠顯示日期與時間
-                        </p>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="works_content"data-aos="fade-left">
-                        <img src="image/kidtopia.png" onclick="location.href='https://iamshero.github.io/kidtopia/kidtopia/playground.html'" title="點我查看Demo">
-                        <p class="works_title">新竹市兒童公園</p>
-                        <p class="works_description">
-                            連結政府open data，練習連接API
-                        </p>
-                    </div>
-                </div> -->
+            </div>
+        </div>
+    
+    </section>
+    
+    <!-- about -->
+    <section id="about">
+        <div class="title">Hello,i am hsing jou lu</div>
+        <div class="experience" style="font-family: 'M PLUS Rounded 1c', sans-serif;text-align: center; padding-top: 20px;padding-bottom: 20px;">
+            <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
+            <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
+            <p>2023.9起，朝前端這條路邁進中！</p>
+        </div>
+        <div class="introduce_myself">
+            自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。
+            <br>平時喜歡聽歌、唱歌、寫寫字、看柯南。
+            <br>
+            雖然不算是多喜歡看書的人，但遇上一本感興趣的書總能讓我覺得心情格外放鬆與舒坦。
+            <br>例如從大學開始我就很喜歡一位叫做「張西」的作家，最喜歡她的一本書叫做「你走慢了我的時間」。
+        </div>
+        <div class="text_by_friends">
+            「因為你是可以把不擅長的東西做得很好的人」-my friend,Jill
+        </div>
+        朋友曾這樣形容我。
+        <br>
+        雖然覺得過譽成分居多<br>
+        不過，再遇上瓶頸時<br>
+        只要想著朋友這句話，我就有繼續前進的動力了：）
+        
+    </section>
+    <!-- experience -->
+    <section id="experience">
+        <div class="title">experience</div>
+        <div class="university_record">
+            <div class="work_experience"data-aos="fade-right" >
+                <div class="records_title" style="background-color: #E2C2DE;">工作經驗</div>
+                擔任系上105學年度教學卓越計畫之計算機概論與視窗程式設計教學助理（2016.9-2017.1）
+            </div>
+            <div class="certificate" data-aos="fade-down">
+                <div class="records_title">證照</div>
+                <ul>
+                    <li>考取TQC中文輸入證照、考取TQC英文輸入證照</li>
+                    <li>考取Word2010實用級合格證書、考取PPT2010實用級合格證書、考取Excel2010實用級合格證書</li>
+                    <li>考取鼎新ERP配銷模組證照、考取鼎新ERP生產製造模組證照</li>
+                </ul>
+            </div>
+            <div class="awards_inside" data-aos="fade-up">
+                <div class="records_title">校內獲獎紀錄</div>
+                畢業專題獲得系上優等獎、最佳介面獎、最佳實用獎
+            </div>
+            <div class="awards_outside" data-aos="fade-left">
+                <div class="records_title" style="background-color: transparent;">校外獲獎紀錄</div>
+                以畢業專題參加中華中華企業資源規劃學會之2018E化系統創意競賽獲得獲第三名
             </div>
         </div>
     </section>
+    <!-- skill -->
+    <section id="skill">
+        <div class="title" data-aos="fade-down">skill</div>
+    </section>
+    <!-- works -->
+    <section id="works">
+        <div class="title" data-aos="fade-down">works</div>
+        <div class="works_layout">
+            <div class="works_content" data-aos="flip-left">
+                <img src="image/糖露坊-甜點網頁.png" onclick="location.href='#'" title="點我查看Demo">
+                <p class="works_title">甜點購物網站-糖露坊</p>
+                <p class="works_description">
+                    利用vue完成購物車之功能
+                </p>
+            </div>
+            <div class="works_content" data-aos="flip-left">
+                <img src="image/糖露坊-甜點網頁.png" onclick="location.href='#'" title="點我查看Demo">
+                <p class="works_title">甜點購物網站-糖露坊</p>
+                <p class="works_description">
+                    利用vue完成購物車之功能
+                </p>
+            </div>
+
+    
+            <div class="works_content" data-aos="flip-left">
+                <img src="image/糖露坊-甜點網頁.png" onclick="location.href='#'" title="點我查看Demo">
+                <p class="works_title">甜點購物網站-糖露坊</p>
+                <p class="works_description">
+                    利用vue完成購物車之功能
+                </p>
+            </div>
+            <div class="works_content" data-aos="flip-left">
+                <img src="image/糖露坊-甜點網頁.png" onclick="location.href='#'" title="點我查看Demo">
+                <p class="works_title">甜點購物網站-糖露坊</p>
+                <p class="works_description">
+                    利用vue完成購物車之功能
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- notes -->
+    <section id="notes">
+        <div class="title" data-aos="fade-down">notes</div>
+    </section>
+    <!-- contact -->
     <section id="contact">
         <div class="title" data-aos="fade-down">Contact</div>
         <div class="bottom_layout" data-aos="fade-up">
@@ -305,25 +259,27 @@
                     <input type="text" placeholder="Subject" name="subject" id="subject" autocomplete="off" required><br>
                     <input type="text" placeholder="Message" name="message"id="message" autocomplete="off" required><br>
                     <button type="submit" id="sendBtn">Send</button>
-                    <p style="text-align: center; background-color: 	#EBD6D6; font-family: 'Julius Sans One', sans-serif;">THANK YOU FOR YOUR MESSAGE :)</p>
+                    <p style="text-align: center; background-color:#E2C2DE;font-family: 'Julius Sans One', sans-serif;color: #9F4D95;">THANK YOU FOR YOUR MESSAGE :)</p>
                 </div>
             </form>
-    
         </div>
     </section>
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
+    <!-- footer -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
+                </div>
             </div>
         </div>
-    </div>
-    <script>
-        AOS.init({
-            duration:3000,
-        });
-      </script>
-       <script src="index.js"></script>
+    </section>
+    
+<script>
+    AOS.init({
+        duration:3000,
+    });
+  </script>
+    <script src="index.js"></script>
 </body>
 </html>
