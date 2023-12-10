@@ -300,17 +300,18 @@
     padding-right: 0;
     margin: 0;
     background: linear-gradient(-10deg,snow,	#000079	,#28004D);
+    height: 100vh;
 }
 .col{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid snow;
+    padding-top: 160px;
 }
 .circle{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 480px;
+    height: 480px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -319,10 +320,16 @@
     
     /* background-color: blanchedalmond; */
 }
+.circle_text span{
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    transform-origin: 0px 240px;
+}
 .logo{
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     background-image: url(image/me.jpg);
     background-size: cover;
     border-radius: 50%;
@@ -344,10 +351,4 @@
     100%{
         transform: rotate(360deg);
     }
-}
-.circle_text span{
-    position: absolute;
-    left: 50%;
-    font-size: 20px;
-    transform-origin: 0px 200px;
 }
