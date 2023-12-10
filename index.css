@@ -300,7 +300,6 @@
     padding-right: 0;
     margin: 0;
     background: linear-gradient(-10deg,snow,	#000079	,#28004D);
-    height: 100vh;
 }
 .col{
     display: flex;
