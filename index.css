@@ -157,16 +157,13 @@
     color: snow;
 }
 #contact{
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 100px;
 }
-
 #footer{
     padding: 8px;
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;
     color: #9F4D95;
-    background-color: #faf0e4;
 }
 #show_menu_overlay{
     position: fixed;
@@ -224,6 +221,19 @@
     text-align: center;
     font-size: 35px;
 }
+.about_layout{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    max-width: 950px;
+    margin: 0px auto;
+    background-color: #E2C2DE;
+    border-radius: 20px;
+}
+.about_layout_right{
+    padding: 20px;
+}
+
 .university_record{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -238,7 +248,7 @@
 }
 .text_by_friends{
     box-shadow: 5px 5px 5px 2px gray; 
-    background-color:#E2C2DE; 
+    background-color:snow; 
     padding: 10px; 
     border-radius: 20px;
     width: 100%;
