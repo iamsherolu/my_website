@@ -126,6 +126,11 @@
         grid-row: 3;
         grid-column: 1;
     }
+    .skill_layout{
+        grid-template-columns: auto;
+        grid-row: 3;
+        grid-column: 1;
+    }
     }
     
     @media (min-width:769px) {
@@ -202,40 +207,45 @@
     <!-- about -->
     <section id="about">
         <div class="title">about</div>
-        <div class="about_layout">
-            <div class="about_content">
-                <div class="experience" style="font-family: 'M PLUS Rounded 1c', sans-serif;text-align: center; padding-top: 20px;padding-bottom: 20px;">
-                    <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
-                    <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
-                    <p>2023.9起，朝前端這條路邁進中！</p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6" data-aos="fade-right">
+                    <div class="about_content">
+                        <div class="experience" style="font-family: 'M PLUS Rounded 1c', sans-serif;text-align: center; padding-top: 20px;padding-bottom: 20px;">
+                            <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
+                            <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
+                            <p>2023.9起，朝前端這條路邁進中！</p>
+                        </div>
+                        <div class="introduce_myself">
+                            自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。
+                            <br>平時喜歡聽歌、唱歌、寫寫字、看柯南。
+                            <br>
+                            雖然不算是多喜歡看書的人，但遇上一本感興趣的書總能讓我覺得心情格外放鬆與舒坦。
+                            <br>例如從大學開始我就很喜歡一位叫做「張西」的作家，最喜歡她的一本書叫做「你走慢了我的時間」。
+                        </div>
+                        <div class="text_by_friends">
+                            「因為你是可以把不擅長的東西做得很好的人」-my friend,Jill
+                        </div>
+                        朋友曾這樣形容我。
+                        <br>
+                        雖然覺得過譽成分居多<br>
+                        不過，遇上瓶頸時，只要想著朋友這句話，我就有繼續前進的動力了：）
+                    </div> 
+                    <div class="dot" id="dot_13" data-aos="fade-up"></div>
+                    <div class="dot" id="dot_14" data-aos="fade-down"></div>
+                    <div class="dot" id="dot_17" data-aos="fade-down"></div>
                 </div>
-                <div class="introduce_myself">
-                    自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。
-                    <br>平時喜歡聽歌、唱歌、寫寫字、看柯南。
-                    <br>
-                    雖然不算是多喜歡看書的人，但遇上一本感興趣的書總能讓我覺得心情格外放鬆與舒坦。
-                    <br>例如從大學開始我就很喜歡一位叫做「張西」的作家，最喜歡她的一本書叫做「你走慢了我的時間」。
+                <div class="col-sm-6">
+                    <div class="about_images" data-aos="fade-left">
+                        <img src="image/zoo.jpg" width="85%" style="border-radius: 15px; border: 1px solid black; padding: 20px;">
+                    </div>
+                    <div class="dot" id="dot_15" data-aos="fade-up"></div>
+                    <div class="dot" id="dot_16" data-aos="fade-down"></div>
                 </div>
-                <div class="text_by_friends">
-                    「因為你是可以把不擅長的東西做得很好的人」-my friend,Jill
-                </div>
-                朋友曾這樣形容我。
-                <br>
-                雖然覺得過譽成分居多<br>
-                不過，遇上瓶頸時，只要想著朋友這句話，我就有繼續前進的動力了：）
-            </div>  
-        </div> 
-        <div class="about_images">
-            <div class="about_img">
-                <img src="image/zoo.jpg">
             </div>
-            <div class="about_img">
-                <img src="image/interest.jpg">
-            </div>
-            <div class="about_img">
-                <img src="image/notes_exam.jpg">
-            </div>       
         </div>
+      
+        
        
         
     </section>
@@ -248,26 +258,33 @@
                 擔任系上105學年度教學卓越計畫之計算機概論與視窗程式設計教學助理（2016.9-2017.1）
             </div>
             <div class="certificate" data-aos="fade-down">
-                <div class="records_title">證照</div>
+                <div class="records_title">大學時期考取之證照</div>
                 <ul>
-                    <li>考取TQC中文輸入證照、考取TQC英文輸入證照</li>
-                    <li>考取Word2010實用級合格證書、考取PPT2010實用級合格證書、考取Excel2010實用級合格證書</li>
-                    <li>考取鼎新ERP配銷模組證照、考取鼎新ERP生產製造模組證照</li>
+                    <li>考取TQC中文輸入證照、TQC英文輸入證照</li>
+                    <li>考取Word2010實用級合格證書、PPT2010實用級合格證書、Excel2010實用級合格證書</li>
+                    <li>考取鼎新ERP配銷模組證照、鼎新ERP生產製造模組證照</li>
                 </ul>
             </div>
             <div class="awards_inside" data-aos="fade-up">
-                <div class="records_title">校內獲獎紀錄</div>
+                <div class="records_title">大學時期校內獲獎紀錄</div>
                 畢業專題獲得系上優等獎、最佳介面獎、最佳實用獎
             </div>
             <div class="awards_outside" data-aos="fade-left">
-                <div class="records_title" style="background-color: transparent;">校外獲獎紀錄</div>
+                <div class="records_title" style="background-color: transparent;">大學時期校外獲獎紀錄</div>
                 以畢業專題參加中華中華企業資源規劃學會之2018E化系統創意競賽獲得獲第三名
             </div>
         </div>
+        <div class="dot" id="dot_18" ></div>
+        <div class="dot" id="dot_19" ></div>
+        <div class="dot" id="dot_20" ></div>
+        <div class="dot" id="dot_21" ></div>
     </section>
     <!-- skill -->
     <section id="skill">
         <div class="title" data-aos="fade-down">skill</div>
+        <div class="skill_layout">
+            
+        </div>
     </section>
     <!-- works -->
     <section id="works">
@@ -281,34 +298,34 @@
                 </p>
             </div>
             <div class="works_content" data-aos="flip-left">
-                <img src="image/糖露坊-甜點網頁.png" onclick="location.href='#'" title="點我查看Demo">
-                <p class="works_title">甜點購物網站-糖露坊</p>
+                <img src="image/kidtopia.png" onclick="location.href='#'" title="點我查看Demo">
+                <p class="works_title">新竹市兒童公園</p>
                 <p class="works_description">
-                    利用vue完成購物車之功能
-                </p>
-            </div>
-
-    
-            <div class="works_content" data-aos="flip-left">
-                <img src="image/糖露坊-甜點網頁.png" onclick="location.href='#'" title="點我查看Demo">
-                <p class="works_title">甜點購物網站-糖露坊</p>
-                <p class="works_description">
-                    利用vue完成購物車之功能
+                    利用Json以及Vue完成公園相關資訊之搜尋功能
                 </p>
             </div>
             <div class="works_content" data-aos="flip-left">
-                <img src="image/糖露坊-甜點網頁.png" onclick="location.href='#'" title="點我查看Demo">
-                <p class="works_title">甜點購物網站-糖露坊</p>
+                <img src="image/to-do_list.png" onclick="location.href='#'" title="點我查看Demo">
+                <p class="works_title">TO-DO LIST</p>
                 <p class="works_description">
-                    利用vue完成購物車之功能
+                    包含新增、刪除、修改之功能，並且能夠隨記事指定時間排列優先順序
+                </p>
+            </div>
+            <div class="works_content" data-aos="flip-left">
+                <img src="image/to-do_list.png" onclick="location.href='#'" title="點我查看Demo">
+                <p class="works_title">記憶力大考驗</p>
+                <p class="works_description">
+                    利用Vue完成之
                 </p>
             </div>
         </div>
     </section>
+
     <!-- notes -->
     <section id="notes">
         <div class="title" data-aos="fade-down">notes</div>
     </section>
+
     <!-- contact -->
     <section id="contact">
         <div class="title" data-aos="fade-down">Contact</div>
@@ -329,13 +346,9 @@
             </form>
         </div>
     </section>
+
     <!-- footer -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
-                </div>
-            </div>
+    <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
     
 <script>
     AOS.init({

@@ -298,7 +298,7 @@
     padding-bottom: 50px;
     text-align: center;
     font-family: 'M PLUS Rounded 1c', sans-serif;
-    background-color: blanchedalmond;
+    background-color: snow;
 }
 .about_title{
     color: #6C3365;
@@ -306,47 +306,78 @@
     text-align: center;
     font-size: 35px;
 }
-.about_layout{
-    width: 100%;
+.about_content{
+    padding: 20px;
+    width: 85%;
     max-width: 800px;
     margin: 0px auto;
     background-color: snow;
     border-radius: 20px; 
-    padding: 20px 20px 0px;
-}
-.about_content{
     padding: 20px;
 }
 .text_by_friends{
-    box-shadow: 5px 5px 5px 2px #E2C2DE	; 
-    background-color:	#F1E1FF; 
     padding: 10px; 
     border-radius: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     text-align: center;
     margin: 20px auto;
+    background-color: blanchedalmond;
+    box-shadow: 5px 5px 3px #FFD2D2;
 }
-.about_images{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    width: 100%;
-    max-width: 960px;
-    margin: 20px auto;
+.col-sm-6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-.about_img{
-    margin: 0px auto;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
+#dot_13{
+    width: 40px;
+    height: 40px;
+    background-color: #E2C2DE;
+    border-radius:  50% ;
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
 }
-.about_img img{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin: 0px auto;
-    border: 25px solid 	#FFD2D2;
+#dot_14{
+    width: 25px;
+    height: 25px;
+    background-color: blanchedalmond;
+    border-radius: 50% ;
+    position: absolute;
+    left: 7%;
+    bottom: 0%;
 }
+#dot_15{
+    width: 50px;
+    height: 100px;
+    background-color: #FFD2D2;
+    border-radius:  100px 0 0 100px ;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+}
+#dot_16{
+    width: 45px;
+    height: 45px;
+    background-color: #D2E9FF;
+    border-radius: 50% ;
+    position: absolute;
+    left: 0%;
+    top: 40%;
+}
+#dot_17{
+    width: 40px;
+    height: 80px;
+    background-color:#D9B3B3;
+    border-radius: 0 80px 80px 0 ;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    /* 左邊的圓形 */
+}
+
 
 /* section-experience */
 .university_record{
@@ -399,14 +430,67 @@
 #experience{
     padding-top: 100px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: snow;
+    position: relative;
+}
+#dot_18{
+    width: 90px;
+    height: 90px;
+    background-color: #D2E9FF;
+    border-radius: 0 0 90px 0 ;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+#dot_19{
+    width: 90px;
+    height: 90px;
+    background-color:blanchedalmond;
+    border-radius: 0 0 0 90px ;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+}
+#dot_20{
+    width: 90px;
+    height: 90px;
+    background-color:  #E2C2DE;
+    border-radius: 0 90px 0 0  ;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+}
+#dot_21{
+    width: 90px;
+    height: 90px;
+    background-color:#FFD2D2;
+    border-radius: 90px 0 0 0 ;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
 }
 
 /* section-skill */
+#skill{
+    padding-top: 100px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: snow;
+    padding-bottom: 50px;
+}
+.skill_layout{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 930px;
+}
+
 
 
 /* section-works */
 #works{
     padding-top: 100px;
+    background-color: snow;
 }
 .works_layout{
     display: grid;
@@ -448,6 +532,7 @@
 #notes{
     padding-top: 100px;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: snow;
 }
 
 /* section-contact */
@@ -509,6 +594,8 @@
 }
 #contact{
     padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: snow;
 }
 
 /* footer */
@@ -517,6 +604,7 @@
     font-family: 'Julius Sans One', sans-serif;
     text-align: center;
     color: #9F4D95;
+    background-color: snow;
 }
 
 
