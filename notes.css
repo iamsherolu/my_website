@@ -1,0 +1,169 @@
+/* 響應式網頁斷點 */
+@media (max-width:768px) {
+    .topnav h2{
+        position: relative;
+        left: -40%;
+        top:0;
+        transform: translate(40%,0%);
+        padding-left: 20px;
+        text-align: left;
+    } 
+}
+
+/* 導覽列 */
+.topnav h2{
+    color: 	#6C3365;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 20px 25px 10px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+}
+.topnav{
+    margin: 10px auto 20px;
+    text-align: center;
+    background-color: snow;
+    opacity: 0.8;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 30px;
+}
+.nav_btn{
+    font-size: 15px;
+    color: 	#6C3365;
+    font-family: 'Julius Sans One', sans-serif;
+    padding: 0px 25px 5px;
+    cursor: pointer;
+    display: inline-block;
+    background-color: transparent;
+}
+.nav_btn:hover{
+    border-bottom: 1px solid #6C3365;
+}
+.menu_icon{
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 20px;
+    width: 50px;
+    float: right;
+    margin: 20px 15px 10px;
+    color: 	#6C3365;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* menu overlay */
+#show_menu_overlay{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: 	#FAF4FF;
+    z-index: 2;
+}
+.menu_overlay_layout{
+    background-color: snow;
+    margin: 120px auto 20px;
+    color: #9F4D95;
+    font-family: 'Julius Sans One', sans-serif;
+    width: 100%;
+    max-width: 450px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    box-shadow: 10px 10px 5px gray;
+}
+.menu_btn{
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.menu_btn:hover{
+    padding-right: 10px;
+    font-size: 20px;
+}
+.menu_title{
+    background-color: #D2A2CC;
+}
+.title_content{
+    transform: rotate(270deg);
+    transform-origin: right bottom;
+    font-size: 20px;
+    background-color: transparent;
+    color: snow;
+}
+#off_menu_overlay{
+    padding-bottom: 50px;
+}
+
+/* notes */
+.notes_layout{
+    margin:50px auto 50px;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    background-color:blanchedalmond;
+    padding: 20px;
+}
+.title{
+    font-size: 23px;
+    color: #6C3365;
+    padding-bottom: 10px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+.subtitle{
+    color: #006030;
+    font-size: 20px;
+}
+.content p{
+    background-color: blanchedalmond;
+}
+.important{
+    color: red;
+    font-size: 18px;
+}
+.aside_menu_layout{
+    padding-top: 100px;
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+    position: fixed;
+    left: 6%;
+    top: 20%;
+}
+.aside_menu_btn:hover{
+    background-color: #FAF4FF;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.aside_menu_btn{
+    padding: 10px;
+}
+.up_menu_layout{
+    padding-top: 100px;
+    margin: 0px auto;
+    width: 90%;
+    max-width: 600px;
+
+}
+.up_menu_btn{
+    display: inline-block;
+    padding: 10px;
+}
+.up_menu_btn:hover{
+    background-color:  #FAF4FF;
+    cursor: pointer;
+    padding-right: 15px;
+}
+
+/* footer */
+#footer{
+    padding: 8px;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    color: #9F4D95;
+    background-color: snow;
+}
