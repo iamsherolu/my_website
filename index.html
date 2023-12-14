@@ -131,6 +131,24 @@
         grid-row: 3;
         grid-column: 1;
     }
+    .notes_layout{
+        grid-template-columns: 50% 50%;
+        grid-row: 2;
+        grid-column: 2;
+    }
+    #dot_30{
+        display: none;
+    }
+    #dot_35{
+        display: none;
+    }
+    #dot_36{
+        display: none;
+    }
+    #dot_37{
+        display: none;
+    }
+
     }
     
     @media (min-width:769px) {
@@ -157,11 +175,7 @@
         <!-- menu overlay -->
     <div id="show_menu_overlay">
         <div class="menu_overlay_layout">
-            <div class="menu_title">
-                <div class="title_content">
-                    WELCOME TO HJL'S website
-                </div>
-            </div>
+            <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">close</div>
             <div class="menu_btns">
                 <div class="menu_btn" onclick="location.href='index.html'">homepage</div>
                 <div class="menu_btn" onclick="scrollToSection('about')">about</div>
@@ -172,7 +186,6 @@
                 <div class="menu_btn" onclick="scrollToSection('contact')">contact</div>
             </div>
         </div>
-            <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">close</div>
     </div>
 
     <!-- 網頁開始 -->
@@ -218,12 +231,27 @@
                         </div>
                         
                     </div> 
-                    <!-- <div class="dot" id="dot_13" data-aos="fade-up"></div>
-                    <div class="dot" id="dot_14" data-aos="fade-down"></div>
-                    <div class="dot" id="dot_17" data-aos="fade-down"></div> -->
                 </div>
-                <div class="col-sm-6"></div>
-                <div class="col-sm-6"></div>
+                <div class="col-sm-6" data-aos="fade-left">
+                    <div class="about_dot_layout">
+                        <div class="dot" id="dot_26"></div>
+                        <div class="dot" id="dot_27"></div>
+                        <div class="dot" id="dot_28"></div>
+                        <div class="dot" id="dot_29"></div>
+                        <div class="dot" id="dot_30"></div>
+                        <div class="dot" id="dot_36"></div>
+                        <div class="dot" id="dot_37"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="about_dot_layout" data-aos="fade-right">
+                        <div class="dot" id="dot_31"></div>
+                        <div class="dot" id="dot_32"></div>
+                        <div class="dot" id="dot_33"></div>
+                        <div class="dot" id="dot_34"></div>
+                        <div class="dot" id="dot_35"></div>
+                    </div>
+                </div>
                 <div class="col-sm-6" data-aos="fade-left">
                     <div class="introduce_myself">
                         自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。
@@ -244,20 +272,18 @@
                     </div>
                     
                 </div>
-                <div class="col-sm-6"></div>
-                <!-- <div class="col-sm-6">
-                    <div class="about_images" data-aos="fade-left">
-                        <img src="image/zoo.jpg" width="85%" style="border-radius: 15px; border: 1px solid black; padding: 20px;">
+                <div class="col-sm-6">
+                    <div class="about_dot_layout" data-aos="fade-down">
+                        <div class="dot" id="dot_17"></div>
+                        <div class="dot" id="dot_22"></div>
+                        <div class="dot" id="dot_23"></div>
+                        <div class="dot" id="dot_24"></div>
+                        <div class="dot" id="dot_25"></div>
                     </div>
-                    <div class="dot" id="dot_15" data-aos="fade-up"></div>
-                    <div class="dot" id="dot_16" data-aos="fade-down"></div>
-                </div> -->
+                </div>
             </div>
         </div>
       
-        
-       
-        
     </section>
     <!-- experience -->
     <section id="experience">
@@ -334,6 +360,21 @@
     <!-- notes -->
     <section id="notes">
         <div class="title" data-aos="fade-down">notes</div>
+       <div class="notes_layout">
+            <div class="dot notes_dot" id="dot_13" onclick="location.href='notes.html'">
+                我想要圖片跟文字各佔一半！-Grid Layout
+            </div>
+            <div class="dot notes_dot" id="dot_14" onclick="location.href='notes.html'">
+                隨滑鼠滑到哪裡，div跟著動起來！
+            </div>
+            <div class="dot notes_dot" id="dot_15" onclick="location.href='notes.html'">
+                margin.padding.border
+            </div>
+            <div class="dot notes_dot" id="dot_16" onclick="location.href='notes.html'">
+                display:none v.s.visibility:hidden
+            </div>
+       </div>
+        
     </section>
 
     <!-- contact -->
