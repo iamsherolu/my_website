@@ -23,3 +23,32 @@ window.addEventListener('resize', function () {
         off_menu_overlay();
     }
 });
+
+
+function showDiv(divId) {
+    hideAllDivs();
+
+    // 如果 divId 是 '_all'，顯示所有 div
+    if (divId === '_all') {
+        var allDivs = document.querySelectorAll('.hidden');
+        allDivs.forEach(function (div) {
+            div.style.display = 'grid';
+        });
+    } else {
+        // 顯示指定的 div
+        var divToShow = document.getElementById('div' + divId);
+        if (divToShow) {
+            divToShow.style.display = 'grid';
+        }
+    }
+}
+
+function hideAllDivs() {
+    // 將所有的 div 隱藏
+    var allDivs = document.querySelectorAll('.hidden');
+    allDivs.forEach(function (div) {
+        div.style.display = 'none';
+    });
+}
+
+showDiv('_all');

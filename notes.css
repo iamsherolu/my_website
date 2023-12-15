@@ -101,7 +101,7 @@
 
 /* notes */
 .notes_layout{
-    margin:50px auto 50px;
+    margin:200px auto 50px;
     width: 90%;
     max-width: 1000px;
     border-radius: 20px;
@@ -158,6 +158,22 @@
     cursor: pointer;
     padding-right: 15px;
 }
+#div_other{
+   margin-top: 50px;
+}
+#div_all{
+    margin-top: 50px;
+}
+#div_htmlcss{
+    margin-top: 50px;
+}
+#div_js{
+    margin-top: 50px;
+}
+#div_animation{
+    margin-top: 50px;
+}
+
 
 /* footer */
 #footer{
@@ -166,4 +182,8 @@
     text-align: center;
     color: #9F4D95;
     background-color: snow;
+}
+
+.hidden {
+    display: none;
 }
