@@ -25,7 +25,24 @@
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-
+        @media (max-width:1179px) {
+            .about_experience_photo{
+                display: none;
+            }
+            .about_content{
+                width: 100%;
+                max-width: 1200px;
+                text-align: center;
+                padding: 10px;
+                height:350px;
+            }
+            .introction_photo{
+                display: none;
+            }
+            .evaluate_content img{
+                display: none;
+            }
+        }
         @media (max-width:768px) {
             .nav_btn:not(:first-child){
             display: none;
@@ -148,9 +165,7 @@
     #dot_37{
         display: none;
     }
-
     }
-    
     @media (min-width:769px) {
     .menu_icon{
         visibility: hidden;
@@ -219,71 +234,50 @@
     
     <!-- about -->
     <section id="about">
-        <div class="title">about</div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-6" data-aos="fade-right">
-                    <div class="about_content">
-                        <div class="experience" style="font-family: 'M PLUS Rounded 1c', sans-serif;text-align: center; padding-top: 20px;padding-bottom: 20px;">
-                            <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
-                            <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
-                            <p>2023.9起，朝前端這條路邁進中！</p>
-                        </div>
-                        
-                    </div> 
+        <!-- <div class="title">about</div> -->
+        <div class="about_layout_top">
+            <div class="about_content">
+                <div class="experience">
+                    <div class="experience_title">簡介</div>
+                    <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
+                    <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
+                    <p>2023.9起，朝前端這條路邁進中！</p>
+                    <p>其他經歷與得獎紀錄詳見<a href="#experience" style="text-decoration:none; font-size: 20px; color: #9F4D95;">"experience"</a></p>
                 </div>
-                <div class="col-sm-6" data-aos="fade-left">
-                    <div class="about_dot_layout">
-                        <div class="dot" id="dot_26"></div>
-                        <div class="dot" id="dot_27"></div>
-                        <div class="dot" id="dot_28"></div>
-                        <div class="dot" id="dot_29"></div>
-                        <div class="dot" id="dot_30"></div>
-                        <div class="dot" id="dot_36"></div>
-                        <div class="dot" id="dot_37"></div>
-                    </div>
+                <div class="about_experience_photo">
+                    <img src="image/meme.jpg">
+                    <img src="image/notes_exam.jpg" style="width: 300px; height: 300px; border-radius: 50%; position: absolute; top: 50%; right: 45%;">
                 </div>
-                <div class="col-sm-6">
-                    <div class="about_dot_layout" data-aos="fade-right">
-                        <div class="dot" id="dot_31"></div>
-                        <div class="dot" id="dot_32"></div>
-                        <div class="dot" id="dot_33"></div>
-                        <div class="dot" id="dot_34"></div>
-                        <div class="dot" id="dot_35"></div>
-                    </div>
-                </div>
-                <div class="col-sm-6" data-aos="fade-left">
-                    <div class="introduce_myself">
-                        自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。
-                        <br>平時喜歡聽歌、唱歌、寫寫字、看柯南。
-                        <br>
-                        雖然不算是多喜歡看書的人，但遇上一本感興趣的書總能讓我覺得心情格外放鬆與舒坦。
-                        <br>例如從大學開始我就很喜歡一位叫做「張西」的作家，最喜歡她的一本書叫做「你走慢了我的時間」。
-                    </div>
-                </div>
-                <div class="col-sm-6" data-aos="fade-up">
-                    <div class="text_by_friends">
-                    「因為你是可以把不擅長的東西做得很好的人」<br>-my friend,Jill
-                    <br><br>
-                    朋友曾這樣形容我。
-                    <br>
-                    雖然覺得過譽成分居多<br>
-                    不過，遇上瓶頸時，只要想著朋友這句話，我就有繼續前進的動力了：）
-                    </div>
-                    
-                </div>
-                <div class="col-sm-6">
-                    <div class="about_dot_layout" data-aos="fade-down">
-                        <div class="dot" id="dot_17"></div>
-                        <div class="dot" id="dot_22"></div>
-                        <div class="dot" id="dot_23"></div>
-                        <div class="dot" id="dot_24"></div>
-                        <div class="dot" id="dot_25"></div>
+            </div> 
+        </div> 
+        <div class="about_layout_middle">
+            <div class="introduce_myself">
+                <div class="introduction_content">
+                    <div class="introduction_title">自我介紹</div>
+                    <p>Hi,I am HJL!</p>
+                    <p>自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。</p>
+                    <p>平時喜歡聽歌、唱歌、寫寫字、看柯南。</p>
+                    <p>雖然不算是多喜歡看書的人，但遇上一本感興趣的書總能讓我覺得心情格外放鬆與舒坦。</p>
+                    <br>例如從大學開始我就很喜歡一位叫做「張西」的作家，最喜歡她的一本書叫做「你走慢了我的時間」。
+                    <div class="introction_photo">
+                        <img src="image/books.jpg">
                     </div>
                 </div>
             </div>
-        </div>
-      
+        </div> 
+        <div class="about_layout_bottom">
+            <div class="others_evaluate">
+                <div class="evaluate_content">
+                    <div class="evaluate_title">朋友眼中的我</div>
+                    <p>「因為你是可以把不擅長的東西做得很好的人」-my friend,Jill</p>
+                    <p>朋友曾這樣形容我。</p>
+                    <p>雖然覺得過譽成分居多不過，遇上瓶頸時，只要想著朋友這句話，我就有繼續前進的動力了：）</p>
+                    <div class="evaluate_photo">
+                        <img src="image/zoo.jpg">
+                    </div>
+                </div>
+            </div> 
+        </div> 
     </section>
     <!-- experience -->
     <section id="experience">
@@ -319,7 +313,48 @@
     <section id="skill">
         <div class="title" data-aos="fade-down">skill</div>
         <div class="skill_layout">
-            
+            <div class="skill_item" data-aos="flip-right">
+                <div class="skill_subtitle">
+                    HTML、CSS
+                </div>
+                <div class="skill_description">
+                    <ul>
+                        <li>
+                            熟悉flex box及grid layout排版
+                        </li>
+                        <li>
+                            會使用bootstrap框架，亦熟悉網頁斷點做出RWD效果之網頁
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skill_item" data-aos="flip-right">
+                <div class="skill_subtitle">
+                    JavaScript
+                </div>
+                 <div class="skill_description">
+                    <ul>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="skill_item" data-aos="flip-right">
+                <div class="skill_subtitle">
+                    Other
+                </div>
+                <div class="skill_description">
+                    <ul>
+                        <li>
+                            會套用google font及google font icon
+                        </li>
+                        <li>
+                            會套用AOS動畫效果
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
     <!-- works -->
@@ -394,11 +429,14 @@
     <!-- footer -->
     <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
     
-<script>
-    AOS.init({
-        duration:3000,
-    });
-  </script>
+    <!-- 套用AOS動畫 -->
+    <script>
+        AOS.init({
+            duration:3000,
+        });
+    </script>
+
+    <!-- 連結外部js -->
     <script src="index.js"></script>
 </body>
 </html>

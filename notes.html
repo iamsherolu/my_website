@@ -28,7 +28,7 @@
 
 
         @media (max-width:768px) {
-            .nav_btn:not(:first-child){
+        .nav_btn:not(:first-child){
             display: none;
             }
         .special{
@@ -39,9 +39,21 @@
             grid-template-columns: auto;
             grid-row: 2;
             grid-column: 1;
-        }    
-        .col-sm-3{
-            display: none;
+        }
+        .notes_menu_btn{
+            display: inline-block;
+            width: 100%;
+            max-width: 150px;
+        }
+        .notes_menu_layout{
+            position: fixed;
+            top:0%;
+            margin: 0px auto;
+            background-color: white;
+        }
+        .notes{
+            padding-top: 200px;
+            padding-left: 0;
         }
         }
         @media (min-width:769px) {
@@ -88,171 +100,161 @@
         </div>
             <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">close</div>
     </div>
+
+    <!-- 筆記主體：側邊欄menu與筆記內容 -->
     <div class="container-fluid">
-        <div class="up_menu_layout">
-            <div class="up_menu_btn" onclick="showDiv('_all')" id="btn_all">全部筆記</div>
-            <div class="up_menu_btn" onclick="showDiv('_htmlcss')" id="btn_htmlcss">HTML/CSS筆記</div>
-            <div class="up_menu_btn" onclick="showDiv('_js')" id="btn_js">JavaScript筆記</div>
-            <div class="up_menu_btn" onclick="showDiv('_animation')" id="btn_animation">動畫筆記</div>
-            <div class="up_menu_btn" onclick="showDiv('_other')" id="btn_other">其他</div>
+        <div class="notes_menu_layout">
+            <div class="notes_menu_btn" onclick="showDiv('_all')" id="btn_all">全部筆記</div>
+            <div class="notes_menu_btn" onclick="showDiv('_htmlcss')" id="btn_htmlcss">HTML/CSS筆記</div>
+            <div class="notes_menu_btn" onclick="showDiv('_js')" id="btn_js">JavaScript筆記</div>
+            <div class="notes_menu_btn" onclick="showDiv('_animation')" id="btn_animation">動畫筆記</div>
+            <div class="notes_menu_btn" onclick="showDiv('_other')" id="btn_other">其他</div>
         </div>
-    </div>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="aside_menu_layout">
-                <div class="aside_menu_btn" onclick="showDiv('_all')" id="btn_all">全部筆記</div>
-                <div class="aside_menu_btn" onclick="showDiv('_htmlcss')" id="btn_htmlcss">HTML/CSS筆記</div>
-                <div class="aside_menu_btn" onclick="showDiv('_js')" id="btn_js">JavaScript筆記</div>
-                <div class="aside_menu_btn" onclick="showDiv('_animation')" id="btn_animation">動畫筆記</div>
-                <div class="aside_menu_btn" onclick="showDiv('_other')" id="btn_other">其他</div>
-            </div>
-        </div>
-        <div class="col-sm-9">
-            <div class="notes">
-                <div class="div_all"></div>
-                <!-- html和css的筆記們 -->
-                <div id="div_htmlcss" class="hidden">
-                    <div class="notes_layout"  id="ex1">
-                        <div class="content">
-                            <div class="title">
-                                我想要圖片跟文字各佔一半！-Grid Layout
-                            </div>
-                            當我想要讓圖片和文字在同個div裡，我希望它各佔一半時： 
-                            <p>首先，圖片先設定寬度大小</p>
-                            <p>其次，將它們所屬的那個div（父元素）設定為</p>
                 
-                            <p>display:grid;</p>
-                            grid-template-columns: 1fr 1fr;
-                
-                            <p>其中，fr表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
+        <div class="notes">
+            <!-- 全部筆記 -->
+            <div class="div_all"></div>
+    
+            <!-- html和css的筆記們 -->
+            <div id="div_htmlcss" class="hidden">
+                <div class="notes_layout"  id="ex1">
+                    <div class="content">
+                        <div class="title">
+                            我想要圖片跟文字各佔一半！-Grid Layout
                         </div>
-                    </div>
-                    <div class="notes_layout" id="ex2">
-                        <div class="content">
-                            <div class="title">
-                                隨滑鼠滑到哪裡，div跟著動起來！
-                            </div> 
-                            <p>這個動畫叫做"AOS animation"，只要有以下步驟即可完成：</p>
-                            1.到https://github.com/michalsnik/aos ，複製安裝AOS的的程式碼到“標籤head裡“和“標籤body 結尾之前“。 <br>
-                            2.在https://michalsnik.github.io/aos/裡，選擇你要的樣式，然後把data-aos那段複製貼上。表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
-                        </div>
-                    </div>
-                    <div class="notes_layout" id="ex3">
-                        <div class="content">
-                            <div class="title">
-                                margin.padding.border
-                            </div> 
-                            margin:使元素跟元素之間不要靠太近（外間距）<br>
-                            padding:使元素和內容不要靠太近（內間距）<br>
-                            border:外圍 box-sizing:調整內距和標框的計算方式，又包含content-box（僅包含內容寬度）和border-box（包含padding和border））
-                
-                            <p>寫法：</p>
-                            上、右、下、左 ex. margin: 20px 15px 10px 30px;<br>
-                            上、左右、下 ex. padding: 100px auto 20px;<br>
-                            上下、左右 ex. margin: 20px 15px ;<br>
-                            上下左右 padding: 20px;
-                        </div>
-                    </div>
-                    <div class="notes_layout" id="ex4">
-                        <div class="content">
-                            <div class="title">
-                                display:none v.s. visibility:hidden
-                            </div> 
-                            display:none 隱藏且不佔空間 <br>
-                            visibility:hidden 隱藏且佔空間
-                        </div>
-                    </div>
-                    <div class="notes_layout">
-                        <div class="content">
-                            <div class="title">
-                                一樣高的col(不受內容文字多寡影響)
-                            </div> 
-                            父層：display: flex;<br>
-                            子元素：flex: 1; （使子元素擴展以填滿可用空間）
-                        </div>
-                    </div>
-                    <div class="notes_layout">
-                        <div class="content">
-                            <div class="title">
-                                用Grid Layout設計出3欄（行）2列，並且具RWD效果
-                            </div> 
-                            首先，欄位有三行，列有兩列，其中某一個item是佔了兩列。 <br>
-                            所以利用Grid Layout時，display：grid; grid-template-columns利用百分比去寫你要的三欄佔比大小，並且利用grid-gap去調整間距。 
-                            <p>其次，怎麼將其中一個item變成涵蓋兩列？ </p>
-                            先找到「它是第幾欄」，比如是第三欄那就寫grid-column:3;然後要把這個item擴展把列變寬-- grid-row:1/span; <br>
-                            其中，因為只有那個item要調整，所以寫1;利用span進行擴展，擴展為兩列，則寫2;
-                            <p>再來，怎麼變成RWD？利用@media去調整。裡面寫：</p>
-                            grid-template-columns:auto;<br>
-                            grid-column:1; <br>
-                            grid-row:5;
-                            <p class="important">放父層！</p>
-                        </div>
-                    </div>
-                    <div class="notes_layout">
-                        <div class="content">
-                            <div class="title">
-                                置中！
-                            </div> 
-                            <div class="subtitle">
-                                置中div（only水平置中）
-                            </div>
-                            <div class="important">這會受到div上方有無文字或是有無div而影響位置喔！</div>
-                            <p>display:block; </p>
-                            margin:10px auto 15px;
-                            <div class="subtitle">
-                                設定div裡面的文字水平垂直置中
-                            </div>
-                            <p>假設父層（div）的寬是500px、高是500px;文字就設為： </p>
-                            text-align:center; line-height:500px;
-                            <div class="subtitle">
-                                用flexbox水平垂直置中"div裡面的"文字
-                            </div>
-                            <p class="important">
-                                這超好用的！放父層！！</p>
-                                <p>display:flex;</p>
-                                justify-content:center;<br>
-                                align-items:center;
-                            </div>
-                        </div>
-                    <div class="notes_layout">
-                        <div class="content">
-                            <div class="title">
-                                怎麼做按按鈕跳出相對應div，其他隱藏？
-                            </div> 
-                        </div>
+                        當我想要讓圖片和文字在同個div裡，我希望它各佔一半時： 
+                        <p>首先，圖片先設定寬度大小</p>
+                        <p>其次，將它們所屬的那個div（父元素）設定為</p>
+            
+                        <p>display:grid;</p>
+                        grid-template-columns: 1fr 1fr;
+            
+                        <p>其中，fr表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
                     </div>
                 </div>
-
-                <div class="div_js"></div>
-                <div class="div_animation"></div>
-
-                <!--其他筆記-->
-                <div id="div_other" class="hidden">
-                    <div class="notes_layout">
-                        <div class="content">
-                            <div class="title">
-                                ＜script＞要放哪裡？
-                            </div> 
-                            <p class="important">ANS:放在＜head＞＜body＞＜div＞都可以！取決於你「引入的JS功能」和「加載順序」！</p>
-                            先了解HTML的加載順序！由上而下，且遇到＜script＞就會先下載！
+                <div class="notes_layout" id="ex2">
+                    <div class="content">
+                        <div class="title">
+                            隨滑鼠滑到哪裡，div跟著動起來！
+                        </div> 
+                        <p>這個動畫叫做"AOS animation"，只要有以下步驟即可完成：</p>
+                        1.到https://github.com/michalsnik/aos ，複製安裝AOS的的程式碼到“標籤head裡“和“標籤body 結尾之前“。 <br>
+                        2.在https://michalsnik.github.io/aos/裡，選擇你要的樣式，然後把data-aos那段複製貼上。表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
+                    </div>
+                </div>
+                <div class="notes_layout" id="ex3">
+                    <div class="content">
+                        <div class="title">
+                            margin.padding.border
+                        </div> 
+                        margin:使元素跟元素之間不要靠太近（外間距）<br>
+                        padding:使元素和內容不要靠太近（內間距）<br>
+                        border:外圍 box-sizing:調整內距和標框的計算方式，又包含content-box（僅包含內容寬度）和border-box（包含padding和border））
+            
+                        <p>寫法：</p>
+                        上、右、下、左 ex. margin: 20px 15px 10px 30px;<br>
+                        上、左右、下 ex. padding: 100px auto 20px;<br>
+                        上下、左右 ex. margin: 20px 15px ;<br>
+                        上下左右 padding: 20px;
+                    </div>
+                </div>
+                <div class="notes_layout" id="ex4">
+                    <div class="content">
+                        <div class="title">
+                            display:none v.s. visibility:hidden
+                        </div> 
+                        display:none 隱藏且不佔空間 <br>
+                        visibility:hidden 隱藏且佔空間
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            一樣高的col(不受內容文字多寡影響)
+                        </div> 
+                        父層：display: flex;<br>
+                        子元素：flex: 1; （使子元素擴展以填滿可用空間）
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            用Grid Layout設計出3欄（行）2列，並且具RWD效果
+                        </div> 
+                        首先，欄位有三行，列有兩列，其中某一個item是佔了兩列。 <br>
+                        所以利用Grid Layout時，display：grid; grid-template-columns利用百分比去寫你要的三欄佔比大小，並且利用grid-gap去調整間距。 
+                        <p>其次，怎麼將其中一個item變成涵蓋兩列？ </p>
+                        先找到「它是第幾欄」，比如是第三欄那就寫grid-column:3;然後要把這個item擴展把列變寬-- grid-row:1/span; <br>
+                        其中，因為只有那個item要調整，所以寫1;利用span進行擴展，擴展為兩列，則寫2;
+                        <p>再來，怎麼變成RWD？利用@media去調整。裡面寫：</p>
+                        grid-template-columns:auto;<br>
+                        grid-column:1; <br>
+                        grid-row:5;
+                        <p class="important">放父層！</p>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            置中！
+                        </div> 
+                        <div class="subtitle">
+                            置中div（only水平置中）
+                        </div>
+                        <div class="important">這會受到div上方有無文字或是有無div而影響位置喔！</div>
+                        <p>display:block; </p>
+                        margin:10px auto 15px;
+                        <div class="subtitle">
+                            設定div裡面的文字水平垂直置中
+                        </div>
+                        <p>假設父層（div）的寬是500px、高是500px;文字就設為： </p>
+                        text-align:center; line-height:500px;
+                        <div class="subtitle">
+                            用flexbox水平垂直置中"div裡面的"文字
+                        </div>
+                        <p class="important">
+                            這超好用的！放父層！！</p>
+                            <p>display:flex;</p>
+                            justify-content:center;<br>
+                            align-items:center;
                         </div>
                     </div>
-                    <div class="notes_layout">
-                        <div class="content">
-                            <div class="title">
-                                ＜link＞要放哪裡？
-                            </div> 
-                            <p class="important">ANS:放在＜head＞中！</p>
-                            原因在於，可以確保瀏覽器在選染網頁內容時，就已經載入需要的外部資源。倘若放在頁面底部，那麼瀏覽器在入時，使用者會看到沒有用css美化過的網頁才載入css
-                        </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            怎麼做按按鈕跳出相對應div，其他隱藏？
+                        </div> 
                     </div>
                 </div>
             </div>
-        </div> 
+    
+            <div class="div_js"></div>
+            <div class="div_animation"></div>
+    
+            <!--其他筆記-->
+            <div id="div_other" class="hidden">
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            ＜script＞要放哪裡？
+                        </div> 
+                        <p class="important">ANS:放在＜head＞＜body＞＜div＞都可以！取決於你「引入的JS功能」和「加載順序」！</p>
+                        先了解HTML的加載順序！由上而下，且遇到＜script＞就會先下載！
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            ＜link＞要放哪裡？
+                        </div> 
+                        <p class="important">ANS:放在＜head＞中！</p>
+                        原因在於，可以確保瀏覽器在選染網頁內容時，就已經載入需要的外部資源。倘若放在頁面底部，那麼瀏覽器在入時，使用者會看到沒有用css美化過的網頁才載入css
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    
    
     <!-- footer -->
 <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>        

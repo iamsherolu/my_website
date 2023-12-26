@@ -29,3 +29,5 @@ text.innerHTML=text.innerText.split("").map(
     (char,i)=>
     `<span style="transform:rotate(${i*12}deg)">${char}</span> `   //讓circle_text上的文字都分別在一個<span>中
 ).join("")
+
+

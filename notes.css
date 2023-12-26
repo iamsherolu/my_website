@@ -99,14 +99,26 @@
     padding-bottom: 50px;
 }
 
+/* container */
+.container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
 /* notes */
+.notes{
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-bottom: 100px;
+}
 .notes_layout{
-    margin:200px auto 50px;
     width: 90%;
     max-width: 1000px;
     border-radius: 20px;
     background-color:blanchedalmond;
     padding: 20px;
+    margin: 30px auto;
+
 }
 .title{
     font-size: 23px;
@@ -125,39 +137,26 @@
     color: red;
     font-size: 18px;
 }
-.aside_menu_layout{
+.notes_menu_layout{
     padding-top: 100px;
     width: 100%;
-    max-width: 200px;
+    max-width: 500px;
     text-align: center;
     position: fixed;
-    left: 6%;
+    left: 0%;
     top: 20%;
+    margin: 0px auto;
 }
-.aside_menu_btn:hover{
+.notes_menu_btn:hover{
     background-color: #FAF4FF;
     padding-left: 20px;
     cursor: pointer;
 }
-.aside_menu_btn{
+.notes_menu_btn{
     padding: 10px;
+    width: 200px;
 }
-.up_menu_layout{
-    padding-top: 100px;
-    margin: 0px auto;
-    width: 90%;
-    max-width: 600px;
 
-}
-.up_menu_btn{
-    display: inline-block;
-    padding: 10px;
-}
-.up_menu_btn:hover{
-    background-color:  #FAF4FF;
-    cursor: pointer;
-    padding-right: 15px;
-}
 #div_other{
    margin-top: 50px;
 }
