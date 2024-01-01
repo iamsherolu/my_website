@@ -16,9 +16,11 @@
     <!-- AOS animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- 套用google font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <!-- 套用google font icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
     <style>
-        /* 套用google font */
         @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Fira+Sans&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
@@ -57,10 +59,10 @@
             grid-row: 2;
             width: 90%;
            }
-           .bottom_message{
+        .bottom_message{
             padding-top: 20px;
            } 
-           #text1{
+        #text1{
             height: 250px;
             top: 20%;
             left: 10%;
@@ -112,13 +114,13 @@
         text-align: center;
         margin: auto;
         } 
-    .circle_text span{
+        .circle_text span{
         position: absolute;
         left: 50%;
         font-size: 20px;
         transform-origin: 0px 215px;
-    }
-    #dot_1{
+        }
+        #dot_1{
         width: 100px;
         height: 100px;
         background-color: #E2C2DE;
@@ -126,52 +128,51 @@
         position: absolute;
         bottom: 0%;
         right: 0%;
-    }
-    #dot_9{
-      display: none;
-    }
-    #dot_12{
-      display: none;
-    }
-    .about_layout{
-        grid-template-columns: auto;
-        grid-row: 2;
-        grid-column: 1;
-    }
-    .about_images{
-        grid-template-columns: auto;
-        grid-row: 3;
-        grid-column: 1;
-    }
-    .skill_layout{
-        grid-template-columns: auto;
-        grid-row: 3;
-        grid-column: 1;
-    }
-    .notes_layout{
-        grid-template-columns: 50% 50%;
-        grid-row: 2;
-        grid-column: 2;
-    }
-    #dot_30{
-        display: none;
-    }
-    #dot_35{
-        display: none;
-    }
-    #dot_36{
-        display: none;
-    }
-    #dot_37{
-        display: none;
-    }
-    }
-    @media (min-width:769px) {
-    .menu_icon{
-        visibility: hidden;
-        position: absolute;
         }
-    }
+        #dot_9{
+        display: none;
+        }
+        #dot_12{
+        display: none;
+        }
+        .about_layout{
+            grid-template-columns: auto;
+            grid-row: 2;
+            grid-column: 1;
+        }
+        .about_images{
+            grid-template-columns: auto;
+            grid-row: 3;
+            grid-column: 1;
+        }
+        .skill_layout{
+            grid-template-columns: auto;
+            grid-row: 3;
+            grid-column: 1;
+        }
+        #dot_30{
+            display: none;
+        }
+        #dot_35{
+            display: none;
+        }
+        #dot_36{
+            display: none;
+        }
+        #dot_37{
+            display: none;
+        }
+        .notes_dot{
+            width: 100%;
+            margin-top: 10px;
+        }
+        }
+        @media (min-width:769px) {
+        .menu_icon{
+            visibility: hidden;
+            position: absolute;
+            }
+        }
     </style>
     <title>HJL's website</title>
 </head>
@@ -335,7 +336,7 @@
                  <div class="skill_description">
                     <ul>
                         <li>
-                            
+                            略懂基礎語法
                         </li>
                     </ul>
                 </div>
@@ -388,18 +389,19 @@
     <!-- notes -->
     <section id="notes">
         <div class="title" data-aos="fade-down">notes</div>
-       <div class="notes_layout">
+       <div class="notes_container">
             <div class="dot notes_dot" id="dot_13" onclick="location.href='notes.html#ex1'">
-                我想要圖片跟文字各佔一半！-Grid Layout
+            我想要圖片跟文字各佔一半！-Grid Layout
             </div>
             <div class="dot notes_dot" id="dot_14" onclick="location.href='notes.html#ex2'">
-                隨滑鼠滑到哪裡，div跟著動起來！
+                ＜script＞要放哪裡？
             </div>
             <div class="dot notes_dot" id="dot_15" onclick="location.href='notes.html#ex3'">
-                margin.padding.border
+            display:none v.s.visibility:hidden
             </div>
-            <div class="dot notes_dot" id="dot_16" onclick="location.href='notes.html#ex4'">
-                display:none v.s.visibility:hidden
+
+            <div class="dot notes_dot" id="dot_16" onclick="location.href='notes.html'">
+            see more
             </div>
        </div>
         
@@ -437,6 +439,6 @@
     </script>
 
     <!-- 連結外部js -->
-    <script src="index.js"></script>
+    <script src="index.js" ></script>
 </body>
 </html>

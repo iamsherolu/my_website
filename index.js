@@ -24,10 +24,10 @@ window.addEventListener('resize', function () {
     }
 });
 
+// intro的文字繞圓動畫
 const text= document.querySelector('.circle_text p');
 text.innerHTML=text.innerText.split("").map(
     (char,i)=>
     `<span style="transform:rotate(${i*12}deg)">${char}</span> `   //讓circle_text上的文字都分別在一個<span>中
 ).join("")
-
 

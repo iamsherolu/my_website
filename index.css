@@ -441,159 +441,6 @@
     border: 13px solid snow;
     position: absolute;
 }
-#dot_17{
-    width: 50px;
-    height: 50px;
-    background-color: #D2E9FF;
-    border-radius: 50% ;
-    position: absolute;
-    right: 10%;
-    top: 40%;
-}
-#dot_22{
-    width: 15px;
-    height: 15px;
-    background-color: #D2E9FF;
-    border-radius: 50% ;
-    position: absolute;
-    right: 50%;
-    top: 20%;
-}
-#dot_23{
-    width: 30px;
-    height: 30px;
-    background-color: #D2E9FF;
-    border-radius: 50% ;
-    position: absolute;
-    left: 10%;
-    top: 50%;
-}
-#dot_24{
-    width: 20px;
-    height: 20px;
-    background-color: #D2E9FF;
-    border-radius: 50% ;
-    position: absolute;
-    left: 0%;
-    top: 20%;
-}
-#dot_25{
-    width: 100px;
-    height: 100px;
-    background-color: #D2E9FF;
-    border-radius: 50% ;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
-#dot_26{
-    width: 50px;
-    height: 50px;
-    background-color: #FFD2D2;
-    border-radius: 50% ;
-    position: absolute;
-    right: 10%;
-    top: 90%;
-}
-#dot_27{
-    width: 15px;
-    height: 15px;
-    background-color: #FFD2D2;
-    border-radius: 50% ;
-    position: absolute;
-    right: 50%;
-    top: 20%;
-}
-#dot_28{
-    width: 30px;
-    height: 30px;
-    background-color: #FFD2D2;
-    border-radius: 50% ;
-    position: absolute;
-    left: 70%;
-    top: 80%;
-}
-#dot_29{
-    width: 20px;
-    height: 20px;
-    background-color:#FFD2D2;
-    border-radius: 50% ;
-    position: absolute;
-    left: 5%;
-    top: 40%;
-}
-#dot_30{
-    width: 100px;
-    height: 100px;
-    background-color: #FFD2D2;
-    border-radius: 50% ;
-    position: absolute;
-    left: 10%;
-    top: 10%;
-}
-#dot_36{
-    width: 120px;
-    height: 120px;
-    background-color:#FFD2D2;
-    border-radius: 50% ;
-    position: absolute;
-    left: 25%;
-    top: 60%;
-}
-#dot_37{
-    width: 70px;
-    height: 70px;
-    background-color: #FFD2D2;
-    border-radius: 50% ;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
-#dot_31{
-    width: 50px;
-    height: 50px;
-    background-color: blanchedalmond;
-    border-radius: 50% ;
-    position: absolute;
-    right: 0%;
-    top: 70%;
-}
-#dot_32{
-    width: 15px;
-    height: 15px;
-    background-color: blanchedalmond;
-    border-radius: 50% ;
-    position: absolute;
-    right: 40%;
-    top: 20%;
-}
-#dot_33{
-    width: 30px;
-    height: 30px;
-    background-color: blanchedalmond;
-    border-radius: 50% ;
-    position: absolute;
-    left: 10%;
-    top: 50%;
-}
-#dot_34{
-    width: 20px;
-    height: 20px;
-    background-color: blanchedalmond;
-    border-radius: 50% ;
-    position: absolute;
-    left: 0%;
-    top: 20%;
-}
-#dot_35{
-    width: 100px;
-    height: 100px;
-    background-color: blanchedalmond;
-    border-radius: 50% ;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-}
 
 
 /* section-experience */
@@ -766,25 +613,30 @@
     background-color: snow;
     margin: 0px auto;
 }
-.notes_layout{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%; 
+.notes_container{
+    max-width: 1300px;
     width: 100%;
-    max-width: 1000px;
-    margin: 0px auto;
+    margin: 30px auto 0px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .notes_dot{
+    margin: 0px auto;
+
+    /* dot裡文字水平垂直置中 */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin: 0px auto;
+    text-align: center;
     cursor: pointer;
+    gap: 10px;
+    padding: 10px;
+    width: 50%;
+    box-sizing: border-box;
 }
 .notes_dot:hover{
     box-shadow: 5px 5px 3px gray;
 }
-
 #dot_13{
     width: 200px;
     height: 200px;
@@ -809,9 +661,6 @@
     background-color:#D2E9FF;
     border-radius: 50%;
 }
-
-
-
 /* section-contact */
 .bottom_layout{
     margin: 0px auto 0px;

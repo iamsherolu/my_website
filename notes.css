@@ -70,11 +70,10 @@
     margin: 120px auto 20px;
     color: #9F4D95;
     font-family: 'Julius Sans One', sans-serif;
-    width: 100%;
-    max-width: 450px;
+    width: 90%;
+    max-width: 500px;
     display: grid;
-    grid-template-columns: 40% 60%;
-    box-shadow: 10px 10px 5px gray;
+    position: relative;
 }
 .menu_btn{
     padding: 20px;
@@ -88,15 +87,26 @@
 .menu_title{
     background-color: #D2A2CC;
 }
-.title_content{
-    transform: rotate(270deg);
-    transform-origin: right bottom;
-    font-size: 20px;
-    background-color: transparent;
-    color: snow;
-}
 #off_menu_overlay{
-    padding-bottom: 50px;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    color: snow;
+    font-family: 'Julius Sans One', sans-serif;
+    background-color: #D2A2CC;
+    text-align: center;
+    border-radius: 50%;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#off_menu_overlay:hover{
+    background-color: blanchedalmond;
+    color: #9F4D95;
 }
 
 /* container */

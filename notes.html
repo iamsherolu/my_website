@@ -80,26 +80,22 @@
         <div class="nav_btn" onclick="location.href='index.html#contact'">contact</div>
         <div class="menu_icon" onclick="show_menu_overlay()">menu</div>
     </div>
+
         <!-- menu overlay -->
-    <div id="show_menu_overlay">
-        <div class="menu_overlay_layout">
-            <div class="menu_title">
-                <div class="title_content">
-                    WELCOME TO HJL'S website
+        <div id="show_menu_overlay">
+            <div class="menu_overlay_layout">
+                <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">close</div>
+                <div class="menu_btns">
+                    <div class="menu_btn" onclick="location.href='index.html'">homepage</div>
+                    <div class="menu_btn" onclick="scrollToSection('about')">about</div>
+                    <div class="menu_btn" onclick="scrollToSection('experience')">experience</div>
+                    <div class="menu_btn" onclick="scrollToSection('skill')">skill</div>
+                    <div class="menu_btn" onclick="scrollToSection('works')">works</div>
+                    <div class="menu_btn" onclick="scrollToSection('notes')">notes</div>
+                    <div class="menu_btn" onclick="scrollToSection('contact')">contact</div>
                 </div>
             </div>
-            <div class="menu_btns">
-                <div class="menu_btn" onclick="location.href='index.html'">homepage</div>
-                <div class="menu_btn" onclick="scrollToSection('about')">about</div>
-                <div class="menu_btn" onclick="scrollToSection('experience')">experience</div>
-                <div class="menu_btn" onclick="scrollToSection('skill')">skill</div>
-                <div class="menu_btn" onclick="scrollToSection('works')">works</div>
-                <div class="menu_btn" onclick="scrollToSection('notes')">notes</div>
-                <div class="menu_btn" onclick="scrollToSection('contact')">contact</div>
-            </div>
         </div>
-            <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">close</div>
-    </div>
 
     <!-- 筆記主體：側邊欄menu與筆記內容 -->
     <div class="container-fluid">
@@ -132,7 +128,7 @@
                         <p>其中，fr表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
                     </div>
                 </div>
-                <div class="notes_layout" id="ex2">
+                <div class="notes_layout">
                     <div class="content">
                         <div class="title">
                             隨滑鼠滑到哪裡，div跟著動起來！
@@ -142,7 +138,7 @@
                         2.在https://michalsnik.github.io/aos/裡，選擇你要的樣式，然後把data-aos那段複製貼上。表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
                     </div>
                 </div>
-                <div class="notes_layout" id="ex3">
+                <div class="notes_layout">
                     <div class="content">
                         <div class="title">
                             margin.padding.border
@@ -158,7 +154,7 @@
                         上下左右 padding: 20px;
                     </div>
                 </div>
-                <div class="notes_layout" id="ex4">
+                <div class="notes_layout" id="ex3">
                     <div class="content">
                         <div class="title">
                             display:none v.s. visibility:hidden
@@ -233,7 +229,7 @@
     
             <!--其他筆記-->
             <div id="div_other" class="hidden">
-                <div class="notes_layout">
+                <div class="notes_layout" id="ex2">
                     <div class="content">
                         <div class="title">
                             ＜script＞要放哪裡？
