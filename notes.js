@@ -52,3 +52,15 @@ function hideAllDivs() {
 }
 
 showDiv('_all');
+
+
+function changeBtn_color(btnId) {
+    var menu_btn = document.querySelector('.notes_menu_btn.clicked');
+
+    if (menu_btn) {
+        menu_btn.classList.remove('clicked');
+    }
+
+    var change_color = document.getElementById(btnId);
+    change_color.classList.add('clicked');
+}
