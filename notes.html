@@ -77,7 +77,7 @@
         <div class="nav_btn" onclick="location.href='index.html#skill'">skill</div>
         <h2 onclick="location.href='index.html'">HJL</h2>
         <div class="nav_btn" onclick="location.href='index.html#works'">works</div>
-        <div class="nav_btn" onclick="location.href='index.html#notes'">notes</div>
+        <div class="nav_btn" onclick="location.href='notes.html'">notes</div>
         <div class="nav_btn" onclick="location.href='index.html#contact'">contact</div>
         <div class="menu_icon" onclick="show_menu_overlay()">menu</div>
     </div>
@@ -92,7 +92,7 @@
                     <div class="menu_btn" onclick="scrollToSection('experience')">experience</div>
                     <div class="menu_btn" onclick="scrollToSection('skill')">skill</div>
                     <div class="menu_btn" onclick="scrollToSection('works')">works</div>
-                    <div class="menu_btn" onclick="scrollToSection('notes')">notes</div>
+                    <div class="menu_btn" onclick="location.href='notes.html'">notes</div>
                     <div class="menu_btn" onclick="scrollToSection('contact')">contact</div>
                 </div>
             </div>
@@ -122,7 +122,33 @@
                         <div class="title">
                             MVC模式
                         </div> 
-                    
+                    <p class="subtitle">意涵</p>
+                    <ul>
+                        <li>
+                            Model：用來跟資料庫進行溝通，但不會去管資料怎麼操作、顯示。Controller會跟Model要資料
+                        </li>
+                        <li>
+                            View：對應到HTML，把資料呈現的HTML頁面傳給Client
+                        </li>
+                        <li>
+                            Controller：Model和View的橋樑，負責把資料傳給View，讓View生成HTML
+                        </li>
+                    </ul>
+                    <p class="subtitle">優勢</p>
+                    <ul>
+                        <li>
+                            模組化： 將應用程式分解成三個獨立的組件，使每個組件都可以獨立開發、測試和維護。
+                        </li>
+                        <li>
+                            可擴展性： 新功能的添加或現有功能的修改不太可能影響其他組件，使系統更容易擴展。
+                        </li>
+                        <li>
+                            可維護性： 由於不同組件的職責明確，代碼的維護和排錯變得更加容易。
+                        </li>
+                        <li>
+                            分工協作： 不同的團隊成員可以同時開發不同組件，提高開發效率。
+                        </li>
+                    </ul>
                     </div>
                 </div>
             </div>
@@ -164,7 +190,24 @@
                         <p>display:grid;</p>
                         grid-template-columns: 1fr 1fr;
             
-                        <p>其中，fr表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
+                        <p>其中，fr表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成兩等份。如果有三個1fr則表示每一塊佔1/3，以此類推。</p>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            用Grid Layout設計出3欄（行）2列，並且具RWD效果
+                        </div> 
+                        首先，欄位有三行，列有兩列，其中某一個item是佔了兩列。 <br>
+                        所以利用Grid Layout時，display：grid; grid-template-columns利用百分比去寫你要的三欄佔比大小，並且利用grid-gap去調整間距。 
+                        <p>其次，怎麼將其中一個item變成涵蓋兩列？ </p>
+                        先找到「它是第幾欄」，比如是第三欄那就寫grid-column:3;然後要把這個item擴展把列變寬-- grid-row:1/span; <br>
+                        其中，因為只有那個item要調整，所以寫1;利用span進行擴展，擴展為兩列，則寫2;
+                        <p>再來，怎麼變成RWD？利用media query去調整。裡面寫：</p>
+                        grid-template-columns:auto;<br>
+                        grid-column:1; <br>
+                        grid-row:5;
+                        <p class="important">放父層！</p>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -204,23 +247,6 @@
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
-                            用Grid Layout設計出3欄（行）2列，並且具RWD效果
-                        </div> 
-                        首先，欄位有三行，列有兩列，其中某一個item是佔了兩列。 <br>
-                        所以利用Grid Layout時，display：grid; grid-template-columns利用百分比去寫你要的三欄佔比大小，並且利用grid-gap去調整間距。 
-                        <p>其次，怎麼將其中一個item變成涵蓋兩列？ </p>
-                        先找到「它是第幾欄」，比如是第三欄那就寫grid-column:3;然後要把這個item擴展把列變寬-- grid-row:1/span; <br>
-                        其中，因為只有那個item要調整，所以寫1;利用span進行擴展，擴展為兩列，則寫2;
-                        <p>再來，怎麼變成RWD？利用@media去調整。裡面寫：</p>
-                        grid-template-columns:auto;<br>
-                        grid-column:1; <br>
-                        grid-row:5;
-                        <p class="important">放父層！</p>
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
                             置中！
                         </div> 
                         <div class="subtitle">
@@ -247,13 +273,6 @@
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
-                            怎麼做按按鈕跳出相對應div，其他隱藏？
-                        </div> 
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
                            什麼是偽元素？
                         </div> 
                             目的：在元素內容內插入虛擬內容，能夠更靈活控制icon樣式和位置。也就是在不增加HTML元素情況下，用CSS進行調整
@@ -264,7 +283,7 @@
                                 <li>
                                     添加content屬性：沒有這個，偽元素就不會產生（content:" ",除非想要在偽元素裡加上文字-content:'哈囉你好嗎'）
                                 </li>
-                                <li>要給偽元素絕對位置才會顯示</li>
+                                <li>要給偽元素絕對位置才會顯示（記得你的父層要position:relative）</li>
                             </ul>
                             <p class="subtitle">偽元素裡面可以在建立一個偽元素嗎？</p>
                             <span class="important">ans:不可以！</span>
@@ -332,7 +351,16 @@
                         <p class="subtitle">可否重複宣告？</p>
                         <ul>
                             <li>
-                                let和const不可以重複宣告
+                                let和const不可以重複宣告，不然會有SyntaxError（其中，let可以重新賦值，但是const不行）
+                                <div class="example">
+                                    <span class="important">何謂賦值？</span>
+                                    <br>
+                                    ex. <br>
+                                    const student={name:"橘子"};<br>
+                                    user.name="柚子";
+                                    console.log(user);//會印出柚子
+                                </div>
+                                
                             </li>
                             <li>
                                 var可以重複宣告
@@ -353,9 +381,16 @@
                         <p class="subtitle">是否會被提升？</p>
                         <ul>
                             <li>
-                                let和const不會被提升，因此在作用域中，變數通常用let或是const進行宣告
+                                let和const不會被提升，所以如果在宣告前就使用了變數，那麼就會進入暫時死區 (TDZ)，console會出現Uncaught ReferenceError。
+                                因此在作用域中，變數是用let或是const進行宣告
+                            </li>
+                            <li>
+                                var會使得在宣告前就使用該變數的話，不會出現錯誤
                             </li>
                         </ul>
+                        <p class="subtitle">何時要用let？何時要用const?</p>
+                        沒有標準答案，但是判斷方法可以看「是否有需要重新賦值」
+                        <p class="important">let和contst是以「區塊」為為範圍；var可以用在全域或是函數裡</p>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -379,8 +414,9 @@
                             <li>null的用意是用來宣告「空值」</li>
                             <li>DOM操作時，若DOM元素不存在：null</li>
                         </ul>
-                        <p class="important">null==undefined，return true</p>
-                        <p class="important">null===undefined，return false</p>
+                        <p class="subtitle">null==undefined，return true</p>
+                        原因是因為：==會強制轉換資料型態！所以所以實務上不建議使用==
+                        <p class="subtitle">null===undefined，return false</p>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -392,6 +428,8 @@
                         ex. var x=1; （即把1 assign給x，給值的這個動作就叫做"assign"）
                         <p class="subtitle">==即表示等於</p>
                         ex.222=="222"，回傳的答案會是“true”
+                        <br>
+                        原因是因為：==會強制轉換資料型態！所以所以實務上不建議使用==
                         <p class="subtitle">===為JS特有的（較嚴謹）</p>
                         ex.222==="222"，回傳的答案會是“false”
                     </div>
@@ -526,6 +564,13 @@
                         </div> 
                         把文字那個元素的css改成<span class="important">vertical-align: top;</span>即可！
                     </div>
+                </div>
+            </div>
+            <div class="notes_layout">
+                <div class="content">
+                    <div class="title">
+                        怎麼做按按鈕跳出相對應div，其他隱藏？
+                    </div> 
                 </div>
             </div>
         </div>
