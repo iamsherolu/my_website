@@ -381,8 +381,7 @@
                         <p class="subtitle">是否會被提升？</p>
                         <ul>
                             <li>
-                                let和const不會被提升，所以如果在宣告前就使用了變數，那麼就會進入暫時死區 (TDZ)，console會出現Uncaught ReferenceError。
-                                因此在作用域中，變數是用let或是const進行宣告
+                                let和const僅會提升到區塊作用域，所以如果在宣告前就使用了變數，那麼就會進入暫時死區 (TDZ)，console會出現Uncaught ReferenceError。
                             </li>
                             <li>
                                 var會使得在宣告前就使用該變數的話，不會出現錯誤
@@ -464,7 +463,16 @@
                         <div class="title">
                             Hoisting（提升）
                         </div> 
-                        所謂的hoisting是指，你所宣告的變數「不會」在程式碼被執行前，被移動到作用域頂部                    
+                        <p class="subtitle">意涵</p>
+                        <ul>
+                            <li>
+                                所謂的hoisting是指，你所宣告的變數「不會」在程式碼被執行前，被移動到作用域頂部，其中var會提升到「函式」作用域;let和const會被提升到區塊作用域。（函式作用域是指，var可以在宣告函式之前就呼叫該函式喔！）
+                            </li>
+                            <li class="important">只有提升「宣告」這件事喔！並不會賦值</li>
+                        </ul>
+                        <p class="subtitle">何謂何謂TDZ（暫時死區）</p>
+                        目的：是為了避免還沒被宣告的變數被拿來用。
+
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -496,7 +504,29 @@
                         <div class="title">
                             for迴圈 v.s. forEach
                         </div> 
-                    
+                    <p class="subtitle">
+                        for迴圈
+                    </p>
+                    <ul>
+                        <li>
+                            可以使用break
+                        </li>
+                        <li>
+                            但是指令語法要寫比較長
+                        </li>
+                    </ul>
+                    <p class="subtitle">
+                        forEach
+                    </p>
+                    <ul>
+                        <li>
+                            比for迴圈簡潔
+                        </li>
+                        <li class="important">
+                            不可以使用break、continue已跳出回圈，也就是說forEach不能提早跑出迴圈
+                        </li>
+                        <li>只會遍歷陣列，不會回傳新的陣列</li>
+                    </ul>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -512,7 +542,7 @@
                         <div class="title">
                             什麼是JavaScript html DOM EventListener？
                         </div> 
-                    
+                        包含：
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -526,6 +556,33 @@
                         <p class="subtitle">同源政策：同源與非同源？</p>
 
                         <p class="subtitle">該如何解決CORS?</p>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            當按下某按鈕，已改變該按鈕的css
+                        </div> 
+                        <div class="subtitle">
+                            方法一
+                        </div>
+                        
+                        <div class="example">
+                            const btn = document.getElementById('btn_btn');<br>
+                                if (btn) {<br>
+                                    btn.style.display = 'none';<br>
+                                }<br>
+                        </div>
+                        <div class="subtitle">
+                            方法二
+                        </div>
+                        
+                        <div class="example">
+                            const overlay_btn = document.getElementById('show_menu_overlay');<br>
+                            overlay_btn.addEventListener("click",function(){ <br>
+                                btn.style.display="none"; <br>
+                            }) <br>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -570,6 +627,40 @@
                         <div class="title">
                             怎麼做按按鈕跳出相對應div，其他隱藏？
                         </div> 
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            overlay選單，正確連到指定位置
+                        </div> 
+                        <p class="subtitle">HTML部分</p>
+                            <ul>
+                                <li>
+                                    內部區域：onclick="scrollToSection('id_name')"
+                                </li>
+                                <li>
+                                    外部區域：onclick="location.href='notes.html'"
+                                </li>
+                            </ul>
+                            <p class="subtitle">JavaScript部分</p>
+                            <div class="example">
+                                function scrollToSection(id_name) {
+                                    <br>
+                                    // 滾動到相應的位置
+                                    <br>
+                                    const section = document.getElementById(id_name);<br>
+                                    if (section) {<br>
+                                        section.scrollIntoView({ behavior: 'smooth' });<br>
+                                    }<br>
+                                    <br>
+                                    // 關閉overlay<br>
+                                    const overlay = document.getElementById('show_menu_overlay');<br>
+                                    if (overlay) {<br>
+                                        overlay.style.display = 'none';<br>
+                                    }<br>
+                                }
+                            </div>
                     </div>
                 </div>
             </div>
