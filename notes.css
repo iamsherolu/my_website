@@ -130,6 +130,7 @@
     background-color:#FAF4FF;
     padding: 20px;
     margin: 30px auto;
+    word-break: break-all;
 }
 .title{
     font-size: 25px;
@@ -144,7 +145,6 @@
 }
 .content p{
     background-color:#FAF4FF;
-    word-break: break-all;
     
 }
 .important{
