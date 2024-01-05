@@ -64,3 +64,9 @@ function changeBtn_color(btnId) {
     var change_color = document.getElementById(btnId);
     change_color.classList.add('clicked');
 }
+
+//按下javascript筆記按鈕，跑出其他細項
+function show_js_layout(){
+    var js_layout=document.getElementById('js_layout').style.display="block";
+    
+}

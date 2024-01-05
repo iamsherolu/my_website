@@ -44,7 +44,7 @@
         .notes_menu_btn{
             display: inline-block;
             width: 100%;
-            max-width: 150px;
+            max-width: 200px;
             text-align: center;
         }
         .notes_menu_layout{
@@ -54,6 +54,9 @@
             background-color: white;
             max-width: 1000px;
             width: 100%;
+        }
+        .js_layout{
+            margin: 0px auto 20px;
         }
         .notes{
             margin-top: 150px;
@@ -105,7 +108,19 @@
             <div class="notes_menu_btn" onclick="showDiv('_design');changeBtn_color('btn_design')" id="btn_design">前端架構與設計</div>
             <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool')" id="btn_tool">前端工具筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss')" id="btn_htmlcss">HTML/CSS筆記</div>
-            <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js')" id="btn_js">JavaScript筆記</div>
+            <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js');show_js_layout()" id="btn_js">
+                <span style="vertical-align: top;">JavaScript筆記</span>
+                <span class="material-symbols-outlined" id="arrow_more">
+                    expand_more
+                </span>
+            </div>
+            <!-- 顯示按下javascript按鈕時，會跑出的其他按鈕 -->
+            <div class="js_layout" id="js_layout">
+                <div class="js_btn">JavaScript基礎語法和觀念</div>
+                <div class="js_btn" onclick="location.href='notes.html#js_dom'">JavaScript HTML DOM</div>
+                <div class="js_btn">JavaScript其他筆記</div>
+            </div>
+
             <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation')" id="btn_animation">動畫筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue')" id="btn_vue">vue筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other')" id="btn_other">其他</div>
@@ -523,7 +538,7 @@
                             比for迴圈簡潔
                         </li>
                         <li class="important">
-                            不可以使用break、continue已跳出回圈，也就是說forEach不能提早跑出迴圈
+                            不可以使用break、continue跳出回圈，也就是說forEach不能提早跑出迴圈
                         </li>
                         <li>只會遍歷陣列，不會回傳新的陣列</li>
                     </ul>
@@ -537,12 +552,149 @@
                     
                     </div>
                 </div>
-                <div class="notes_layout">
+                <div class="notes_layout" id="js_dom">
                     <div class="content">
                         <div class="title">
                             什麼是JavaScript html DOM EventListener？
                         </div> 
-                        包含：
+                        <p class="subtitle">event</p>
+                        <ul>
+                            <li>所謂的事件就是只在document中的特定事情</li>
+                            <li>ex.click、mousemove等</li>
+                        </ul>
+                        <p class="subtitle">EventListener</p>
+                        即捕獲和處理事件的函數
+                        <p class="subtitle">內涵</p>
+                        包含：EventListener()、Event Object、Event Bubble v.s. Event Capturing、具名函數與匿名函數
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            EventListener()？
+                        </div> 
+                        <p class="subtitle">意涵</p>
+                        包含addEventListener()（監聽事件）和removeEventListener()（移除監聽事件）
+                        <p class="subtitle">addEventListener()</p>
+                        <p class="important">element.addEventListener(event,function,useCapture);</p>
+                        <ul>
+                            <li>element:你要要監聽哪個元素</li>
+                            <li>event:你想發生什麼事？比如說按按鈕-click、滑鼠放在上面產生變化-mouseover</li>
+                            <li>function:函數的名稱，事件發生時要執行的函數</li>
+                            <li>useCapture:指定事件是否在捕獲階段觸發：若為true-表示在捕獲階段處理;false或「省略」則是在冒泡階段處理。</li>
+                            <li>Event Object:監聽事件發生時，瀏覽器會去執行透過addEventListener()產生的EventListener(即function），此時，EventListener會建立「物件」，以參數形式傳給function</li>
+                        </ul>
+                        <div class="example">
+                            <span>JavaScript</span>
+                            <p>假設我在HTML有一個id為myButton的button元素</p>
+                            // 獲取按鈕元素<br>
+                            var button = document.getElementById('myButton');<br>
+
+                            // 定義事件處理函數<br>
+                            function handleClick() {<br>
+                            alert('按鈕被點擊了！');<br>
+                            }<br>
+
+                            // 使用addEventListener()添加點擊事件監聽器，並設置捕獲階段為true<br>
+                            button.addEventListener('click', handleClick, true);
+                        </div>
+
+                        <p class="subtitle">removeEventListener()</p>
+                        <p class="important">element.removeEventListener(event,listener[,useCapture];</p>
+                        <ul>
+                            <li>listener[]:你要移除的事件監聽器函數</li>
+                        </ul>
+                        <p class="important">你要移除的事件監聽器函數必須和添加事件監聽器的函數一樣，所以，匿名函數就沒有辦法使用removeEventListener()</p>
+                        <div class="example">
+                            <span>JavaScript</span>
+                            <p>假設我在HTML有一個id為myButton的button元素和一個id為removeButtonListener的button元素</p>
+                            // 獲取按鈕元素<br>
+                            var button = document.getElementById('myButton');<br>
+                            var removeButton = document.getElementById('removeButtonListener');<br>
+
+                            // 定義事件處理函數<br>
+                            function handleClick() {<br>
+                            alert('按鈕被點擊了！');<br>
+                            }<br>
+
+                            // 使用addEventListener()添加點擊事件監聽器<br>
+                            button.addEventListener('click', handleClick);<br>
+
+                            // 使用addEventListener()添加點擊事件監聽器，用於移除另一個按鈕的點擊事件<br>
+                            removeButton.addEventListener('click', function() {<br>
+                            // 移除事件監聽器<br>
+                            button.removeEventListener('click', handleClick);<br>
+                            alert('事件監聽器已被移除！');<br>
+                            });
+
+                        </div>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            什麼是Event Object？
+                        </div> 
+                        <p class="important">element.addEventListener(event,function（event）);</p>
+                        <p class="subtitle">意涵</p>
+                        所有跟這個event有關的屬性，都會聚集在這個event object裡，作為回調函數的「參數」傳遞給事件處理器。
+                        <br>
+                        白話文就是：我要處理「誰」，然後這個對象以及他的相關資訊，都存在這個event object裡面！
+                        <p class="subtitle">事件屬性</p>
+                        例如：
+                        <ul>
+                            <li>event.type：click、keydown...</li>
+                            <li>event.target</li>
+                            <li>event.keyCode</li>
+                        </ul>
+                        <p class="subtitle">事件方法</p>
+                        <ul>
+                            <li>event.preventDefault()</li>
+                            <li>eventstopPropagation()-停止事件傳播:確保按下按鈕時，只有按鈕本身的操作被執行</li>
+                            <li>event.keyCode</li>
+                        </ul>
+                        <p class="subtitle">例子</p>
+                        <div class="example">
+                        var button = document.getElementById('myButton');<br>
+
+                        button.addEventListener('click', function(event) {<br>
+                        // 獲取觸發事件的元素<br>
+                        var targetElement = event.target;<br>
+
+                        // 獲取事件的類型<br>
+                        var eventType = event.type;<br>
+
+                        // 獲取滑鼠點擊的位置<br>
+                        var clickPosition = '點擊位置：' + event.clientX + ', ' + event.clientY;<br>
+
+                        // 在console上顯示<br>
+                        console.log('觸發事件的元素：', targetElement);<br>
+                        console.log('事件類型：', eventType);<br>
+                        console.log(clickPosition);<br>
+                        });<br>
+                        <p class="important">參數不是都叫做event，只是習慣，這樣能提高可讀性。你也可以取別的，只要符合js的變數命名規定即可</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            Event Bubble v.s. Event Capturing（不太懂）
+                        </div> 
+                        <p class="subtitle">事件傳遞過程三階段</p>
+                        <ul>
+                            <li>Capturing Phase（捕獲階段）：最外層元素項最內層元素傳遞</li>
+                            <li>Target Phase（目標階段）：事件會在目標元素上觸發</li>
+                            <li>Bubbling Phase（冒泡階段）：最內層元素項最外層元素傳遞</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            具名函數與匿名函數 
+                        </div> 
+                        
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -561,7 +713,7 @@
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
-                            當按下某按鈕，已改變該按鈕的css
+                            當按下某按鈕，以改變該按鈕的css
                         </div> 
                         <div class="subtitle">
                             方法一

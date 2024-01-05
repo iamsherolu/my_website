@@ -108,6 +108,13 @@
     background-color: blanchedalmond;
     color: #9F4D95;
 }
+.js_layout{
+    display: none;
+    width: 100%;
+    max-width: 300px;
+    margin:0px 0px 20px;
+}
+
 
 /* container */
 .container{
@@ -129,7 +136,7 @@
     background-color:#FAF4FF;
     padding: 20px;
     margin: 30px auto;
-
+    word-wrap:break-word;
 }
 .title{
     font-size: 25px;
@@ -168,12 +175,20 @@
 }
 .notes_menu_btn{
     padding: 10px;
-    width: 200px;
+    width: 300px;
     background-color: white;
 }
 .notes_menu_btn.clicked {
     background-color: #D2E9FF; 
 }
+.js_btn{
+    cursor: pointer;
+    background-color: white;
+}
+.js_btn:hover{
+    background-color: 	#FFF8D7;
+}
+
 .example{
     background-color: white;
     border-radius: 15px;
@@ -181,6 +196,13 @@
     width: 100%;
     max-width: 800px;
     margin: 10px auto 30px;
+}
+.example span{
+    background-color:white;
+    color:	#AD5A5A;
+}
+.example>p{
+    background-color: white;
 }
 
 /* footer */
