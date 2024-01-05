@@ -50,13 +50,10 @@
         .notes_menu_layout{
             position: fixed;
             top:0%;
-            margin: 0px auto;
+            /* margin: 0px auto; */
             background-color: white;
             max-width: 1000px;
             width: 100%;
-        }
-        .js_layout{
-            margin: 0px auto 20px;
         }
         .notes{
             margin-top: 150px;
@@ -108,19 +105,7 @@
             <div class="notes_menu_btn" onclick="showDiv('_design');changeBtn_color('btn_design')" id="btn_design">前端架構與設計</div>
             <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool')" id="btn_tool">前端工具筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss')" id="btn_htmlcss">HTML/CSS筆記</div>
-            <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js');show_js_layout()" id="btn_js">
-                <span style="vertical-align: top;">JavaScript筆記</span>
-                <span class="material-symbols-outlined" id="arrow_more">
-                    expand_more
-                </span>
-            </div>
-            <!-- 顯示按下javascript按鈕時，會跑出的其他按鈕 -->
-            <div class="js_layout" id="js_layout">
-                <div class="js_btn">JavaScript基礎語法和觀念</div>
-                <div class="js_btn" onclick="location.href='notes.html#js_dom'">JavaScript HTML DOM</div>
-                <div class="js_btn">JavaScript其他筆記</div>
-            </div>
-
+            <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js')"id="btn_js">JavaScript筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation')" id="btn_animation">動畫筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue')" id="btn_vue">vue筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other')" id="btn_other">其他</div>
