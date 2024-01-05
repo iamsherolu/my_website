@@ -29,13 +29,6 @@
 
 
         @media (max-width:768px) {
-        .nav_btn:not(:first-child){
-            display: none;
-            }
-        .special{
-            position: absolute;
-            left: -9999px;
-            }
         .container-fluid{
             grid-template-columns: auto;
             grid-row: 2;
@@ -56,11 +49,20 @@
             width: 100%;
         }
         .notes{
-            margin-top: 150px;
+            margin-top: 200px;
             padding-left: 0;
         }
         }
-        @media (min-width:769px) {
+        @media (max-width:849px) {
+            .nav_btn:not(:first-child){
+            display: none;
+            }
+        .special{
+            position: absolute;
+            left: -9999px;
+            }
+        }
+        @media (min-width:850px) {
             .menu_icon{
             display: none;
         }
@@ -351,21 +353,20 @@
                         <p class="subtitle">可否重複宣告？</p>
                         <ul>
                             <li>
-                                let和const不可以重複宣告，不然會有SyntaxError（其中，let可以重新賦值，但是const不行）
-                                <div class="example">
-                                    <span class="important">何謂賦值？</span>
-                                    <br>
-                                    ex. <br>
-                                    const student={name:"橘子"};<br>
-                                    user.name="柚子";
-                                    console.log(user);//會印出柚子
-                                </div>
-                                
+                                let和const不可以重複宣告，不然會有SyntaxError（其中，let可以重新賦值，但是const不行）        
                             </li>
                             <li>
                                 var可以重複宣告
                             </li>
                         </ul>
+                        <div class="example">
+                            <span class="important">何謂賦值？</span>
+                            <br>
+                            ex. <br>
+                            const student={name:"橘子"};<br>
+                            user.name="柚子";
+                            console.log(user);//會印出柚子
+                        </div>
                         <p class="subtitle">使用前是否要先宣告？（也就是宣告時就要給值了嗎？）</p>
                         <ul>
                             <li>
@@ -418,6 +419,7 @@
                         <p class="subtitle">null===undefined，return false</p>
                     </div>
                 </div>
+
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -433,6 +435,7 @@
                         ex.222==="222"，回傳的答案會是“false”
                     </div>
                 </div>
+
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -483,6 +486,7 @@
                     
                     </div>
                 </div>
+
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -491,6 +495,7 @@
                     
                     </div>
                 </div>
+
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -499,6 +504,7 @@
                     
                     </div>
                 </div>
+
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -529,6 +535,7 @@
                     </ul>
                     </div>
                 </div>
+
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -537,7 +544,8 @@
                     
                     </div>
                 </div>
-                <div class="notes_layout" id="js_dom">
+
+                <div class="notes_layout">
                     <div class="content">
                         <div class="title">
                             什麼是JavaScript html DOM EventListener？
@@ -553,6 +561,7 @@
                         包含：EventListener()、Event Object、Event Bubble v.s. Event Capturing、具名函數與匿名函數
                     </div>
                 </div>
+
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -583,7 +592,6 @@
                             // 使用addEventListener()添加點擊事件監聽器，並設置捕獲階段為true<br>
                             button.addEventListener('click', handleClick, true);
                         </div>
-
                         <p class="subtitle">removeEventListener()</p>
                         <p class="important">element.removeEventListener(event,listener[,useCapture];</p>
                         <ul>
@@ -613,113 +621,118 @@
                             });
 
                         </div>
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
-                            什麼是Event Object？
-                        </div> 
-                        <p class="important">element.addEventListener(event,function（event）);</p>
-                        <p class="subtitle">意涵</p>
-                        所有跟這個event有關的屬性，都會聚集在這個event object裡，作為回調函數的「參數」傳遞給事件處理器。
-                        <br>
-                        白話文就是：我要處理「誰」，然後這個對象以及他的相關資訊，都存在這個event object裡面！
-                        <p class="subtitle">事件屬性</p>
-                        例如：
-                        <ul>
-                            <li>event.type：click、keydown...</li>
-                            <li>event.target</li>
-                            <li>event.keyCode</li>
-                        </ul>
-                        <p class="subtitle">事件方法</p>
-                        <ul>
-                            <li>event.preventDefault()</li>
-                            <li>eventstopPropagation()-停止事件傳播:確保按下按鈕時，只有按鈕本身的操作被執行</li>
-                            <li>event.keyCode</li>
-                        </ul>
-                        <p class="subtitle">例子</p>
-                        <div class="example">
-                        var button = document.getElementById('myButton');<br>
 
-                        button.addEventListener('click', function(event) {<br>
-                        // 獲取觸發事件的元素<br>
-                        var targetElement = event.target;<br>
+               
 
-                        // 獲取事件的類型<br>
-                        var eventType = event.type;<br>
 
-                        // 獲取滑鼠點擊的位置<br>
-                        var clickPosition = '點擊位置：' + event.clientX + ', ' + event.clientY;<br>
-
-                        // 在console上顯示<br>
-                        console.log('觸發事件的元素：', targetElement);<br>
-                        console.log('事件類型：', eventType);<br>
-                        console.log(clickPosition);<br>
-                        });<br>
-                        <p class="important">參數不是都叫做event，只是習慣，這樣能提高可讀性。你也可以取別的，只要符合js的變數命名規定即可</p>
+                        <div class="notes_layout">
+                            <div class="content">
+                                <div class="title">
+                                    什麼是Event Object？
+                                </div> 
+                                <p class="important">element.addEventListener(event,function（event）);</p>
+                                <p class="subtitle">意涵</p>
+                                所有跟這個event有關的屬性，都會聚集在這個event object裡，作為回調函數的「參數」傳遞給事件處理器。
+                                <br>
+                                白話文就是：我要處理「誰」，然後這個對象以及他的相關資訊，都存在這個event object裡面！
+                                <p class="subtitle">事件屬性</p>
+                                例如：
+                                <ul>
+                                    <li>event.type：click、keydown...</li>
+                                    <li>event.target</li>
+                                    <li>event.keyCode</li>
+                                </ul>
+                                <p class="subtitle">事件方法</p>
+                                <ul>
+                                    <li>event.preventDefault()</li>
+                                    <li>eventstopPropagation()-停止事件傳播:確保按下按鈕時，只有按鈕本身的操作被執行</li>
+                                    <li>event.keyCode</li>
+                                </ul>
+                                <p class="subtitle">例子</p>
+                                <div class="example">
+                                var button = document.getElementById('myButton');<br>
+        
+                                button.addEventListener('click', function(event) {<br>
+                                // 獲取觸發事件的元素<br>
+                                var targetElement = event.target;<br>
+        
+                                // 獲取事件的類型<br>
+                                var eventType = event.type;<br>
+        
+                                // 獲取滑鼠點擊的位置<br>
+                                var clickPosition = '點擊位置：' + event.clientX + ', ' + event.clientY;<br>
+        
+                                // 在console上顯示<br>
+                                console.log('觸發事件的元素：', targetElement);<br>
+                                console.log('事件類型：', eventType);<br>
+                                console.log(clickPosition);<br>
+                                });<br>
+                                <p class="important">參數不是都叫做event，只是習慣，這樣能提高可讀性。你也可以取別的，只要符合js的變數命名規定即可</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
-                            Event Bubble v.s. Event Capturing（不太懂）
-                        </div> 
-                        <p class="subtitle">事件傳遞過程三階段</p>
-                        <ul>
-                            <li>Capturing Phase（捕獲階段）：最外層元素項最內層元素傳遞</li>
-                            <li>Target Phase（目標階段）：事件會在目標元素上觸發</li>
-                            <li>Bubbling Phase（冒泡階段）：最內層元素項最外層元素傳遞</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
-                            具名函數與匿名函數 
-                        </div> 
-                        
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
-                            fetch時發生CORS怎麼辦！！！（還沒有弄懂）
-                        </div> 
-                        <p class="subtitle">什麼是CORS（跨來源資源共用）？</p>
-                        就是請求對象和來源對象不同的時候，HTTP請求受到限制！
-
-                        <p class="subtitle">同源政策：同源與非同源？</p>
-
-                        <p class="subtitle">該如何解決CORS?</p>
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
-                            當按下某按鈕，以改變該按鈕的css
-                        </div> 
-                        <div class="subtitle">
-                            方法一
+                        <div class="notes_layout">
+                            <div class="content">
+                                <div class="title">
+                                    Event Bubble v.s. Event Capturing（不太懂）
+                                </div> 
+                                <p class="subtitle">事件傳遞過程三階段</p>
+                                <ul>
+                                    <li>Capturing Phase（捕獲階段）：最外層元素項最內層元素傳遞</li>
+                                    <li>Target Phase（目標階段）：事件會在目標元素上觸發</li>
+                                    <li>Bubbling Phase（冒泡階段）：最內層元素項最外層元素傳遞</li>
+                                </ul>
+                            </div>
                         </div>
-                        
-                        <div class="example">
-                            const btn = document.getElementById('btn_btn');<br>
-                                if (btn) {<br>
-                                    btn.style.display = 'none';<br>
-                                }<br>
+                        <div class="notes_layout">
+                            <div class="content">
+                                <div class="title">
+                                    具名函數與匿名函數 
+                                </div> 
+                                
+                            </div>
                         </div>
-                        <div class="subtitle">
-                            方法二
+                        <div class="notes_layout">
+                            <div class="content">
+                                <div class="title">
+                                    fetch時發生CORS怎麼辦！！！（還沒有弄懂）
+                                </div> 
+                                <p class="subtitle">什麼是CORS（跨來源資源共用）？</p>
+                                就是請求對象和來源對象不同的時候，HTTP請求受到限制！
+        
+                                <p class="subtitle">同源政策：同源與非同源？</p>
+        
+                                <p class="subtitle">該如何解決CORS?</p>
+                            </div>
                         </div>
-                        
-                        <div class="example">
-                            const overlay_btn = document.getElementById('show_menu_overlay');<br>
-                            overlay_btn.addEventListener("click",function(){ <br>
-                                btn.style.display="none"; <br>
-                            }) <br>
+                        <div class="notes_layout">
+                            <div class="content">
+                                <div class="title">
+                                    當按下某按鈕，以改變該按鈕的css
+                                </div> 
+                                <div class="subtitle">
+                                    方法一
+                                </div>
+                                
+                                <div class="example">
+                                    const btn = document.getElementById('btn_btn');<br>
+                                        if (btn) {<br>
+                                            btn.style.display = 'none';<br>
+                                        }<br>
+                                </div>
+                                <div class="subtitle">
+                                    方法二
+                                </div>
+                                
+                                <div class="example">
+                                    const overlay_btn = document.getElementById('show_menu_overlay');<br>
+                                    overlay_btn.addEventListener("click",function(){ <br>
+                                        btn.style.display="none"; <br>
+                                    }) <br>
+                                </div>
+                            </div>
                         </div>
+        
                     </div>
                 </div>
             </div>
@@ -781,7 +794,7 @@
                                 </li>
                             </ul>
                             <p class="subtitle">JavaScript部分</p>
-                            <div class="example">
+                            <!-- <div class="example">
                                 function scrollToSection(id_name) {
                                     <br>
                                     // 滾動到相應的位置
@@ -797,7 +810,7 @@
                                         overlay.style.display = 'none';<br>
                                     }<br>
                                 }
-                            </div>
+                            </div> -->
                     </div>
                 </div>
             </div>

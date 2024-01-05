@@ -125,12 +125,11 @@
 }
 .notes_layout{
     width: 90%;
-    max-width: 1000px;
+    max-width: 1200px;
     border-radius: 20px;
     background-color:#FAF4FF;
     padding: 20px;
     margin: 30px auto;
-    /* word-wrap:break-word; */
 }
 .title{
     font-size: 25px;
@@ -145,6 +144,7 @@
 }
 .content p{
     background-color:#FAF4FF;
+    word-break: break-all;
     
 }
 .important{
