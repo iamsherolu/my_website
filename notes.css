@@ -13,7 +13,7 @@
 /* 導覽列 */
 .topnav h2{
     color: 	#6C3365;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Amatic SC', sans-serif;
     margin: 20px 25px 10px;
     cursor: pointer;
     display: inline-block;
@@ -88,25 +88,17 @@
     background-color: #D2A2CC;
 }
 #off_menu_overlay{
-    position: absolute;
-    right: 0%;
-    top: 0%;
     color: snow;
     font-family: 'Julius Sans One', sans-serif;
     background-color: #D2A2CC;
-    text-align: center;
-    border-radius: 50%;
     padding: 10px;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    text-align: right;
+
 }
 #off_menu_overlay:hover{
     background-color: blanchedalmond;
     color: #9F4D95;
+    cursor: pointer;
 }
 
 

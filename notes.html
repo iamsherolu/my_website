@@ -35,21 +35,13 @@
             grid-column: 1;
         }
         .notes_menu_btn{
-            display: inline-block;
             width: 100%;
-            max-width: 200px;
             text-align: center;
         }
         .notes_menu_layout{
-            position: fixed;
-            top:0%;
-            margin: 0px auto;
-            background-color: white;
-            max-width: 1000px;
-            width: 100%;
+            display: none;
         }
         .notes{
-            margin-top: 200px;
             padding-left: 0;
         }
         }
@@ -74,28 +66,26 @@
 <body>
     <!-- 導覽列 -->
     <div class="topnav fixed-top">
-        <div class="nav_btn special" onclick="location.href='index.html#about'">about</div>
-        <div class="nav_btn" onclick="location.href='index.html#experience'">experience</div>
-        <div class="nav_btn" onclick="location.href='index.html#skill'">skill</div>
-        <h2 onclick="location.href='index.html'">HJL</h2>
-        <div class="nav_btn" onclick="location.href='index.html#works'">works</div>
-        <div class="nav_btn" onclick="location.href='notes.html'">notes</div>
-        <div class="nav_btn" onclick="location.href='index.html#contact'">contact</div>
+        <h2 onclick="location.href='notes.html'">HJL's notes</h2>
         <div class="menu_icon" onclick="show_menu_overlay()">menu</div>
     </div>
-
         <!-- menu overlay -->
         <div id="show_menu_overlay">
             <div class="menu_overlay_layout">
-                <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">close</div>
+                <div class="off_menu_overlay" id="off_menu_overlay" onclick="off_menu_overlay()">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </div>
                 <div class="menu_btns">
-                    <div class="menu_btn" onclick="location.href='index.html'">homepage</div>
-                    <div class="menu_btn" onclick="scrollToSection('about')">about</div>
-                    <div class="menu_btn" onclick="scrollToSection('experience')">experience</div>
-                    <div class="menu_btn" onclick="scrollToSection('skill')">skill</div>
-                    <div class="menu_btn" onclick="scrollToSection('works')">works</div>
-                    <div class="menu_btn" onclick="location.href='notes.html'">notes</div>
-                    <div class="menu_btn" onclick="scrollToSection('contact')">contact</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_all');changeBtn_color('btn_all');close_overlay()" id="menu_all">全部筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_design');changeBtn_color('btn_design');close_overlay()" id="menu_design">前端架構與設計</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool');close_overlay()" id="menu_tool">前端工具筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss');close_overlay()" id="menu_htmlcss">HTML/CSS筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js');close_overlay()"id="menu_js">JavaScript筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation');close_overlay()" id="menu_animation">動畫筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue');close_overlay()" id="menu_vue">vue筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other');close_overlay()" id="menu_other">其他</div>
                 </div>
             </div>
         </div>
@@ -777,7 +767,7 @@
                                 到https://github.com/michalsnik/aos ，複製安裝AOS的的程式碼到“標籤head裡“和“標籤body 結尾之前“。
                             </li>
                             <li>
-                                在https://michalsnik.github.io/aos/裡，選擇你要的樣式，然後把data-aos那段複製貼上。表示單位，分數的概念，有兩個1fr則表示，我要把這個div切成1/2,1/2。如果有三個1fr則表示每一塊佔1/3，以此類推。
+                                在https://michalsnik.github.io/aos/裡，選擇你要的樣式，然後把data-aos那段複製貼上。
                             </li>
                         </ol>
                     </div>
