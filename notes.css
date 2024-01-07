@@ -75,6 +75,11 @@
     display: grid;
     position: relative;
 }
+.menu_btns{
+    overflow-y: auto; /* 使用 auto 讓滾輪僅在內容過長時顯示 */
+    padding-right: 17px; /* 調整滾輪寬度 */
+    box-sizing: content-box;
+}
 .menu_btn{
     padding: 20px;
     font-size: 20px;
@@ -100,7 +105,6 @@
     color: #9F4D95;
     cursor: pointer;
 }
-
 
 /* container */
 .container{
