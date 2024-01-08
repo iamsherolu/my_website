@@ -78,14 +78,15 @@
                     </span>
                 </div>
                 <div class="menu_btns">
-                    <div class="notes_menu_btn" onclick="showDiv('_all');changeBtn_color('btn_all');close_overlay()" id="menu_all">全部筆記</div>
-                    <div class="notes_menu_btn" onclick="showDiv('_design');changeBtn_color('btn_design');close_overlay()" id="menu_design">前端架構與設計</div>
-                    <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool');close_overlay()" id="menu_tool">前端工具筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_all');changeBtn_color('btn_all');close_overlay()"id="menu_all">全部筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_design');changeBtn_color('btn_design');close_overlay()"id="menu_design">前端架構與設計</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool');close_overlay()"id="menu_tool">前端工具筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss');close_overlay()" id="menu_htmlcss">HTML/CSS筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js');close_overlay()"id="menu_js">JavaScript筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_jquery');changeBtn_color('btn_jquery');close_overlay()"id="menu_jquery">JQuery筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation');close_overlay()" id="menu_animation">動畫筆記</div>
-                    <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue');close_overlay()" id="menu_vue">vue筆記</div>
-                    <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other');close_overlay()" id="menu_other">其他</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue');close_overlay()"id="menu_vue">vue筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other');close_overlay()"id="menu_other">其他</div>
                 </div>
             </div>
         </div>
@@ -98,6 +99,7 @@
             <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool')" id="btn_tool">前端工具筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss')" id="btn_htmlcss">HTML/CSS筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js')"id="btn_js">JavaScript筆記</div>
+            <div class="notes_menu_btn" onclick="showDiv('_jquery');changeBtn_color('btn_jquery')"id="btn_jquery">JQuery筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation')" id="btn_animation">動畫筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue')" id="btn_vue">vue筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other')" id="btn_other">其他</div>
@@ -105,7 +107,7 @@
                 
         <div class="notes">
             <!-- 全部筆記 -->
-            <div class="div_all"></div>
+            <div id="div_all"></div>
     
             <!-- 前端架構與設計筆記 -->
             <div id="div_design" class="hidden">
@@ -412,9 +414,16 @@
                             <li>null的用意是用來宣告「空值」</li>
                             <li>DOM操作時，若DOM元素不存在：null</li>
                         </ul>
+                        <p>所以簡單來說，undefinder是指：</p>
+                        <ul>
+                            <li>宣告變數但沒有給值</li>
+                            <li>呼叫函數，但是缺少參數</li>
+                            <li>使用一個物件沒有的屬性</li>
+                        </ul>
                         <p class="subtitle">null==undefined，return true</p>
                         原因是因為：==會強制轉換資料型態！所以所以實務上不建議使用==
                         <p class="subtitle">null===undefined，return false</p>
+                        <p class="important">JavaScript是「給值」時，才決定資料型態的！</p>
                     </div>
                 </div>
 
@@ -437,10 +446,27 @@
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
-                            為什麼需要function？
+                            什麼是function？為什麼需要function？
                         </div> 
+                        <p class="subtitle">意涵</p>
+                        就是執行網頁程式動作的命令！
                         <p class="important">程式語言規則-DRY(Don't repeat youself)</p>
                         因為如果同樣的程式碼散落在不同地方，會造成一個地方要改，其他地方也要跟著改，所以就乾脆全部寫在function裡面一起處理！
+                        <p class="subtitle">內建函式</p>
+                        ex.alert()、document.write()、isNaN()、prompt("放問題","給使用者回答")
+                        <p class="subtitle">函式怎麼跑？</p>
+                        <div class="example">
+                            function greeting(text){ <br>
+                                document.write(text);<br>
+                            } <br>
+                            greeting('hello, how are you?');
+                        </div>
+                        <ol>
+                            <li>function greeting(){ }:是在告訴browser，我有一個函數長這樣喔，已經存在記憶體裡了，我要用再叫你</li>
+                            <li>'hello, how are you?'當作這個函數的「參數」</li>
+                            <li>傳參數給text變數，亦即 var text='hello, how are you?'</li>
+                            <li>執行函式：輸出text到網頁上</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -505,7 +531,52 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            array(陣列)
+                        </div> 
+                        <p class="subtitle">為什麼需要陣列？</p>
+                        不然的話，萬一你有很多小項目，那麼這些小項目都要一個一個建立變數。如果使用陣列，還能對資料隨時做新增、修改或是刪除。
+                        <p class="subtitle">建構一個陣列</p>
+                        <div class="example">
+                            var months=[1,2,3,4,5,6,7,8,9,10,11,12];<br>
+                            或是寫成<br>
+                            var months=new Array(1,2,3,4,5,6,7,8,9,10,11,12);
+                        </div>
+                        <p class="subtitle">陣列內的資料型態？</p>
+                        <p class="important">可以存放各種型別的值</p> 
+                        <p class="subtitle">索引值</p>
+                        <ul>
+                            <li>用來表示資料在陣列的哪個位置</li>
+                            <li>索引值從<span class="important">"0"</span>開始！每個元素的索引即<span class="important">位置-1</span></li>
+                            <li>以上述例子，如果我要找5月，就會是months[4]=5;</li>
+                            <li>用lenth存取長度屬性-ex.months[months.length-1]，這樣就能存取陣列中最後一個項目的值了</li>
+                            <li>在陣列前端/末端新增項目:陣列名稱.underlined()/陣列名稱.push()/或是直接使用陣列名稱[陣列名稱.length]=''去做更動</li>
+                            <li>刪除陣列中最後一個/第一個項目:陣列名稱.pop()/陣列名稱.shift()</li>
+                        </ul>
+                        <div class="example">
+                            <p>ex.有一個陣列長這樣：var x=[1,2,3,'dog','cat',3.14,true,false];</p>
+                            <ul>
+                                <li>在末端增加"hello"-x.push('hello');</li>
+                                <li>在前端加上"你好"-x.unshift('你好')</li>
+                                <li>刪除最後一個項目-x.pop();</li>
+                                <li>刪除第一個項目-x.shift();</li>
+                                <li>索引第4個-x[4]='cat';</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">條件判斷-if-else</div>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">特定條件下重複執行-while</div>
+                    </div>
+                </div>
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -536,16 +607,11 @@
                     </ul>
                     </div>
                 </div>
-
                 <div class="notes_layout">
                     <div class="content">
-                        <div class="title">
-                            array(陣列)
-                        </div> 
-                    
+                        <div class="title">do/while迴圈</div>
                     </div>
                 </div>
-
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -754,6 +820,18 @@
                 </div>
             </div>
 
+            <!-- JQuery筆記 -->
+            <div id="div_jquery" class="hidden">
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            什麼是JQuery？
+                        </div> 
+                    
+                    </div>
+                </div>
+            </div>
+
             <!-- 動畫筆記 -->
             <div id="div_animation" class="hidden">
                 <div class="notes_layout">
@@ -778,7 +856,6 @@
             <div id="div_vue" class="hidden">
                 
             </div>
-
             <!--其他筆記-->
             <div id="div_other" class="hidden">
                 <div class="notes_layout">
@@ -811,7 +888,7 @@
                                 </li>
                             </ul>
                             <p class="subtitle">JavaScript部分</p>
-                            <!-- <div class="example">
+                            <div class="example">
                                 function scrollToSection(id_name) {
                                     <br>
                                     // 滾動到相應的位置
@@ -827,7 +904,7 @@
                                         overlay.style.display = 'none';<br>
                                     }<br>
                                 }
-                            </div> -->
+                            </div>
                     </div>
                 </div>
             </div>

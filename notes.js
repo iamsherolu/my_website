@@ -14,6 +14,7 @@ function scrollToSection(sectionId) {
     }
 }
 
+//在menu按下任意按鈕，除了跳轉到對應div外，也關閉overlay
 function close_overlay(){
     overlay.style.display='none';
 }
@@ -55,7 +56,7 @@ function hideAllDivs() {
 
 showDiv('_all');
 
-
+//menu按鈕被點選之後會換顏色
 function changeBtn_color(btnId) {
     var menu_btn = document.querySelector('.notes_menu_btn.clicked');
 
