@@ -19,13 +19,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <style>
         /* 套用google font */
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+        
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Fira+Sans&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        
         @media (max-width:768px) {
         .container-fluid{
             grid-template-columns: auto;
@@ -840,15 +836,15 @@
                             <li>jQuery也是js檔案，所以附加方式就跟平常附加外部js一樣</li>
                             <li>最常見的是引用GOOGLE CDN：＜script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"＞，<span class="important">放在head中</span></li>
                         </ul>
-                        <p class="sbtitle">在網頁上加上jQuery吧！</p>
+                        <p class="subtitle">在網頁上加上jQuery吧！</p>
                         引用完之後，就可以再用一個＜script＞標籤寫$(document).ready(function){ };，也可以縮寫為：$(function()){};
                         <ul>
                             <li>$(document).ready()是jQuery的函式，會等到HTML「載完」才執行這段</li>
                             <li>原因：browser遇到JavaScript會馬上執行，這樣使用者會先看到有趣的東西，才進來載HTML</li>
                         </ul>
-                        <p class="important">引入jQuery注意事項</p>
+                        <p class="subtitle">引入jQuery注意事項</p>
                         <ul>
-                            <li>不要再引用jQuery的script下寫任何程式</li>
+                            <li>不要在引用jQuery的script下寫任何程式</li>
                             <li>js程式要放在所有css之「後」，因為應該要先載入css才去執行js</li>
                             <li>jQuery通常會有很多大括號，為了辨別，在函式最後應該標注結束位置</li>
                         </ul>
@@ -859,6 +855,40 @@
                             <li>$('#btn_jquery')，表示選取id為btn_jquery的元素</li>
                             <li>$('p')，表示選取網頁中的所有＜p＞</li>
                         </ul>
+                        <p class="subtitle">自動迴圈</p>
+                        <div class="example">
+                            ex.要隱藏id為imgimg的所有img元素<br>
+                            $('#imgimg').hide();
+                        </div>
+                        <p class="subtitle">鏈結函式</p>
+                        <div class="example">
+                            ex.假設我有一個id為a的長方形，寬為300，高為100 <br>
+                            $('#a').width(300).height(300);
+                        </div>
+                        <div class="example">
+                            ex.假設我有一個id為xy的長方形，寬為500，高為300,並且加入'hello!'的文字，還有讓他以2000毫秒淡出畫面 <br>
+                           $('#xy').width(500).height(300).text('hello!').fadeOut(2000);
+                        </div>
+                        <p class="subtitle">更改HTML元素及其內容</p>
+                        <div class="example">
+                            ex. <br>
+                            我有一個id為container的div，裡面有一個id叫做content的div，content裡面有＜h1＞哈囉＜/h1＞。 現在我想把＜h1＞改成span元素，文字改成hello!
+                            $('#content').html('＜span＞hello!＜/span＞')
+                            <p class="important">html()和text()要小心！</p>
+                            假設網頁上有5個div，執行var x=$('div').html(); <br>
+                            那麼，x存放的值就會是「第一個」div的HTML
+                        </div>
+                        <div class="example">
+                            ex. <br>
+                            我有一個id為container的div，裡面有一個id叫做content的div，content裡面有＜h1＞哈囉＜/h1＞。 現在我想把＜h1＞內的文字改成「你好！」
+                            $('#content h1').text('你好！');
+                        </div>
+                        <div class="example">
+                            ex. <br>
+                            我有一個id為container的div，裡面有一個id叫做content的div，content裡面有＜h1＞哈囉＜/h1＞。現在我想在content裡面插入＜span＞hello!＜/span＞
+                            $('#content').append('＜span＞hello!＜/span＞');
+                            <p class="important">append()是以指定區域的最後一個HTML子元素為準，在該子元素後面「插入」新的元素。這對於＜ul＞＜ol＞新增項目是一個好方法！</p>
+                        </div>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -875,24 +905,24 @@
                         <p class="important">DOM本身不是JavaScript喔！他只是讓JavaSctipt可以跟HTM做溝通，並且更改</p>
                     </div>
                 </div>
-            </div>
-            <div class="notes_layout">
-                <div class="content">
-                    <div class="title">
-                        .innerHTML和.innerText差在哪裡？
-                    </div> 
-                    <p class="subtitle">內涵</p>
-                    <ul>
-                        <li>.innerHTML：連元素都能變更</li>
-                        <li>.innerText：只能修改元素的文字內容</li>
-                    </ul>
-                    <p class="subtitle">例子-innerHTML</p>
-                    <div class="example">
-
-                    </div>
-                    <p class="subtitle">例子-innerText</p>
-                    <div class="example">
-                        
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            .innerHTML和.innerText差在哪裡？
+                        </div> 
+                        <p class="subtitle">內涵</p>
+                        <ul>
+                            <li>.innerHTML：連元素都能變更</li>
+                            <li>.innerText：只能修改元素的文字內容</li>
+                        </ul>
+                        <p class="subtitle">例子-innerHTML</p>
+                        <div class="example">
+    
+                        </div>
+                        <p class="subtitle">例子-innerText</p>
+                        <div class="example">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
@@ -919,7 +949,9 @@
     
             <!-- Vue筆記 -->
             <div id="div_vue" class="hidden">
-                
+                <div class="notes_layout">
+                    <div class="content"></div>
+                </div>
             </div>
             <!--其他筆記-->
             <div id="div_other" class="hidden">
@@ -979,7 +1011,9 @@
     
    
     <!-- footer -->
-<footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>        
-<script src="notes.js"></script>
+    <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>        
+
+    <!-- 引入外部js -->
+    <script src="notes.js"></script>
 </body>
 </html>

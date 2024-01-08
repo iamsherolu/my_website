@@ -123,17 +123,21 @@
     margin: 30px auto;
     word-break: break-all;
 }
-.title{
+.content >.title{
     font-size: 25px;
     color: #6C3365;
     padding-bottom: 10px;
     font-family: 'Abel', sans-serif;
 }
-.subtitle{
-    color: #006030;
-    font-size: 20px;
-    margin-top: 20px;
+.content>.subtitle{
+    background-color:#FFF8D7;
+    color: brown;
+    margin-top: 50px;
     font-family: 'Abel', sans-serif;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: max-content;
 }
 .content p{
     background-color:#FAF4FF;
