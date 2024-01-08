@@ -31,7 +31,7 @@
 .nav_btn{
     font-size: 15px;
     color: 	#6C3365;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Amatic SC', sans-serif;
     padding: 0px 25px 5px;
     cursor: pointer;
     display: inline-block;
@@ -69,16 +69,11 @@
     background-color: snow;
     margin: 120px auto 20px;
     color: #9F4D95;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Amatic SC', sans-serif;
     width: 90%;
     max-width: 500px;
     display: grid;
     position: relative;
-}
-.menu_btns{
-    overflow-y: auto; /* 使用 auto 讓滾輪僅在內容過長時顯示 */
-    padding-right: 17px; /* 調整滾輪寬度 */
-    box-sizing: content-box;
 }
 .menu_btn{
     padding: 20px;
@@ -94,7 +89,7 @@
 }
 #off_menu_overlay{
     color: snow;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Amatic SC', sans-serif;
     background-color: #D2A2CC;
     padding: 10px;
     text-align: right;
@@ -138,6 +133,7 @@
     color: #006030;
     font-size: 20px;
     margin-top: 20px;
+    font-family: 'Abel', sans-serif;
 }
 .content p{
     background-color:#FAF4FF;
@@ -167,9 +163,19 @@
     padding: 10px;
     width: 200px;
     background-color: white;
+    font-family: 'Abel', sans-serif;
 }
 .notes_menu_btn.clicked {
     background-color: #D2E9FF; 
+}
+button{
+    border: 1px dashed #6C3365;
+    padding: 10px;
+    background-color: snow;
+}
+button:hover{
+    color: snow;
+    background-color: #6C3365;
 }
 
 
@@ -192,7 +198,7 @@
 /* footer */
 #footer{
     padding: 8px;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Amatic SC', sans-serif;
     text-align: center;
     color: #9F4D95;
     background-color: snow;

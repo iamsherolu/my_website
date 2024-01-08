@@ -26,8 +26,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-
-
         @media (max-width:768px) {
         .container-fluid{
             grid-template-columns: auto;
@@ -83,7 +81,7 @@
                     <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool');close_overlay()"id="menu_tool">前端工具筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss');close_overlay()" id="menu_htmlcss">HTML/CSS筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js');close_overlay()"id="menu_js">JavaScript筆記</div>
-                    <div class="notes_menu_btn" onclick="showDiv('_jquery');changeBtn_color('btn_jquery');close_overlay()"id="menu_jquery">JQuery筆記</div>
+                    <div class="notes_menu_btn" onclick="showDiv('_jquery');changeBtn_color('btn_jquery');close_overlay()"id="menu_jquery">jQuery筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation');close_overlay()" id="menu_animation">動畫筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue');close_overlay()"id="menu_vue">vue筆記</div>
                     <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other');close_overlay()"id="menu_other">其他</div>
@@ -99,7 +97,7 @@
             <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool')" id="btn_tool">前端工具筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss')" id="btn_htmlcss">HTML/CSS筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js')"id="btn_js">JavaScript筆記</div>
-            <div class="notes_menu_btn" onclick="showDiv('_jquery');changeBtn_color('btn_jquery')"id="btn_jquery">JQuery筆記</div>
+            <div class="notes_menu_btn" onclick="showDiv('_jquery');changeBtn_color('btn_jquery')"id="btn_jquery">jQuery筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation')" id="btn_animation">動畫筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue')" id="btn_vue">vue筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other')" id="btn_other">其他</div>
@@ -345,6 +343,36 @@
     
             <!-- JavaScript筆記 -->
             <div id="div_js" class="hidden">
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            JavaScript是什麼？它到底在幹嘛？
+                        </div> 
+                        <p class="subtitle">意涵</p>
+                        能夠操作網頁上的 HTML 元素、處理事件、發送和接收資料等，使網站變得更加動態和有趣。
+                        <p class="subtitle">它在做什麼？</p>
+                        <ul>
+                            <li>選取網頁元素</li>
+                            <li>控制元素</li>
+                        </ul>
+                        <p class="important">而想要辨識跟修改網頁內容，就必須先知道什麼叫做DOM!</p>
+                        <p class="subtitle">JavaScript怎麼選取網頁元素？</p>
+                        <ul>
+                            <li>
+                                document.getElementById('btn');表示選取id為btn的div元素
+                            </li>
+                            <li>
+                                document.getElementsByTagName('p');表示選取網頁上所有的＜p＞
+                            </li>
+                            <li>
+                                document.getElementsByClassName('nav_btn');表示選取網頁上class為nav_btn的元素
+                            </li>
+                            <li>
+                                document.querySelectorAll('span.important');表示選取網頁上所有class為important的span元素
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
@@ -615,27 +643,6 @@
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
-                            .innerHTML和.innerText差在哪裡？
-                        </div> 
-                        <p class="subtitle">內涵</p>
-                        <ul>
-                            <li>.innerHTML：連元素都能變更</li>
-                            <li>.innerText：只能修改元素的文字內容</li>
-                        </ul>
-                        <p class="subtitle">例子-innerHTML</p>
-                        <div class="example">
-
-                        </div>
-                        <p class="subtitle">例子-innerText</p>
-                        <div class="example">
-                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="notes_layout">
-                    <div class="content">
-                        <div class="title">
                             什麼是JavaScript html DOM EventListener？
                         </div> 
                         <p class="subtitle">event</p>
@@ -825,9 +832,67 @@
                 <div class="notes_layout">
                     <div class="content">
                         <div class="title">
-                            什麼是JQuery？
+                            什麼是jQuery？
                         </div> 
-                    
+                        「JavaScript的函式庫」，jQuery可以用少少行數，完成需要大量行數的純JavaScript才做得到的事，且jQuery是最適合入門的JS函式庫。
+                        <p class="subtitle">附加方式</p>
+                        <ul>
+                            <li>jQuery也是js檔案，所以附加方式就跟平常附加外部js一樣</li>
+                            <li>最常見的是引用GOOGLE CDN：＜script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"＞，<span class="important">放在head中</span></li>
+                        </ul>
+                        <p class="sbtitle">在網頁上加上jQuery吧！</p>
+                        引用完之後，就可以再用一個＜script＞標籤寫$(document).ready(function){ };，也可以縮寫為：$(function()){};
+                        <ul>
+                            <li>$(document).ready()是jQuery的函式，會等到HTML「載完」才執行這段</li>
+                            <li>原因：browser遇到JavaScript會馬上執行，這樣使用者會先看到有趣的東西，才進來載HTML</li>
+                        </ul>
+                        <p class="important">引入jQuery注意事項</p>
+                        <ul>
+                            <li>不要再引用jQuery的script下寫任何程式</li>
+                            <li>js程式要放在所有css之「後」，因為應該要先載入css才去執行js</li>
+                            <li>jQuery通常會有很多大括號，為了辨別，在函式最後應該標注結束位置</li>
+                        </ul>
+                        <p class="subtitle">jQuery怎麼選取網頁元素？-jQuery物件</p>
+                        ex.
+                        <ul>
+                            <li>$('.btn')，表示選取class為btn的元素</li>
+                            <li>$('#btn_jquery')，表示選取id為btn_jquery的元素</li>
+                            <li>$('p')，表示選取網頁中的所有＜p＞</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="content">
+                        <div class="title">
+                            DOM(Domcument Object Model)
+                        </div> 
+                        <ul>
+                            <li>
+                                使browser記住HTML標籤、屬性還有檔案出現順序」
+                            </li>
+                            <li>使JavaScript可以跟網頁元素溝通</li>
+                        </ul> 
+                        <p class="important">DOM本身不是JavaScript喔！他只是讓JavaSctipt可以跟HTM做溝通，並且更改</p>
+                    </div>
+                </div>
+            </div>
+            <div class="notes_layout">
+                <div class="content">
+                    <div class="title">
+                        .innerHTML和.innerText差在哪裡？
+                    </div> 
+                    <p class="subtitle">內涵</p>
+                    <ul>
+                        <li>.innerHTML：連元素都能變更</li>
+                        <li>.innerText：只能修改元素的文字內容</li>
+                    </ul>
+                    <p class="subtitle">例子-innerHTML</p>
+                    <div class="example">
+
+                    </div>
+                    <p class="subtitle">例子-innerText</p>
+                    <div class="example">
+                        
                     </div>
                 </div>
             </div>
