@@ -68,4 +68,14 @@ function changeBtn_color(btnId) {
     change_color.classList.add('clicked');
 }
 
+//調整每個content裡，第一個以外的subtitle（調整與上方文字的間距）
+var contents=document.querySelectorAll('.content');
 
+contents.forEach(function(content){
+    var subtitles=content.querySelectorAll('.subtitle');
+    var i;
+
+    for(i=1;i<subtitles.length;i++){
+        subtitles[i].style.marginTop='30px';
+    }
+})
