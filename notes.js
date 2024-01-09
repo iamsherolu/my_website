@@ -80,21 +80,16 @@ contents.forEach(function(content){
     }
 })
 
-//顯示最後更新日期
-
-// 日期格式化函數
-function formatDate(date) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return date.toLocaleDateString('zh-TW', options);
-}
-
-// 取得目前日期
-const currentDate = new Date();
-
-// 使用 jQuery 更新具有 id 為 'lastUpdated' 的元素的內容
 $(document).ready(function() {
-    $('#updated').text('最後更新日期：' + formatDate(currentDate));
     $('#updated').css('paddingLeft','60px');
     $('#updated').css('color','#6C3365');
     $('#updated').css('fontFamily','Amatic SC ');
+    $('.search_icon').css('color','#6C3365');
+    $('.search_icon').css('cursor','pointer');
+
+    //當按下search icon，input box才會出現邊框
+    $('.search_icon').click(function(){
+        $('.search_layout').css('display','block');
+    })
 });
+

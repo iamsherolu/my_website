@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- jQuery v1.9.1 -->
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Animate.css v3.5.2 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" />
     <!-- AOS animation -->
@@ -50,8 +51,12 @@
         }
         @media (min-width:850px) {
             .menu_icon{
-            display: none;
-        }
+            display: none; 
+            }
+            .search_layout{
+                text-align: left;
+                padding-left: 60px;
+            }
         }
 
     </style>
@@ -61,6 +66,9 @@
     <!-- 導覽列 -->
     <div class="topnav fixed-top">
         <h2 onclick="location.href='notes.html'">HJL's notes</h2>
+        <span class="material-symbols-outlined search_icon" >
+            search
+        </span>
         <div class="menu_icon" onclick="show_menu_overlay()">menu</div>
     </div>
         <!-- menu overlay -->
@@ -98,15 +106,18 @@
             <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue');location.href='#div_vue'" id="btn_vue">vue 筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_other');changeBtn_color('btn_other');location.href='#div_other'" id="btn_other">其他</div>
         </div>
-                
         <div class="notes">
+            <div class="search_layout">
+            <input type="text" id="search_input" placeholder="請輸入關鍵字">
+            <button id="search_enter">查詢</button>
+            </div>
+            
             <!-- 全部筆記 -->
             <div id="div_all">
             </div>
     
             <!-- 前端架構與設計筆記 -->
             <div id="div_design" class="hidden">
-                <p id="updated"></p>
                 <div class="notes_layout">
                     <div class="title">
                         MVC模式
@@ -145,12 +156,10 @@
 
             <!-- 前端工具筆記 -->
             <div id="div_tool" class="hidden">
-                <p id="updated"></p>
             </div>
 
             <!-- html和css的筆記們 -->
             <div id="div_htmlcss" class="hidden">
-                <p id="updated"></p>
                 <div class="notes_layout">
                     <div class="title">
                         當文字與google font icon放在一起時，兩者沒有在同個高度怎麼辦？
@@ -350,7 +359,6 @@
     
             <!-- JavaScript筆記 -->
             <div id="div_js" class="hidden">
-                <p id="updated"></p>
                 <div class="notes_layout">
                     <div class="title">
                         JavaScript是什麼？它到底在幹嘛？
@@ -831,7 +839,6 @@
 
             <!-- JQuery筆記 -->
             <div id="div_jquery" class="hidden">
-                <p id="updated"></p>
                 <div class="notes_layout">
                     <div class="title">
                         什麼是jQuery？
@@ -1034,7 +1041,6 @@
 
             <!-- 動畫筆記 -->
             <div id="div_animation" class="hidden">
-                <p id="updated"></p>
                 <div class="notes_layout">
                     <div class="title">
                         隨滑鼠滑到哪裡，div跟著動起來！
@@ -1055,7 +1061,6 @@
     
             <!-- Vue筆記 -->
             <div id="div_vue" class="hidden">
-                <p id="updated"></p>
                 <div class="notes_layout">
                     <div class="content"></div>
                 </div>
@@ -1063,7 +1068,6 @@
 
             <!--其他筆記-->
             <div id="div_other" class="hidden">
-                <p id="updated"></p>
                 <div class="notes_layout">
                     <div class="title">
                             怎麼做按按鈕跳出相對應div，其他隱藏？
