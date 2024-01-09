@@ -79,3 +79,22 @@ contents.forEach(function(content){
         subtitles[i].style.marginTop='30px';
     }
 })
+
+//顯示最後更新日期
+
+// 日期格式化函數
+function formatDate(date) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString('zh-TW', options);
+}
+
+// 取得目前日期
+const currentDate = new Date();
+
+// 使用 jQuery 更新具有 id 為 'lastUpdated' 的元素的內容
+$(document).ready(function() {
+    $('#updated').text('最後更新日期：' + formatDate(currentDate));
+    $('#updated').css('paddingLeft','60px');
+    $('#updated').css('color','#6C3365');
+    $('#updated').css('fontFamily','Amatic SC ');
+});
