@@ -977,6 +977,35 @@
                 </div>
                 <div class="notes_layout">
                     <div class="title">
+                        當我想控制相同元素，但是除了第一個出現的，該怎麼做？
+                    </div> 
+                    <div class="content">
+                        ex. <br>
+                        假設我有一個叫做content的class，裡面有很多個叫做subtitle的class，我希望第二個以後出現的subtitle，可以調整跟上方文字的距離。
+                        <div class="example">
+                            var contents=document.querySelectorAll('.content'); <br>
+                            contents.forEach(function(content){<br>
+                                var subtitles=content.querySelectorAll('.subtitle');<br>
+                                var i;<br><br>
+
+                                for(i=1;i＜subtitles.length;i++){<br>
+                                    subtitles[i].style.marginTop='30px';<br>
+                                }<br>
+                            })
+                        </div>
+                        也就是說：
+                        <ol>
+                            <li>
+                                先去找所有程式碼裡面，名字叫做conent的class
+                            </li>
+                            <li>利用forEach遍歷整個程式碼，找到所有content裡面，名字叫做subtitle的class們</li>
+                            <li>再利用for迴圈，寫你要的規則</li>
+                            <li>最後，利用索引.style去調整css的部分，<span class="important">注意marginTop寫法！就不要中間那槓了，改成第一個字母大寫</span></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
                             overlay選單，正確連到指定位置
                         </div>
                     <div class="content">

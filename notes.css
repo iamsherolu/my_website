@@ -134,7 +134,7 @@
 .title{
     font-size: 25px;
     background-color: #6C3365;
-    font-family: 'Amatic SC', sans-serif;
+    font-family: 'Amatic SC', 'M PLUS Rounded 1c';
     border-radius: 20px 20px 0 0;
     color: snow;
     padding: 10px;
@@ -167,7 +167,7 @@
     text-align: center;
     position: fixed;
     left: 0%;
-    top: 20%;
+    top: 15%;
     margin: 10px auto;
 }
 .notes_menu_btn:hover{
@@ -194,8 +194,6 @@ button:hover{
     color: snow;
     background-color: #6C3365;
 }
-
-
 .example{
     background-color: white;
     border-radius: 15px;
