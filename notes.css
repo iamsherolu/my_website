@@ -70,10 +70,15 @@
     margin: 120px auto 20px;
     color: #9F4D95;
     font-family: 'Amatic SC', sans-serif;
-    width: 90%;
+    width: 80%;
     max-width: 500px;
     display: grid;
     position: relative;
+    border: 1px solid #6C3365;
+    border-radius: 15px;
+}
+.menu_btns{
+    border-radius: 15px;
 }
 .menu_btn{
     padding: 20px;
@@ -93,12 +98,15 @@
     background-color: #D2A2CC;
     padding: 10px;
     text-align: right;
-
+    border-radius: 15px 15px 0 0 ;
 }
 #off_menu_overlay:hover{
-    background-color: blanchedalmond;
+    background-color: #FFF8D7;
     color: #9F4D95;
     cursor: pointer;
+}
+#menu_other{
+    border-radius:0 0 15px 15px  ;
 }
 
 /* container */
@@ -119,20 +127,25 @@
     max-width: 1200px;
     border-radius: 20px;
     background-color:#FAF4FF;
-    padding: 20px;
     margin: 30px auto;
     word-break: break-all;
+    border: 1px solid #6C3365;
 }
-.content >.title{
+.title{
     font-size: 25px;
-    color: #6C3365;
-    padding-bottom: 10px;
-    font-family: 'Abel', sans-serif;
+    background-color: #6C3365;
+    font-family: 'Amatic SC', sans-serif;
+    border-radius: 20px 20px 0 0;
+    color: snow;
+    padding: 10px;
+}
+.content{
+    padding: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .content>.subtitle{
     background-color:#FFF8D7;
     color: brown;
-    margin-top: 50px;
     font-family: 'Abel', sans-serif;
     padding: 5px 10px;
     border-radius: 10px;
@@ -146,7 +159,6 @@
 .important{
     color: red;
     font-size: 18px;
-    margin: 30px 0px;
 }
 .notes_menu_layout{
     padding-top: 100px;
@@ -167,10 +179,11 @@
     padding: 10px;
     width: 200px;
     background-color: white;
-    font-family: 'Abel', sans-serif;
+    font-family: 'Amatic SC','M PLUS Rounded 1c';
 }
 .notes_menu_btn.clicked {
-    background-color: #D2E9FF; 
+    background-color: 	#FFF8D7; 
+    color: #AD5A5A;
 }
 button{
     border: 1px dashed #6C3365;
