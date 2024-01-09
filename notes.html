@@ -788,14 +788,6 @@
                 </div>
                 <div class="notes_layout">
                     <div class="title">
-                        具名函數與匿名函數 
-                    </div> 
-                    <div class="content">
-                        
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="title">
                         fetch時發生CORS怎麼辦！！！（還沒有弄懂）
                     </div> 
                     <div class="content">
@@ -815,19 +807,17 @@
                         <div class="subtitle">
                             方法一
                         </div>
-                        
                         <div class="example">
-                            const btn = document.getElementById('btn_btn');<br>
+                            var btn = document.getElementById('btn_btn');<br>
                                 if (btn) {<br>
                                     btn.style.display = 'none';<br>
                                 }<br>
                         </div>
                         <div class="subtitle">
                             方法二
-                        </div>
-                        
+                        </div>    
                         <div class="example">
-                            const overlay_btn = document.getElementById('show_menu_overlay');<br>
+                            var overlay_btn = document.getElementById('show_menu_overlay');<br>
                             overlay_btn.addEventListener("click",function(){ <br>
                                 btn.style.display="none"; <br>
                             }) <br>
@@ -909,12 +899,85 @@
                             $('#content').append('＜span＞hello!＜/span＞');
                             <p class="important">append()是以指定區域的最後一個HTML子元素為準，在該子元素後面「插入」新的元素。這對於＜ul＞＜ol＞新增項目是一個好方法！</p>
                         </div>
+                        <p class="important">重點整理:</p>
+                        <ul>
+                            <li>.html()是更改html標籤</li>
+                            <li>.text()是更改內容</li>
+                            <li>.append()是在指定元素內插入最後一個子元素</li>
+                            <li>.prepend()是在指定元素內第一個位置插入新的子元素</li>
+                            <li>.before()是指在選擇元素前面插入</li>
+                            <li>.after()是指在選擇元素後面插入</li>
+                            <li>.remove()移除指定的元素</li>
+                            <li>.replaceWith()把指定元素換成其他元素</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="notes_layout">
                     <div class="title">設定標籤屬性</div>
                     <div class="content">
+                        <div class="subtitle">addClass()</div>
+                        即加入class到元素內 
+                        <div class="example">
+                            ex.我想加入一個叫做btn的class到＜button＞內 <br>
+                            $('button').addClass('btn');
+                        </div>
+                        <div class="example">
+                            ex.我想加入一個叫做worklink的class到＜a＞內 <br>
+                            $('a[href^="http://]"').addClass('worklink');
+                        </div>
+                        <div class="subtitle">removeClass()</div>
+                        即移除元素內的class <br>
                         
+                        <div class="example">
+                            ex.我想移除id為nav_1的div中的btn這個class <br>
+                            $('#nav_1').removeClass('btn');                        
+                        </div>
+                        <p class="important">
+                            addClass()和removeClass()放class名稱時，不需要在名稱前面加上"."
+                        </p>
+                        <div class="subtitle">toggleClass()</div>
+                        即切換 <br>
+                        <div class="example">
+                            ex.有一個按鈕(class為btn)，還沒按的時候，背景為灰色，字為黑色;按下去後，背景為黑色，字為白色 <br>
+                            .btn{ <br>
+                                color:black; <br>
+                                background-color:gray;
+                            } <br><br>
+                            .btn .active{ <br>
+                                color:white; <br>
+                                background-color:black; <br>
+                            }
+                            <ul>
+                                <li>先在css設定你一開始btn的顏色）</li>
+                                <li> 接著在設定一個class代表按下去這個狀況的</li>
+                            </ul>
+                        </div>
+                        <div class="example">
+                            $('.btn').click(function(){ <br>
+                                $(this).$(this).toggleClass('active'); <br>
+                            })
+                        </div>
+                        <div class="subtitle">css()</div>
+                        <div class="example">
+                            ex.我想把叫做aside_menu的class，都加上黑色邊框 <br>
+                            $('.aside_menu').css('border','1px soild black');
+                            <p class="important">所以，要調整css的屬性，就是屬性在前，直放在後，都用引號括起來</p>
+                        </div>
+                        <div class="example">
+                            ex.一次改很多css屬性，我想把叫做aside_menu的class改成背景為黃色、字為咖啡色、加上邊框2px黑色實線，並以物件實字寫：<br>
+                            $('.aside_menu').css({ <br>
+                                'background-color' :'yellow'; <br>
+                                'color':'brown'; br
+                                'border':'2px soild black';<br>
+                            })
+                        </div>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">不具名函式</div>
+                    <div class="content">
+                        <div class="subtitle">意涵</div>
+                        它是沒有名字的函式，所以你沒有辦法呼叫它。它是被當成「參數」要傳遞給其他函式用的！
                     </div>
                 </div>
                 <div class="notes_layout">
