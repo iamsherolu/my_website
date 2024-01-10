@@ -80,16 +80,42 @@ contents.forEach(function(content){
     }
 })
 
+
 $(document).ready(function() {
-    $('#updated').css('paddingLeft','60px');
-    $('#updated').css('color','#6C3365');
-    $('#updated').css('fontFamily','Amatic SC ');
     $('.search_icon').css('color','#6C3365');
     $('.search_icon').css('cursor','pointer');
-
-    //當按下search icon，input box才會出現邊框
+    $('.search_symbol').css('color','#6C3365');
+    $('.search_symbol').css('cursor','pointer');
+    
+    //建立搜尋功能
     $('.search_icon').click(function(){
-        $('.search_layout').css('display','block');
-    })
+        var searchInput = $('.search_input').val().toLowerCase();
+    
+        $('.notes_layout').each(function(){
+            var notesContent = $(this).text().toLowerCase();
+    
+            if(notesContent.includes(searchInput)){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        });
+    });
+    
+    $('.search_symbol').click(function(){
+        var searchInput = $('.keywords').val().toLowerCase();
+    
+        $('.notes_layout').each(function(){
+            var notesContent = $(this).text().toLowerCase();
+    
+            if(notesContent.includes(searchInput)){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }
+        });
+    });    
 });
 

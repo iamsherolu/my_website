@@ -39,6 +39,14 @@
         .notes{
             padding-left: 0;
         }
+        .search_layout{
+                display: block;
+            }
+        }
+        @media (min-width:769px) {
+            .search_layout{
+                display: none;
+            }
         }
         @media (max-width:849px) {
             .nav_btn:not(:first-child){
@@ -53,10 +61,6 @@
             .menu_icon{
             display: none; 
             }
-            .search_layout{
-                text-align: left;
-                padding-left: 60px;
-            }
         }
 
     </style>
@@ -66,9 +70,6 @@
     <!-- 導覽列 -->
     <div class="topnav fixed-top">
         <h2 onclick="location.href='notes.html'">HJL's notes</h2>
-        <span class="material-symbols-outlined search_icon" >
-            search
-        </span>
         <div class="menu_icon" onclick="show_menu_overlay()">menu</div>
     </div>
         <!-- menu overlay -->
@@ -96,6 +97,10 @@
     <!-- 筆記主體：側邊欄menu與筆記內容 -->
     <div class="container-fluid">
         <div class="notes_menu_layout">
+            <input type="text" class="search_input" placeholder="請輸入關鍵字">
+            <span class="material-symbols-outlined search_icon" >
+                    search
+            </span>
             <div class="notes_menu_btn" onclick="showDiv('_all');changeBtn_color('btn_all');location.href='#div_all'" id="btn_all">全部筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_design');changeBtn_color('btn_design');location.href='#div_design'" id="btn_design">前端架構與設計</div>
             <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool')" id="btn_tool">前端工具筆記</div>
@@ -108,8 +113,10 @@
         </div>
         <div class="notes">
             <div class="search_layout">
-            <input type="text" id="search_input" placeholder="請輸入關鍵字">
-            <button id="search_enter">查詢</button>
+                <input type="text" class="keywords" placeholder="請輸入關鍵字">
+                <span class="material-symbols-outlined search_symbol" >
+                        search
+                </span>
             </div>
             
             <!-- 全部筆記 -->
