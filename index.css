@@ -548,11 +548,11 @@
 }
 .skill_item{
     border-radius: 20px;
-    margin: 10px;
-    border: 1px solid brown;
+    margin: 20px;
+    box-shadow: 5px 5px 3px gray;
 }
 .skill_subtitle{
-    background-color: blanchedalmond;
+    background-color: #F1E1FF;
     padding: 15px;
     font-weight: 600;
     text-align: center;
@@ -563,7 +563,26 @@
     padding: 10px 15px 10px 0px;
     border-radius: 0 0 20px 20px ;
 }
-
+.notes_link{
+    width: 100%;
+    max-width: 500px;
+    margin: 0px auto;
+}
+#dot_13{
+    width: 150px;
+    height: 150px;
+    background-color:#F1E1FF;
+    border-radius:50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+}
+#dot_13:hover{
+    cursor: pointer;
+    background-color: #460046;
+    color: snow;
+}
 
 /* section-works */
 #works{
