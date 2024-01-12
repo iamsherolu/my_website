@@ -1,3 +1,17 @@
+//彈跳出div
+document.querySelectorAll('.popup').forEach(function (popup) {
+    popup.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+});
+
+document.addEventListener('click', function () {
+    document.querySelectorAll('.popup').forEach(function (popup) {
+        popup.style.display = 'none';
+    });
+});
+
+
 var overlay = document.getElementById('show_menu_overlay');
 
 function show_menu_overlay(){
@@ -53,10 +67,9 @@ function hideAllDivs() {
         div.style.display = 'none';
     });
 }
-
 showDiv('_all');
 
-//menu按鈕被點選之後會換顏色
+
 function changeBtn_color(btnId) {
     var menu_btn = document.querySelector('.notes_menu_btn.clicked');
 
@@ -67,6 +80,17 @@ function changeBtn_color(btnId) {
     var change_color = document.getElementById(btnId);
     change_color.classList.add('clicked');
 }
+
+// 設置默認按鈕狀態
+changeBtn_color('btn_all');
+
+// 添加點擊事件，調用 changeBtn_color 函數
+document.querySelectorAll('.notes_menu_btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        var btnId = btn.getAttribute('id');
+        changeBtn_color(btnId);
+    });
+});
 
 //調整每個content裡，第一個以外的subtitle（調整與上方文字的間距）
 var contents=document.querySelectorAll('.content');

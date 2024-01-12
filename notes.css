@@ -149,6 +149,25 @@ input:focus{
     grid-template-columns: 20% 80%;
 }
 
+/* 側邊欄按鈕選單 */
+.popup_layout{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#btn_design:hover .popup_layout:hover{
+    display: block;
+}
+.popup_container{
+    position: relative;
+}
+
 /* notes */
 .notes{
     margin-top: 10px;
@@ -209,8 +228,11 @@ input:focus{
     background-color: #FAF4FF;
     padding-left: 20px;
     cursor: pointer;
+    color: #6C3365;
+    border-radius: 0px 20px 20px 0px;
 }
 .notes_menu_btn{
+    position: relative;
     padding: 10px;
     width: 200px;
     background-color: white;
@@ -219,7 +241,28 @@ input:focus{
 .notes_menu_btn.clicked {
     background-color: 	#FFF8D7; 
     color: #AD5A5A;
+    border-radius: 0px 20px 20px 0px;
 }
+/* .dropdown_layout {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown_layout:hover .dropdown-content {
+    display: block;
+} */
+
 button{
     border: 1px dashed #6C3365;
     padding: 10px;
