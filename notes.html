@@ -106,23 +106,6 @@
             <div class="notes_menu_btn" onclick="showDiv('_design');changeBtn_color('btn_design')" id="btn_design">前端架構與設計</div>
             <div class="notes_menu_btn" onclick="showDiv('_tool');changeBtn_color('btn_tool')" id="btn_tool">前端工具筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_htmlcss');changeBtn_color('btn_htmlcss');location.href='#div_htmlcss'" id="btn_htmlcss">HTML/CSS筆記</div>
-
-            <!-- <div class="dropdown_layout">
-                <div class="notes_menu_btn" onclick="showDiv('_js');changeBtn_color('btn_js');location.href='#div_js'"id="btn_js">JavaScript 筆記</div>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div>
-              <div class="dropdown_layout">
-                <button class="notes_menu_btn">Dropdown</button>
-                <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div>   -->
             <div class="notes_menu_btn" onclick="showDiv('_jquery');changeBtn_color('btn_jquery');location.href='#div_jquery'"id="btn_jquery">jQuery 筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_animation');changeBtn_color('btn_animation');location.href='#div_animation'" id="btn_animation">動畫筆記</div>
             <div class="notes_menu_btn" onclick="showDiv('_vue');changeBtn_color('btn_vue');location.href='#div_vue'" id="btn_vue">vue 筆記</div>
@@ -196,11 +179,98 @@
                 </div>
                 <div class="notes_layout">
                     <div class="title">
-                        ＜script＞要放哪裡？
+                        DOMContentLoaded
                     </div> 
                     <div class="content">
-                        <p class="important">ANS:放在＜head＞＜body＞＜div＞都可以！取決於你「引入的JS功能」和「加載順序」！</p>
-                        先了解HTML的加載順序！由上而下，且遇到＜script＞就會先下載！
+                        <p class="subtitle">先了解網頁載入順序</p>
+                        <ul>
+                            <li>先解析HMTL，由上而下進行解析，遇到＜script＞會先暫停，換js接手處理，執行完回來繼續解析HTML</li>
+                            <li>＜head＞裡的css全部下載完才會執行js，但是如果是有外部css，那麼外部css和外部js是一起進行</li>
+                        </ul>
+                        <p class="important">那麼問題來了，js到底應該放在哪裡？</p>
+                        <p class="important">ANS:取決於js的功能還有加在順序之需要，要放＜head＞或是＜body＞或是＜div＞皆可</p>
+                        <ul>
+                            <li>放body前好處：畫面可以更快呈現，避免影響到還沒有載入的HTML元素，也就是避免「阻塞效應」發生。</li>
+                            <li>放body前壞處：因為＜script＞最後才載入，所以網頁會缺乏功能性。解決方法- <span class="important">在＜script＞中加入async和defer</span></li>
+                        </ul>
+                        <p class="subtitle">HTML和DOM的關係</p>
+                        HTML解析完就會產生DOM結構。藉由DOM來表示網頁的結構和內容，開發者可以透過JavaScript等腳本語言與這個DOM交互，動態改變網頁的內容和外觀。
+                        <p class="subtitle">意涵</p>
+                        就是DOM完成時才會觸發的事件。
+                        <p class="subtitle">目的</p>
+                        幫助開發者偵測什麼時候要執行這些script
+                        <p class="subtitle">時機</p>
+                        載入網頁時
+
+                        資料來源：https://medium.com/@jacobhsu/js-css-html載入順序-397fa70ea400
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        load（window.onload）
+                    </div> 
+                    <div class="content">
+                       <p class="subtitle">意涵</p>
+                       <span class="important">HTML完全載入、解析完，且css也載完了</span>才會觸發。
+                        <p class="subtitle">和DOMContentLoaded之比較</p>
+                        load會在DOMContentLoaded「後」才被觸發。
+                        <p class="subtitle">時機</p>
+                        載入網頁時
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        beforeunload
+                    </div> 
+                    <div class="content">
+                      要<span class="important">「準備」離開網頁時</span>才會被觸發，例如跳出「確定要離開了嗎」那種alert，就是使用beforeunload觸發的。
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        unload
+                    </div> 
+                    <div class="content">
+                      <span class="important">離開網頁「後」</span>才會被觸發，例如想要知道使用者當時是什麼時候離開網頁，就可以用unload
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        defer
+                    </div> 
+                    <div class="content">
+                        <div class="subtitle">意涵</div>
+                        建構DOM的同時，在背景載入＜script＞。如果比DOM還早載完，那就等到DOM完成才會執行
+                        <div class="subtitle">使用時機</div>
+                        假設有A和B兩個＜script＞，A依賴B，若要確保A在B之前就執行，就要使用defer
+                    </div>
+                    <div class="example">
+                        ＜script＞ <br>
+                            var myVariable = "Hello from B!"; <br>
+                        ＜/script＞ <br>
+                        ＜script defer＞ <br>
+                            console.log("A 在 B 之後執行，依賴的變數：" + myVariable);<br>
+                        ＜/script＞
+                        <br>
+                       <p class="important">在這個例子中，上面的＜script＞定義了一個變數 myVariable，而下面的＜script＞則使用 defer 屬性以確保它在上面的＜script＞之後執行。這樣，下面的＜script＞就可以安全地依賴於上面的＜script＞中定義的變數，確保下面的＜script＞在上面的＜script＞之後執行。</p>
+                        
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        async
+                    </div> 
+                    <div class="content">
+                        <p class="subtitle">意涵</p>
+                        asynchronus，非同步，即解析HTML時，不用等＜script＞載入和執行，也就是瀏覽器會在下載指令的同時繼續做「渲染」，不會造成阻塞。
+                        <p class="subtitle">使用時機</p>
+                        如果指令間並沒有依賴關係存在，就用async
+                        <p class="important">壞處：無法保證指令的執行順序</p>
+                        <p class="important">和defer不同之處：async的＜script＞和HTML解析彼此獨立</p>
+                        <ul>
+                            <li>下載不會停止解析HTML</li>
+                            <li class="important">但是「執行」會暫停解析HTML喔！</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -258,6 +328,17 @@
                         上、左右、下 ex. padding: 100px auto 20px;<br>
                         上下、左右 ex. margin: 20px 15px ;<br>
                         上下左右 padding: 20px;
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        border-box v.s. content-box
+                    </div> 
+                    <div class="content">
+                        <ul>
+                            <li>現在預設值為content-box</li>
+                            <li>兩者區別方式在於：content-box的width和height <span class="important">並不包含padding和margin</span>，只有content </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -363,14 +444,23 @@
                      </div> 
                     <div class="content">
                         <p class="subtitle">絕對單位還是相對單位？</p>
-                           <ul>
-                            <li>
-                                相對單位：em、rem
-                            </li>
-                            <li>
-                                絕對單位：px
-                            </li>
-                           </ul>
+                        <ul>
+                        <li>
+                            相對單位：em、rem
+                        </li>
+                        <li>
+                            絕對單位：px
+                        </li>
+                        </ul>
+                        <p class="subtitle">em</p>
+                        <ul>
+                            <li>font-size:依據父層字體大小做倍數變動，所以有繼承的問題</li>
+                            <li>width:以「現在這個元素」多大作為基準進行倍數調整</li>
+                        </ul>
+                        <p class="subtitle">rem</p>
+                        <ul>
+                            <li>根據html做倍數變動，更適合用於RWD</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="notes_layout">

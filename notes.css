@@ -198,13 +198,15 @@ input:focus{
 }
 .content>.subtitle{
     background-color:#FFF8D7;
-    color: brown;
+    color: darkgreen;
     font-family: 'Abel', sans-serif;
+    font-weight: 700;
     padding: 5px 10px;
     border-radius: 10px;
     text-align: center;
     max-width: max-content;
     margin-left: -10px; 
+    font-size: 18px;
 }
 .content p{
     background-color:#FAF4FF;
@@ -212,7 +214,6 @@ input:focus{
 }
 .important{
     color: red;
-    font-size: 18px;
 }
 .notes_menu_layout{
     padding-top: 100px;
