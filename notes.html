@@ -165,6 +165,20 @@
 
             <!-- 前端工具筆記 -->
             <div id="div_tool" class="hidden">
+                <div class="notes_layout">
+                    <div class="title">前端模組化</div>
+                    <p class="subtitle">為什麼要模組化</p>
+                    
+                </div>
+                <div class="notes_layout">
+                    <div class="title">cookies v.s. session storage  v.s. local storage</div>
+                    <p class="subtitle">cookies</p>
+
+                    <p class="subtitle">session storage</p>
+
+                    <p class="subtitle">local storage</p>
+
+                </div>
             </div>
 
             <!-- html和css的筆記們 -->
@@ -378,38 +392,105 @@
                         <div class="subtitle">
                             用flexbox水平垂直置中"div裡面的"文字
                         </div>
-                        <p class="important">
-                            這超好用的！放父層！！</p>
+                        <p class="important">這超好用的！放父層！！</p>
                             <p>display:flex;</p>
                             justify-content:center;<br>
                             align-items:center;
-                        </div>
-                    </div>
-                <div class="notes_layout">
-                    <div class="title">
-                        什麼是偽元素？
-                     </div> 
-                    <div class="content">
-                            目的：在元素內容內插入虛擬內容，能夠更靈活控制icon樣式和位置。也就是在不增加HTML元素情況下，用CSS進行調整
-                            <br>
-                            最常使用的是:before和:after
-                            <p class="subtitle">寫法</p>
-                            <ul>
-                                <li>
-                                    添加content屬性：沒有這個，偽元素就不會產生（content:" ",除非想要在偽元素裡加上文字-content:'哈囉你好嗎'）
-                                </li>
-                                <li>要給偽元素絕對位置才會顯示（記得你的父層要position:relative）</li>
-                            </ul>
-                            <p class="subtitle">偽元素裡面可以在建立一個偽元素嗎？</p>
-                            <span class="important">ans:不可以！</span>
-                            <p style="margin-top: 30px;">資料來源：https://w3c.hexschool.com/blog/5667df85</p>
                     </div>
                 </div>
                 <div class="notes_layout">
                     <div class="title">
-                        什麼是偽類？
+                        block v.s. inline v.s.inline-block
+                    </div> 
+                    <div class="content">
+                        <p class="subtitle">block</p>
+                        <ul>
+                            <li>
+                                會繼承父元素的寬度，並且佔一行，除非你用display去變更值
+                            </li>
+                            <li>例如：＜p＞＜div＞</li>
+                            <li>可以透過css屬性去調整寬和高等</li>
+                        </ul>
+                        <p class="subtitle">inline</p>
+                        <ul>
+                            <li>
+                                會在同一行，除非你用display去變更值
+                            </li>
+                            <li>例如：＜span>
+                            <li>無法透過css屬性去調整寬和高</li>
+                        </ul>
+                        <p class="subtitle">inline-block</p>
+                        也就是block＋inline＝同一行，但是高被撐開
+                    </div>
+                </div>      
+                <div class="notes_layout">
+                    <div class="title">
+                        什麼是偽元素（Pseudo-elements）？
                      </div> 
                     <div class="content">
+                        <p class="subtitle">目的</p>
+                        在元素內容內插入虛擬內容，能夠更靈活控制icon樣式和位置。也就是在不增加HTML元素情況下，用CSS進行調整
+                       <p class="subtitle">最常使用的是::before和::after</p> 
+                        <ul>
+                            <li>
+                                添加content屬性：沒有這個，偽元素就不會產生（content:" ",除非想要在偽元素裡加上文字-content:'哈囉你好嗎'）
+                            </li>
+                            <li>要給偽元素絕對位置才會顯示（記得你的父層要position:relative）</li>
+                        </ul>
+                        <p class="subtitle">偽元素裡面可以在建立一個偽元素嗎？</p>
+                        <span class="important">ans:不可以！</span>
+                        <p class="subtitle">其他偽元素</p>
+                        <ul>
+                            <li>::first-letter</li>
+                            <li>::placeholder</li>
+                            <li>::marker</li>
+                        </ul>
+                        <p style="margin-top: 30px;">資料來源：https://w3c.hexschool.com/blog/5667df85</p>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        什麼是偽類（Pseudo-classes）？
+                     </div> 
+                    <div class="content">
+                        <p class="subtitle">意涵</p>
+                        針對元素的某些狀態或特定條件進行選擇。
+                        <p class="subtitle">常見的偽類</p>
+                        <ul>
+                            <li>:hover</li>
+                            <li>:focus</li>
+                            <li>:active</li>
+                            <li>:first-child</li>
+                            <li>last-child</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <div class="title">
+                        position
+                     </div> 
+                    <div class="content">
+                        <p class="subtitle">staic</p>
+                        就是照原本預設的位置排列
+                        <p class="subtitle">relative</p>
+                        <ul>
+                            <li>就是相對於原本預設的位置做調整</li>
+                            <li>會蓋過「沒有」設定相對定位的東西</li>
+                        </ul>
+                       
+                        <p class="subtitle">absolute</p>
+                        <ul>
+                            <li>以最接近且有定位的父元素當作參考基準點，如果沒有這樣的父元素，那就是以html物件為基準點</li>
+                            <li>如果總共有三層，且外面都有定位，然後最內層是absolute的話，依「最接近」的元素為定為基準</li>
+                            <li>自己會獨立出來一層，所以外層會內縮</li>
+                            <li>跟fixed很像，但absolute並不會隨著網頁滾動而一起動</li>
+                        </ul>
+                        <p class="subtitle">fixed</p>
+                        <ul>
+                            <li>把某個東西固定在畫面的某個地方</li>
+                            <li>自己會獨立出來一層</li>
+                        </ul>
+                        <p class="subtitle">sticky</p>
                         
                     </div>
                 </div>
@@ -418,7 +499,14 @@
                         background-color和background差在哪裡？
                      </div> 
                     <div class="content">
-                        
+                        <p class="subtitle">background-color</p>
+                        <ul>
+                            <li>設定元素背景顏色的屬性</li>
+                        </ul>
+                        <p class="subtitle">background</p>
+                        <ul>
+                            <li>這是一個綜合的屬性，允許你一次性設定多個背景屬性，包括背景顏色、背景圖片、背景位置、重複方式等。</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -859,7 +947,7 @@
                         什麼是Event Object？
                     </div> 
                     <div class="content">
-                        <p class="important">element.addEventListener(event,function（event）);</p>
+                        <p class="important" style="font-size: 25px;">element.addEventListener(event,function（event）);</p>
                         <p class="subtitle">意涵</p>
                         所有跟這個event有關的屬性，都會聚集在這個event object裡，作為回調函數的「參數」傳遞給事件處理器。
                         <br>
