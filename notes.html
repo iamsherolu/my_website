@@ -128,9 +128,9 @@
             <!-- 前端架構與設計筆記 -->
             <div id="div_design" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         MVC模式
-                    </div> 
+                    </p> 
                     <div class="content">
                     <p class="subtitle">意涵</p>
                     <ul>
@@ -166,7 +166,7 @@
             <!-- 前端工具筆記 -->
             <div id="div_tool" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">前端模組化</div>
+                    <p class="title">前端模組化</p>
                     <div class="content">
                         <p class="subtitle">為什麼要模組化</p>
                     </div>
@@ -174,7 +174,7 @@
                     
                 </div>
                 <div class="notes_layout">
-                    <div class="title">cookies v.s. session storage  v.s. local storage</div>
+                    <p class="title">cookies v.s. session storage  v.s. local storage</p>
                     <div class="content">
                         <p class="subtitle">cookies</p>
 
@@ -190,17 +190,32 @@
             <!-- html和css的筆記們 -->
             <div id="div_htmlcss" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         當文字與google font icon放在一起時，兩者沒有在同個高度怎麼辦？
-                    </div> 
+                    </p> 
                     <div class="content">
                         把文字那個元素的css改成<span class="important">vertical-align: top;</span>即可！
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
+                        flex-wrap
+                    </p> 
+                    <div class="content">
+                        <div class="subtitle">意涵</div>
+                        用於控制Flex容器中的子元素如何排列和換行
+                        <div class="subtitle">值</div>
+                        <ul>
+                            <li>nowrap：這是默認的，也就是讓子元素儘可能都在同一行</li>
+                            <li>wrap：如果空間不足，子元素會換行。RWD常用</li>
+                            <li>wrap-reverse：跟wrap很像，只是是從容器的<span class="important">尾部</span>開始排列</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <p class="title">
                         DOMContentLoaded
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">先了解網頁載入順序</p>
                         <ul>
@@ -226,9 +241,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         load（window.onload）
-                    </div> 
+                    </p> 
                     <div class="content">
                        <p class="subtitle">意涵</p>
                        <span class="important">HTML完全載入、解析完，且css也載完了</span>才會觸發。
@@ -239,25 +254,25 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         beforeunload
-                    </div> 
+                    </p> 
                     <div class="content">
                       要<span class="important">「準備」離開網頁時</span>才會被觸發，例如跳出「確定要離開了嗎」那種alert，就是使用beforeunload觸發的。
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         unload
-                    </div> 
+                    </p> 
                     <div class="content">
                       <span class="important">離開網頁「後」</span>才會被觸發，例如想要知道使用者當時是什麼時候離開網頁，就可以用unload
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         defer
-                    </div> 
+                    </p> 
                     <div class="content">
                         <div class="subtitle">意涵</div>
                         建構DOM的同時，在背景載入＜script＞。如果比DOM還早載完，那就等到DOM完成才會執行
@@ -277,9 +292,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         async
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">意涵</p>
                         asynchronus，非同步，即解析HTML時，不用等＜script＞載入和執行，也就是瀏覽器會在下載指令的同時繼續做「渲染」，不會造成阻塞。
@@ -294,18 +309,18 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         ＜link＞要放哪裡？
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="important">ANS:放在＜head＞中！</p>
                         原因在於，可以確保瀏覽器在選染網頁內容時，就已經載入需要的外部資源。倘若放在頁面底部，那麼瀏覽器在入時，使用者會看到沒有用css美化過的網頁才載入css
                     </div>
                 </div>
                 <div class="notes_layout" >
-                    <div class="title">
+                    <p class="title">
                         我想要圖片跟文字各佔一半！-Grid Layout
-                    </div>
+                    </p>
                     <div class="content">
                         當我想要讓圖片和文字在同個div裡，我希望它各佔一半時： 
                         <p>首先，圖片先設定寬度大小</p>
@@ -318,9 +333,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         用Grid Layout設計出3欄（行）2列，並且具RWD效果
-                    </div> 
+                    </p> 
                     <div class="content">
                         首先，欄位有三行，列有兩列，其中某一個item是佔了兩列。 <br>
                         所以利用Grid Layout時，display：grid; grid-template-columns利用百分比去寫你要的三欄佔比大小，並且利用grid-gap去調整間距。 
@@ -335,9 +350,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         margin.padding.border
-                    </div> 
+                    </p> 
                     <div class="content">
                         margin:使元素跟元素之間不要靠太近（外間距）<br>
                         padding:使元素和內容不要靠太近（內間距）<br>
@@ -351,9 +366,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         border-box v.s. content-box
-                    </div> 
+                    </p> 
                     <div class="content">
                         <ul>
                             <li>現在預設值為content-box</li>
@@ -362,27 +377,27 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         display:none v.s. visibility:hidden
-                    </div> 
+                    </p> 
                     <div class="content">
                         display:none 隱藏且不佔空間 <br>
                         visibility:hidden 隱藏且佔空間
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         一樣高的col(不受內容文字多寡影響)
-                    </div> 
+                    </p> 
                     <div class="content">
                         父層：display: flex;<br>
                         子元素：flex: 1; （使子元素擴展以填滿可用空間）
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         置中！
-                    </div> 
+                    </p> 
                     <div class="content">
                         <div class="subtitle">
                             置中div（only水平置中）
@@ -405,9 +420,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         block v.s. inline v.s.inline-block
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">block</p>
                         <ul>
@@ -430,9 +445,9 @@
                     </div>
                 </div>      
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         什麼是偽元素（Pseudo-elements）？
-                     </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">目的</p>
                         在元素內容內插入虛擬內容，能夠更靈活控制icon樣式和位置。也就是在不增加HTML元素情況下，用CSS進行調整
@@ -455,9 +470,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         什麼是偽類（Pseudo-classes）？
-                     </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">意涵</p>
                         針對元素的某些狀態或特定條件進行選擇。
@@ -472,9 +487,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         position
-                     </div> 
+                     </p> 
                     <div class="content">
                         <p class="subtitle">staic</p>
                         就是照原本預設的位置排列
@@ -501,9 +516,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         background-color和background差在哪裡？
-                     </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">background-color</p>
                         <ul>
@@ -516,9 +531,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         css選擇器優先級？
-                     </div> 
+                    </p> 
                     <div class="content">
                         <p class="important">ans:!import>行內樣式>id>class=偽元素>型態選擇器</p>
                         <ul>
@@ -533,9 +548,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         px v.s. em v.s. rem
-                     </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">絕對單位還是相對單位？</p>
                         <ul>
@@ -558,21 +573,86 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
-                        側邊欄該怎麼寫？
-                     </div> 
+                    <p class="title">
+                        transform
+                    </p> 
                     <div class="content">
+                        <p class="subtitle">常見用法</p>
+                        <ul>
+                            <li>rotate：旋轉</li>
+                            <li>scale：縮放</li>
+                            <li>translate：平移</li>
+                            <li>skew：傾斜</li>
+                            <li>rotateX/rotateY：3D轉換</li>
+                        </ul>
+                        <p class="subtitle">也可以合在一起寫！</p>
+                        ex.旋轉45度，縮放1.5倍，水平移動20px，垂直移動30px
+                        <div class="example">
+                            transform: rotate(45deg) scale(1.5) translate(20px, 30px);
+                            <p class="important">中間以空格隔開！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <p class="title">
+                        transform-style
+                    </p> 
+                    <div class="content">
+                        <p class="subtitle">意涵</p>
+                        是CSS中用於3D轉換的屬性之一，它定義了在使用CSS進行3D轉換時，子元素是如何在3D空間中呈現的。
+                        <p class="subtitle">值</p>
+                        <ul>
+                            <li>flat：就是平面呈現，跟父元素是不是3D轉換並沒有關係</li>
+                            <li>preserve-3d：子元素將在3D空間中呈現，且這是受到父元素的影響</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <p class="title">
+                        perspective(3D轉換視距)
+                    </p> 
+                    <div class="content">
+                        設定得越小（例如100px），會強化3D效果；反之（例如1000px）則越平緩。
+                    </div>
+                </div>
+                <div class="notes_layout">
+                    <p class="title">
+                        transition
+                    </p> 
+                    <div class="content">
+                        <p class="important">transition: [屬性] [持續時間] [控制屬性值的變化速度] [延遲時間];</p>
+                        ex.例如：想讓一個元素的顏色在狀態變化時有一個平滑的過渡效果 
+                        <div class="example">
+                            .element { <br>
+                            transition: color 0.25s ease; <br>
+                          }
+                          <br>
+                          其中，控制屬性值的變化速度（timing-function）的預設值為：ease
+                        </div>
                         
                     </div>
+                </div>
+                <div class="notes_layout">
+                    <p class="title">backface-visibility</p>
+                    <div class="content">
+                        <p class="subtitle">意涵</p>
+                        控制元素背面是否可見（當元素被旋轉或傾斜時）。
+                        <p class="subtitle">值</p>
+                        <ul>
+                            <li>visible（預設）</li>
+                            <li>hidden</li>
+                        </ul>
+                    </div>
+                    
                 </div>
             </div>
     
             <!-- JavaScript筆記 -->
             <div id="div_js" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         JavaScript是什麼？它到底在幹嘛？
-                    </div>
+                    </p>
                     <div class="content"> 
                         <p class="subtitle">意涵</p>
                         能夠操作網頁上的 HTML 元素、處理事件、發送和接收資料等，使網站變得更加動態和有趣。
@@ -600,9 +680,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         var v.s. let v.s. const
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">可否重複宣告？</p>
                         <ul>
@@ -648,9 +728,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         null v.s. undefined
-                    </div> 
+                    </p> 
                     <div class="content">
                         <ul>
                             <li>
@@ -682,9 +762,9 @@
                 </div>
 
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         ＝＝＝ v.s. ＝＝
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">=為賦值運算子</p>
                         ex. var x=1; （即把1 assign給x，給值的這個動作就叫做"assign"）
@@ -698,9 +778,9 @@
                 </div>
 
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         什麼是function？為什麼需要function？
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">意涵</p>
                         就是執行網頁程式動作的命令！
@@ -724,25 +804,25 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         表達式v.s.陳述式
-                    </div> 
+                    </p> 
                     <div class="content">
                     
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         Scope（作用域）
-                    </div> 
+                    </p> 
                     <div class="content">
                     
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         Hoisting（提升）
-                    </div>
+                    </p>
                     <div class="content"> 
                         <p class="subtitle">意涵</p>
                         <ul>
@@ -757,38 +837,26 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         callback（回調函數）
-                    </div>
+                    </p>
                     <div class="content"> 
                     
                     </div>
                 </div>
 
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         IIFE （立即函數）
-                     </div> 
+                     </p> 
                     <div class="content">
                     
                     </div>
                 </div>
-
                 <div class="notes_layout">
-                    <div class="title">
-                        object（物件）
-                    </div> 
-                    <div class="content">
-                        <p class="subtitle">物件的長相</p>
-                        <div class="example">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         array(陣列)
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">為什麼需要陣列？</p>
                         不然的話，萬一你有很多小項目，那麼這些小項目都要一個一個建立變數。如果使用陣列，還能對資料隨時做新增、修改或是刪除。
@@ -822,21 +890,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">條件判斷-if-else</div>
-                    <div class="content">
-
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="title">特定條件下重複執行-while</div>
-                    <div class="content">
-                        
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         for迴圈 v.s. forEach
-                    </div>
+                    </p>
                     <div class="content">
                          
                     <p class="subtitle">
@@ -865,15 +921,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">do/while迴圈</div>
-                    <div class="content">
-                        
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         什麼是JavaScript html DOM EventListener？
-                    </div>
+                    </p>
                     <div class="content"> 
                         <p class="subtitle">event</p>
                         <ul>
@@ -888,9 +938,9 @@
                 </div>
 
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         EventListener()？
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">意涵</p>
                         包含addEventListener()（監聽事件）和removeEventListener()（移除監聽事件）
@@ -949,9 +999,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         什麼是Event Object？
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="important" style="font-size: 25px;">element.addEventListener(event,function（event）);</p>
                         <p class="subtitle">意涵</p>
@@ -995,9 +1045,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         Event Bubble v.s. Event Capturing（不太懂）
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">事件傳遞過程三階段</p>
                         <ul>
@@ -1008,9 +1058,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         fetch時發生CORS怎麼辦！！！（還沒有弄懂）
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p class="subtitle">什麼是CORS（跨來源資源共用）？</p>
                         就是請求對象和來源對象不同的時候，HTTP請求受到限制！
@@ -1021,9 +1071,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         當按下某按鈕，以改變該按鈕的css
-                    </div> 
+                    </p> 
                     <div class="content">
                         <div class="subtitle">
                             方法一
@@ -1050,9 +1100,9 @@
             <!-- JQuery筆記 -->
             <div id="div_jquery" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         什麼是jQuery？
-                    </div> 
+                    </p> 
                     <div class="content">
                         「JavaScript的函式庫」，jQuery可以用少少行數，完成需要大量行數的純JavaScript才做得到的事，且jQuery是最適合入門的JS函式庫。
                         <p class="subtitle">附加方式</p>
@@ -1096,7 +1146,7 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">更改HTML元素及其內容</div>
+                    <p class="title">更改HTML元素及其內容</p>
                     <div class="content">
                         <p class="subtitle">變更HTML元素</p>
                         <div class="example">
@@ -1134,7 +1184,7 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">設定標籤屬性</div>
+                    <p class="title">設定標籤屬性</p>
                     <div class="content">
                         <div class="subtitle">addClass()</div>
                         即加入class到元素內 
@@ -1195,7 +1245,7 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">不具名函式</div>
+                    <p class="title">不具名函式</p>
                     <div class="content">
                         <div class="subtitle">意涵</div>
                         它是沒有名字的函式，所以你沒有辦法呼叫它。它是被當成「參數」要傳遞給其他函式用的！
@@ -1206,9 +1256,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         DOM(Domcument Object Model)
-                    </div> 
+                    </p> 
                     <div class="content">
                         <ul>
                             <li>
@@ -1220,9 +1270,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         .innerHTML和.innerText差在哪裡？
-                    </div>
+                    </p>
                     <div class="content"> 
                         <p class="subtitle">內涵</p>
                         <ul>
@@ -1240,9 +1290,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         
-                    </div>
+                    </p>
                     <div class="content"> 
                         
                     </div>
@@ -1252,9 +1302,9 @@
             <!-- 動畫筆記 -->
             <div id="div_animation" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         隨滑鼠滑到哪裡，div跟著動起來！
-                    </div> 
+                    </p> 
                     <div class="content">
                         <p>這個動畫叫做"AOS animation"，只要有以下步驟即可完成：</p>
                         <ol>
@@ -1272,7 +1322,7 @@
             <!--    Git&GitHub筆記 -->
             <div id="div_git_github" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">什麼是Git？</div>
+                    <p class="title">什麼是Git？</p>
                     <div class="content"> 
                         <p class="subtitle">意涵</p>
                         Git是一種分散式版本控制系統，它被廣泛用於協作軟體開發項目。版本控制是一種追蹤和管理代碼變更的系統，它允許多人在同一個項目上協作，同時保留對代碼歷史的完整記錄。
@@ -1284,7 +1334,7 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">什麼是GitHub？</div>
+                    <p class="title">什麼是GitHub？</p>
                     <div class="content"> 
                         <p class="subtitle">意涵</p>
                         
@@ -1300,17 +1350,17 @@
             <!--其他筆記-->
             <div id="div_other" class="hidden">
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                             怎麼做按按鈕跳出相對應div，其他隱藏？
-                        </div> 
+                    </p> 
                     <div class="content">
                         
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                         當我想控制相同元素，但是除了第一個出現的，該怎麼做？
-                    </div> 
+                    </p> 
                     <div class="content">
                         ex. <br>
                         假設我有一個叫做content的class，裡面有很多個叫做subtitle的class，我希望第二個以後出現的subtitle，可以調整跟上方文字的距離。
@@ -1337,9 +1387,9 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <div class="title">
+                    <p class="title">
                             overlay選單，正確連到指定位置
-                        </div>
+                    </p>
                     <div class="content">
                          
                         <p class="subtitle">HTML部分</p>
