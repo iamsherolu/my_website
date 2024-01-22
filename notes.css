@@ -214,6 +214,7 @@ input:focus{
 }
 .important{
     color: red;
+    margin-top: 20px;
 }
 .notes_menu_layout{
     padding-top: 100px;

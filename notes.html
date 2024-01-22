@@ -169,6 +169,7 @@
                     <p class="title">前端模組化</p>
                     <div class="content">
                         <p class="subtitle">為什麼要模組化</p>
+                        
                     </div>
                     
                     
@@ -177,13 +178,21 @@
                     <p class="title">cookies v.s. session storage  v.s. local storage</p>
                     <div class="content">
                         <p class="subtitle">cookies</p>
-
+                        有一個指定的生命週期，通常用來client和server間的資料傳輸，ex.驗證身份、記錄用戶在網站上的活動紀錄
+                        <ul>
+                            <li>可以是session（會話期間）或是具體到期日期</li>
+                            <li>如果未設定指定期間，那就是僅在瀏覽器打開的時間內有效。</li>
+                        </ul>
                         <p class="subtitle">session storage</p>
-
+                        生命週期指在「當前」瀏覽器，瀏覽器關掉就會被清掉了
                         <p class="subtitle">local storage</p>
+                        生命週期是永久的，除非手動刪除。
+                        <p class="important">怎麼選擇？</p>
+                        <ul>
+                            <li>如果只需要短期保存數據，且希望時間到自動刪除:Session Storage</li>
+                            <li>要長期保存數據:Local Storage</li>
+                        </ul>
                     </div>
-                   
-
                 </div>
             </div>
 
@@ -844,13 +853,55 @@
                     
                     </div>
                 </div>
-
+                <div class="notes_layout">
+                    <p class="title">不具名函式</p>
+                    <div class="content">
+                        <p class="subtitle">意涵</p>
+                        它是沒有名字的函式，所以你沒有辦法呼叫它。它是被當成「參數」要傳遞給其他函式用的！ <br>
+                        <p class="subtitle">匿名函式表達式</p>
+                        <div class="example">
+                            let anonymousFunction1 = function() { <br>
+                                console.log("這是一個匿名函式表達式。"); <br>
+                              };
+                              <p class="important">使用function關鍵字</p>
+                        </div>
+                        <p class="subtitle">箭頭函式</p>
+                        <div class="example">
+                            let anonymousFunction2 = () => { <br>
+                                console.log("這是一個箭頭函式。"); <br>
+                              };
+                        </div>
+                    </div>
+                </div>
                 <div class="notes_layout">
                     <p class="title">
                         IIFE （立即函數）
                      </p> 
                     <div class="content">
-                    
+                        <p class="subtitle">意義</p>
+                        用於建立一個匿名函式並立即執行它。
+                            <div class="important">
+                                (function() { <br>
+                                    console.log("這是一個立即執行函數！"); <br>
+                                })();
+                            </div>
+                        <p class="subtitle">內涵</p>
+                        <ul>
+                            <li>隔離作用域：函式內部的變數不會污染全域變數，同時避免了外部作用域污染函式內部。</li>
+                            <li>立即執行，不需要額外呼叫</li>
+                            <li>保護變數：能夠使特定變數不受外部影響</li>
+                            <li>避免命名衝突：立即函式內的變數不會和外部變數產生命名衝突</li>
+                        </ul> 
+                        <div class="example">
+                            (function(x, y) { <br>
+                                console.log("相加的結果是：" + (x + y)); <br>
+                              })(5, 10);
+                        </div> 
+                        <ol>
+                            <li>匿名函數接受了x和y兩個參數，並將兩個相加之後，在console顯示出結果</li>
+                            <li>用()把函數包起來，形成匿名函數</li>
+                            <li>（5,10）是立即函式的實際調用，將兩個參數回傳給函式</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="notes_layout">
@@ -1245,17 +1296,6 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <p class="title">不具名函式</p>
-                    <div class="content">
-                        <div class="subtitle">意涵</div>
-                        它是沒有名字的函式，所以你沒有辦法呼叫它。它是被當成「參數」要傳遞給其他函式用的！
-                    </div>
-                    ex.
-                    <div class="example">
-
-                    </div>
-                </div>
-                <div class="notes_layout">
                     <p class="title">
                         DOM(Domcument Object Model)
                     </p> 
@@ -1281,20 +1321,20 @@
                         </ul>
                         <p class="subtitle">例子-innerHTML</p>
                         <div class="example">
-    
+                            例如在HTML有一個id為myElement的元素，內容為「原始內容」
+                            <p>JavaScript</p>
+                            var myElement = document.getElementById('myElement'); <br>
+                            // 使用 innerHTML 更新元素內容 <br>
+                            myElement.innerHTML = '新的內容 ＜strong＞加粗＜/strong＞'; 
                         </div>
                         <p class="subtitle">例子-innerText</p>
                         <div class="example">
-                            
+                            例如在HTML有一個id為myElement的元素，內容為「原始內容」
+                            <p>JavaScript</p>
+                            var myElement = document.getElementById('myElement'); <br>
+                            // 使用 innerText 更新元素文本內容 <br>
+                            myElement.innerText = '新的文本內容';
                         </div>
-                    </div>
-                </div>
-                <div class="notes_layout">
-                    <p class="title">
-                        
-                    </p>
-                    <div class="content"> 
-                        
                     </div>
                 </div>
             </div>
@@ -1322,7 +1362,7 @@
             <!--    Git&GitHub筆記 -->
             <div id="div_git_github" class="hidden">
                 <div class="notes_layout">
-                    <p class="title">什麼是Git？</p>
+                    <p class="title">什麼是Git？（未解決）</p>
                     <div class="content"> 
                         <p class="subtitle">意涵</p>
                         Git是一種分散式版本控制系統，它被廣泛用於協作軟體開發項目。版本控制是一種追蹤和管理代碼變更的系統，它允許多人在同一個項目上協作，同時保留對代碼歷史的完整記錄。
@@ -1334,7 +1374,7 @@
                     </div>
                 </div>
                 <div class="notes_layout">
-                    <p class="title">什麼是GitHub？</p>
+                    <p class="title">什麼是GitHub？（未解決）</p>
                     <div class="content"> 
                         <p class="subtitle">意涵</p>
                         
@@ -1342,7 +1382,6 @@
                         <ul>
                             <li></li>
                         </ul>
-                        資料來源：https://www.youtube.com/watch?v=0y-xgoyebLg
                     </div>
                 </div>
             </div>
@@ -1354,7 +1393,9 @@
                             怎麼做按按鈕跳出相對應div，其他隱藏？
                     </p> 
                     <div class="content">
-                        
+                        <ol>
+                            <li></li>
+                        </ol>
                     </div>
                 </div>
                 <div class="notes_layout">
