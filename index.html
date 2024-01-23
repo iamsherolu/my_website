@@ -28,21 +28,12 @@
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
         @media (max-width:1179px) {
-            .about_experience_photo{
-                display: none;
-            }
             .about_content{
                 width: 100%;
                 max-width: 1200px;
                 text-align: center;
                 padding: 10px;
                 height:350px;
-            }
-            .introction_photo{
-                display: none;
-            }
-            .evaluate_content img{
-                display: none;
             }
         }
         @media (max-width:768px) {
@@ -62,11 +53,6 @@
         .bottom_message{
             padding-top: 20px;
            } 
-        #text1{
-            height: 250px;
-            top: 20%;
-            left: 10%;
-        }
         .works_layout{
             grid-template-columns: auto;
             grid-row: 4;
@@ -101,39 +87,39 @@
             background-color: snow;
         }
         .circle{
-        width: 430px;
-        height: 430px;
+            width: 430px;
+            height: 430px;
         }
         .logo{
-        position: absolute;
-        width: 330px;
-        height: 330px;
-        background-image: url(image/me.jpg);
-        background-size: cover;
-        border-radius: 50%;
-        text-align: center;
-        margin: auto;
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            background-image: url(image/me.jpg);
+            background-size: cover;
+            border-radius: 50%;
+            text-align: center;
+            margin: auto;
         } 
         .circle_text span{
-        position: absolute;
-        left: 50%;
-        font-size: 20px;
-        transform-origin: 0px 215px;
+            position: absolute;
+            left: 50%;
+            font-size: 20px;
+            transform-origin: 0px 215px;
         }
         #dot_1{
-        width: 100px;
-        height: 100px;
-        background-color: #E2C2DE;
-        border-radius: 100px 0 0 0 ;
-        position: absolute;
-        bottom: 0%;
-        right: 0%;
+            width: 100px;
+            height: 100px;
+            background-color: #E2C2DE;
+            border-radius: 100px 0 0 0 ;
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
         }
         #dot_9{
-        display: none;
+            display: none;
         }
         #dot_12{
-        display: none;
+            display: none;
         }
         .about_layout{
             grid-template-columns: auto;
@@ -239,43 +225,12 @@
         <div class="about_layout_top">
             <div class="about_content">
                 <div class="experience">
-                    <div class="experience_title">簡介</div>
-                    <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
-                    <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
-                    <p>2023.9起，朝前端這條路邁進中！</p>
-                    <p>其他經歷與得獎紀錄詳見<a href="#experience" style="text-decoration:none; font-size: 20px; color: #9F4D95;">"experience"</a></p>
-                </div>
-                <div class="about_experience_photo">
-                    <img src="image/meme.jpg">
-                    <img src="image/notes_exam.jpg" style="width: 300px; height: 300px; border-radius: 50%; position: absolute; top: 50%; right: 45%;">
-                </div>
-            </div> 
-        </div> 
-        <div class="about_layout_middle">
-            <div class="introduce_myself">
-                <div class="introduction_content">
-                    <div class="introduction_title">自我介紹</div>
+                    <div class="experience_title">自我介紹</div>
                     <p>Hi,I am HJL!</p>
                     <p>自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。</p>
-                    <p>平時喜歡聽歌、唱歌、寫寫字、看柯南。</p>
-                    <p>雖然不算是多喜歡看書的人，但遇上一本感興趣的書總能讓我覺得心情格外放鬆與舒坦。</p>
-                    <br>例如從大學開始我就很喜歡一位叫做「張西」的作家，最喜歡她的一本書叫做「你走慢了我的時間」。
-                    <div class="introction_photo">
-                        <img src="image/books.jpg">
-                    </div>
-                </div>
-            </div>
-        </div> 
-        <div class="about_layout_bottom">
-            <div class="others_evaluate">
-                <div class="evaluate_content">
-                    <div class="evaluate_title">朋友眼中的我</div>
-                    <p>「因為你是可以把不擅長的東西做得很好的人」-my friend,Jill</p>
-                    <p>朋友曾這樣形容我。</p>
-                    <p>雖然覺得過譽成分居多不過，遇上瓶頸時，只要想著朋友這句話，我就有繼續前進的動力了：）</p>
-                    <div class="evaluate_photo">
-                        <img src="image/zoo.jpg">
-                    </div>
+                    <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
+                    <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
+                    <p>2023.10起，朝前端這條路邁進中！</p>
                 </div>
             </div> 
         </div> 
@@ -361,38 +316,42 @@
                 <div class="dot" id="dot_13" onclick="location.href='https://iamsherolu.github.io/my_website/notes.html'">點我查看筆記</div>
             </div>
     </section>
+
     <!-- works -->
     <section id="works">
-        <div class="title" data-aos="fade-down">works</div>
+        <div class="title">Works</div>
         <div class="works_layout">
-            <div class="works_content" data-aos="flip-left">
-                <img src="image/糖露坊.png" onclick="location.href='https://iamsherolu.github.io/dessert_shop/'" title="點我查看Demo">
-                <p class="works_title">甜點購物網站-糖露坊</p>
-                    <ul class="works_description">
-                        <li>以HMTL、CSS以及JavaScript完成之</li>
-                        <li>頁面排版係運用bootstrap以及flexbox等完成之響應式網頁</li>
-                        <li>目的：練習切版與JavaScript</li>
-                    </ul>
+            <div class="works_display" id="works_display">
+                <div id="display_content_1" class="display_content">
+                    <div class="display_title">糖露坊</div>
+                    <div class="display_description">文字敘述</div>
+                    <button class="demo">查看demo</button>
+                    <button class="github_code">查看GitHub Code</button>
+                </div>
+                <div id="display_content_2" class="display_content">
+                    <div class="display_title">Diverson Topia</div>
+                    <div class="display_description">文字敘述</div>
+                    <button class="demo">查看demo</button>
+                    <button class="github_code">查看GitHub Code</button>
+                </div>
+                <div id="display_content_3" class="display_content">
+                    <div class="display_title">前端學習筆記</div>
+                    <div class="display_description">文字敘述</div>
+                    <button class="demo">查看demo</button>
+                    <button class="github_code">查看GitHub Code</button>
+                </div>
+                <div id="display_content_4" class="display_content">
+                    <div class="display_title">YT切版</div>
+                    <div class="display_description">文字敘述</div>
+                    <button class="demo">查看demo</button>
+                    <button class="github_code">查看GitHub Code</button>
+                </div>
             </div>
-            <div class="works_content" data-aos="flip-left">
-                <img src="image/game.png" onclick="location.href='https://iamsherolu.github.io/game/'" title="點我查看Demo">
-                <p class="works_title">Diversion Topia</p>
-                <ul class="works_description">
-                    <li>內含三個小遊戲：剪刀石頭布、記憶力大考驗、終極密碼</li>
-                    <li>以HMTL、CSS以及JavaScript完成之</li>
-                    <li>頁面排版係運用bootstrap以及flexbox等完成之響應式網頁</li>
-                    <li>目的:練習JavaScript</li>
-                </ul>
-            </div>
-            <div class="works_content" data-aos="flip-left">
-                <img src="image/notes.png" onclick="location.href='https://iamsherolu.github.io/my_website/notes.html'" title="點我查看Demo">
-                <p class="works_title">前端筆記</p>
-                <ul class="works_description">
-                    <li>記錄我在學習前端的進度，問題與解決方法</li>
-                    <li>以HMTL、CSS以及JavaScript完成之</li>
-                    <li>頁面排版係運用bootstrap以及flexbox等完成之響應式網頁</li>
-                    <li>建立搜尋功能方便找到對應筆記</li>
-                </ul>
+            <div class="works_list">
+                <div class="list_item" id="item_1">糖露坊</div>
+                <div class="list_item" id="item_2">Diverson Topia</div>
+                <div class="list_item" id="item_3">前端學習筆記</div>
+                <div class="list_item" id="item_4">YT切版</div>
             </div>
         </div>
     </section>

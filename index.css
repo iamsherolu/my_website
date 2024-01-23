@@ -333,7 +333,6 @@
     margin: 0px auto;
     position: relative;
 }
-
 .experience{
     padding: 20px;
 }
@@ -348,101 +347,6 @@
     font-size: 25px;
     text-align: center;
 }
-.about_experience_photo img{
-    width: 500px;
-    height: 600px;
-    border-radius: 20px;
-    position: absolute;
-    right: 10%;
-    top:-25%;
-    border:13px solid snow ;
-}
-.introduce_myself{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #FFD2D2;
-    padding: 100px 30px;
-}
-.introduction_title{
-    padding:10px;
-    border-radius: 20px;
-    background-color: 	#FF9797;
-    box-shadow: 10px 10px 5px gray;
-    color: 	#460046;
-    width: 200px;
-    margin-bottom: 20px;
-    font-size: 25px;
-    text-align: center;
-    margin-right: 30px;
-}
-.introduction_content{
-    padding: 25px;
-    background-color: snow;
-    width: 90%;
-    height: 500px;
-    max-width: 1200px;
-    border-radius: 20px;
-    text-align: left;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    margin: 0px auto;
-    position: relative;
-}
-.introction_photo img{
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    float: right;
-    right: -10%;
-    bottom: -10%;
-    border: 13px solid snow;
-    position: absolute;
-}
-.others_evaluate{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color:	#D2E9FF;
-    padding: 100px 30px;
-    text-align: center;
-}
-.evaluate_content{
-    padding: 25px;
-    background-color: snow;
-    width: 90%;
-    height: 500px;
-    max-width: 1200px;
-    border-radius: 20px;
-    text-align: left;
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    margin: 0px auto;
-    position: relative;
-}
-.evaluate_title{
-    padding:10px;
-    border-radius: 20px;
-    background-color: 		#66B3FF;
-    box-shadow: 10px 10px 5px gray;
-    color: 	#460046;
-    width: 200px;
-    margin-bottom: 20px;
-    font-size: 25px;
-    text-align: center;
-    margin-right: 30px;
-}
-.evaluate_photo img{
-    width: 350px;
-    height: 350px;
-    border-radius: 20px;
-    float: right;
-    right: 5%;
-    bottom: -10%;
-    border: 13px solid snow;
-    position: absolute;
-}
-
 
 /* section-experience */
 .university_record{
@@ -587,44 +491,42 @@
 
 /* section-works */
 #works{
-    padding-top: 100px;
     background-color: snow;
 }
 .works_layout{
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    margin: 0px auto ;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    max-width: 960px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0px;
+    gap: 30px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
-.works_content{
-    display: inline-block;
+.works_display{
+    background-color: white;
+    border-radius: 20px;
+    width: 100%;
     padding: 20px;
+    box-shadow: 7px 7px 5px gainsboro;
 }
-.works_content:hover{
+.list_item{
     cursor: pointer;
+    border-bottom: 1px solid #460046;
+    color: #460046;
+    padding: 30px;
 }
-.works_title{
-    color: 	#6C3365;
-    margin-top: 10px;
-    background-color: transparent;
-    font-family: 'Julius Sans One', sans-serif;
+.list_item:hover{
+    opacity: 0.4;
+    padding-left: 40px;
 }
-.works_description{
-    background-color: transparent;
-    color: 	#D2A2CC;
-    visibility: hidden;
+.display_title{
+    text-align: center;
+    font-size: 22px;
+    color: #460046;
+    margin-bottom: 10px;
 }
-.works_content img{
-    width: 100%;
-    box-shadow: 10px 10px 5px gray;
-}
-.works_content img:hover {
-    opacity: 0.3;
-}
-.works_content:hover .works_description {
-    visibility: visible;
-}
+
 
 /* section-contact */
 .bottom_layout{

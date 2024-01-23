@@ -31,3 +31,31 @@ text.innerHTML=text.innerText.split("").map(
     `<span style="transform:rotate(${i*12}deg)">${char}</span> `   //讓circle_text上的文字都分別在一個<span>中
 ).join("")
 
+//works滑鼠碰到按鈕顯示對應文字
+const buttons = document.querySelectorAll('.list_item');
+const displayContents = document.querySelectorAll('.display_content');
+
+buttons.forEach((button, index) => {
+  button.addEventListener('mouseover', function() {
+    displayContents[index].style.display = 'block';
+  });
+
+  button.addEventListener('mouseout', function() {
+    hideText();
+  });
+});
+
+displayContents.forEach((displayContent) => {
+  displayContent.addEventListener('mouseover', function() {
+  });
+
+  displayContent.addEventListener('mouseout', function() {
+    hideText();
+  });
+});
+
+function hideText() {
+  displayContents.forEach((displayContent) => {
+    displayContent.style.display = 'none';
+  });
+}
