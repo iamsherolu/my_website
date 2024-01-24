@@ -32,30 +32,19 @@ text.innerHTML=text.innerText.split("").map(
 ).join("")
 
 //works滑鼠碰到按鈕顯示對應文字
-const buttons = document.querySelectorAll('.list_item');
-const displayContents = document.querySelectorAll('.display_content');
+var list_items=document.querySelectorAll('.list_item');
+var display_content=document.querySelectorAll('.display_content');
 
-buttons.forEach((button, index) => {
-  button.addEventListener('mouseover', function() {
-    displayContents[index].style.display = 'block';
-  });
+display_content[0].style.display='block';
 
-  button.addEventListener('mouseout', function() {
-    hideText();
-  });
-});
+list_items.forEach((list_item,index)=>{
+    list_item.addEventListener('mouseover',function(){
+        display_content.style.display='block';
+    })
+})
 
-displayContents.forEach((displayContent) => {
-  displayContent.addEventListener('mouseover', function() {
-  });
-
-  displayContent.addEventListener('mouseout', function() {
-    hideText();
-  });
-});
-
-function hideText() {
-  displayContents.forEach((displayContent) => {
-    displayContent.style.display = 'none';
-  });
+function hidden(){
+    display_content.forEach((display_content)=>{
+        display_content.style.display='none';
+    });
 }
