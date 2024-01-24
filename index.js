@@ -30,21 +30,3 @@ text.innerHTML=text.innerText.split("").map(
     (char,i)=>
     `<span style="transform:rotate(${i*12}deg)">${char}</span> `   //讓circle_text上的文字都分別在一個<span>中
 ).join("")
-
-//works滑鼠碰到按鈕顯示對應文字
-var list_items=document.querySelectorAll('.list_item');
-var display_content=document.querySelectorAll('.display_content');
-
-display_content[0].style.display='block';
-
-list_items.forEach((list_item,index)=>{
-    list_item.addEventListener('mouseover',function(){
-        display_content.style.display='block';
-    })
-})
-
-function hidden(){
-    display_content.forEach((display_content)=>{
-        display_content.style.display='none';
-    });
-}
