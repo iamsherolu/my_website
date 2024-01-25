@@ -24,6 +24,7 @@
     cursor: pointer;
     display: inline-block;
     background-color: transparent;
+    text-align: left;
 }
 .topnav h2:hover{
     cursor: pointer;
@@ -190,7 +191,7 @@
 #dot_1{
     width: 400px;
     height: 400px;
-    background-color: #E2C2DE;
+    background:linear-gradient(135deg,#D2E9FF,#FAF4FF,#E2C2DE);
     border-radius: 400px 0 0 0 ;
     position: absolute;
     bottom: 0%;
@@ -220,7 +221,7 @@
 #dot_4{
     width: 60px;
     height: 60px;
-    background-color: #E2C2DE;
+    background:linear-gradient(135deg,#D2E9FF,#FAF4FF,#E2C2DE);
     border-radius: 50% ;
     position: absolute;
     left: 5%;
@@ -342,12 +343,12 @@
     padding: 10px 20px;
 }
 
-/*skill/personal skill& efforts */
-#skill{
+/*personal skill& efforts */
+#persoanl_skill{
     padding: 100px 0px;
     background-color: snow;
 }
-.skill_layout{
+.personal_skill_layout{
     border-radius: 20px;
     background:linear-gradient(135deg,#D2E9FF,#FAF4FF,#E2C2DE);
     width: 90%;
@@ -357,29 +358,27 @@
 }
 .works{
     margin-top: 30px;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .skills{
     margin-top: 30px;
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 10% 90%;
+    margin-bottom: 30px;
 }
 .learning_now{
     margin-top: 30px;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .skills_title{
     color: white;
     font-size: 70px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+    /* writing-mode: vertical-rl;
+    text-orientation: mixed; */
     font-family: 'Julius Sans One', sans-serif;
 }
 .skills_item{
     border-radius: 20px;
     background-color: white;
-    box-shadow: 5px 5px 3px gainsboro;
+    box-shadow: 5px 5px 3px gray;
     margin-bottom: 20px;
 }
 .skills_layout{
@@ -394,12 +393,29 @@
     text-align: center;
     font-weight: 600;
     font-size: 20px;
-    color: #6C3365;
     margin-bottom: 15px;
-    background-color: gainsboro;
     border-radius: 20px 20px 0px 0px;
+    background-color: #f5f5dc;
     padding: 10px;
 }
+.works_layout{
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 20px auto;
+    background-color: snow;
+}
+.works_description{
+    padding: 10px;
+}
+.works_title{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    color: brown;
+}
+
 
 
 
@@ -423,7 +439,7 @@
     padding: 20px ;
     width: 100%;
     text-align: center;
-    background-color: 	#E2C2DE;
+    background:linear-gradient(135deg,#D2E9FF,#FAF4FF,#E2C2DE);
 }
 .email_content input:focus{
     outline: none;
