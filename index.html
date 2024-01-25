@@ -40,6 +40,9 @@
             .nav_btn:not(:first-child){
             display: none;
         }
+        .topnav h2:hover{
+            border-bottom:none ;
+        }
         .special{
             position: absolute;
             left: -9999px;
@@ -165,11 +168,10 @@
 <body>
      <!-- 導覽列 -->
     <div class="topnav fixed-top">
-        <div class="nav_btn special" onclick="location.href='#about'">about</div>
-        <div class="nav_btn" onclick="location.href='#experience'">experience</div>
-        <div class="nav_btn" onclick="location.href='#skill'">skill</div>
         <h2 onclick="location.href='index.html'">HJL</h2>
-        <div class="nav_btn" onclick="location.href='#works'">works</div>
+        <div class="nav_btn special" onclick="location.href='#about'">about</div>
+        <div class="nav_btn" onclick="location.href='#skill'">Persnoal Skills & Efforts</div>
+        <!-- <div class="nav_btn" onclick="location.href='#works'">works</div> -->
         <div class="nav_btn" onclick="location.href='notes.html'">notes</div>
         <div class="nav_btn" onclick="location.href='#contact'">contact</div>
         <div class="menu_icon" onclick="show_menu_overlay()">menu</div>
@@ -181,9 +183,8 @@
             <div class="menu_btns">
                 <div class="menu_btn" onclick="location.href='index.html'">homepage</div>
                 <div class="menu_btn" onclick="scrollToSection('about')">about</div>
-                <div class="menu_btn" onclick="scrollToSection('experience')">experience</div>
-                <div class="menu_btn" onclick="scrollToSection('skill')">skill</div>
-                <div class="menu_btn" onclick="scrollToSection('works')">works</div>
+                <div class="menu_btn" onclick="scrollToSection('skill')">Persnoal Skills & Efforts</div>
+                <!-- <div class="menu_btn" onclick="scrollToSection('works')">works</div> -->
                 <div class="menu_btn" onclick="location.href='notes.html'">notes</div>
                 <div class="menu_btn" onclick="scrollToSection('contact')">contact</div>
             </div>
@@ -221,104 +222,89 @@
     
     <!-- about -->
     <section id="about">
-        <!-- <div class="title">about</div> -->
-        <div class="about_layout_top">
-            <div class="about_content">
-                <div class="experience">
-                    <div class="experience_title">自我介紹</div>
-                    <p>Hi,I am HJL!</p>
-                    <p>自認觀察力敏銳、不輕易放棄、細心、高敏感、具備同理心、做事用心肯學。</p>
-                    <p>畢業於銘傳大學資訊管理學系（2014-2018）</p>
-                    <p>畢業後曾準備高普考和地方特考(2018-2023.7)</p>
-                    <p>2023.10起，朝前端這條路邁進中！</p>
-                </div>
-            </div> 
-        </div> 
-    </section>
-    <!-- experience -->
-    <section id="experience">
-        <div class="title">experience</div>
-        <div class="university_record">
-            <div class="work_experience"data-aos="fade-right" >
-                <div class="records_title" style="background-color: #E2C2DE;">工作經驗</div>
-                擔任系上105學年度教學卓越計畫之計算機概論與視窗程式設計教學助理（2016.9-2017.1）
-            </div>
-            <div class="certificate" data-aos="fade-down">
-                <div class="records_title">大學時期考取之證照</div>
-                <ul>
-                    <li>考取TQC中文輸入證照、TQC英文輸入證照</li>
-                    <li>考取Word2010實用級合格證書、PPT2010實用級合格證書、Excel2010實用級合格證書</li>
-                    <li>考取鼎新ERP配銷模組證照、鼎新ERP生產製造模組證照</li>
-                </ul>
-            </div>
-            <div class="awards_inside" data-aos="fade-up">
-                <div class="records_title">大學時期校內獲獎紀錄</div>
-                畢業專題獲得系上優等獎、最佳介面獎、最佳實用獎
-            </div>
-            <div class="awards_outside" data-aos="fade-left">
-                <div class="records_title" style="background-color: transparent;">大學時期校外獲獎紀錄</div>
-                以畢業專題參加中華中華企業資源規劃學會之2018E化系統創意競賽獲得獲第三名
-            </div>
+       <div class="title">about</div>
+       <div class="about_layout">
+        <div class="about_item">
+            <div class="about_title">學經歷</div>
+            <ul>
+                <li>
+                    畢業於銘傳大學資訊管理學系（2014.9-2018.6）
+                </li>
+                <li>曾任系上教學助理（銘傳大學教學卓越計畫）（2016.9-2017.1）</li>
+                <li>畢業後投身於高普考（2018.7-2023.7）</li>
+                <li>轉往朝前端工程師的道路邁進（2023.10-now）</li>
+            </ul>
         </div>
-        <div class="dot" id="dot_18" ></div>
-        <div class="dot" id="dot_19" ></div>
-        <div class="dot" id="dot_20" ></div>
-        <div class="dot" id="dot_21" ></div>
+        <div class="about_item">
+            <div class="about_title">證照與獲獎紀錄</div>
+            <ul>
+                <li>考取TQC中文輸入證照與英文輸入證照(2014)</li>
+                <li>考取辦公室應用Word 2010、PPT 2010、Excel 2010實用級合格證書（2015）</li>
+                <li>考取鼎新ERP配銷模組與生產製造模組證照（2017、2018）</li>
+                <li>參加E化系統創意競賽榮獲第三名(2018)</li>
+            </ul>
+        </div>
+        <div class="about_item">
+            <div class="about_title">特質</div>
+            <ul>
+                <li>觀察力敏銳</li>
+                <li>不輕易放棄</li>
+                <li>做事用心肯學</li>
+                <li>具有同理心</li>
+                <li>高敏感</li>
+            </ul>
+            <p>「因為你是可以把不擅長的東西做得很好的人」 -by my friend,Jill</p>
+        </div>
+       </div>
     </section>
+
     <!-- skill -->
     <section id="skill">
-        <div class="title" data-aos="fade-down">skill</div>
         <div class="skill_layout">
-            <div class="skill_item" data-aos="flip-right">
-                <div class="skill_subtitle">
-                    HTML、CSS
-                </div>
-                <div class="skill_description">
-                    <ul>
-                        <li>
-                            熟悉flex box及grid layout排版
-                        </li>
-                        <li>
-                            會使用bootstrap框架，亦熟悉網頁斷點做出RWD效果之網頁
-                        </li>
-                    </ul>
+            <div class="title">Persnoal Skills & Efforts</div>
+            <div class="works">
+                <div class="skills_title">works</div>
+                <div class="works_layout">
+
                 </div>
             </div>
-            <div class="skill_item" data-aos="flip-right">
-                <div class="skill_subtitle">
-                    JavaScript
+            <div class="skills">
+                <div class="skills_title">skills</div>
+                <div class="skills_layout">
+                    <div class="skills_item">
+                       <div class="skills_item_title">基本技能</div> 
+                       <ul>
+                        <li>HTML</li>
+                        <li>css</li>
+                        <li>JavaScript</li>
+                       </ul>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_item_title">框架</div> 
+                        <ul>
+                            <li>bootstrap</li>
+                        </ul>
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_item_title">開發工具與技術</div> 
+                    </div>
+                    <div class="skills_item">
+                        <div class="skills_item_title">響應式網頁</div> 
+                        <ul>
+                            <li>熟悉斷點</li>
+                        </ul>
+                    </div>
                 </div>
-                 <div class="skill_description">
-                    <ul>
-                        <li>
-                            基礎語法，包含jQuery
-                        </li>
-                    </ul>
-                </div>
+               
             </div>
-            <div class="skill_item" data-aos="flip-right">
-                <div class="skill_subtitle">
-                    Other
-                </div>
-                <div class="skill_description">
-                    <ul>
-                        <li>
-                            會套用google font及google font icon
-                        </li>
-                        <li>
-                            會套用AOS動畫效果
-                        </li>
-                    </ul>
-                </div>
+            <div class="learning_now">
+                <div class="skills_title">learning now</div>
             </div>
         </div>
-            <div class="notes_link" data-aos="fade-up">
-                <div class="dot" id="dot_13" onclick="location.href='https://iamsherolu.github.io/my_website/notes.html'">點我查看筆記</div>
-            </div>
     </section>
 
     <!-- works -->
-    <section id="works">
+    <!-- <section id="works">
         <div class="title">Works</div>
         <div class="works_layout">
             <div class="works_content">
@@ -358,7 +344,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- contact -->
     <section id="contact">
