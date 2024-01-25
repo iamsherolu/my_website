@@ -326,6 +326,7 @@
     background-color:	#F0F0F0;
     border-radius: 10px;
     padding: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .about_title{
     color: #6C3365;
@@ -380,6 +381,7 @@
     background-color: white;
     box-shadow: 5px 5px 3px gray;
     margin-bottom: 20px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .skills_layout{
     width: 100%;
@@ -405,18 +407,36 @@
     grid-template-columns: 50% 50%;
     margin: 20px auto;
     background-color: snow;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .works_description{
     padding: 10px;
 }
 .works_title{
-    margin-bottom: 20px;
     font-size: 25px;
     font-weight: 600;
     color: brown;
 }
-
-
+.works_btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto 0px;
+    gap: 20px;
+}
+.demo,.github_code{
+    border-radius: 30px; 
+    border: none;
+    background-color: #FFD2D2;
+    padding: 10px;
+    text-align: center;
+}
+.demo:hover,.github_code:hover{
+    border: 2px solid #FFD2D2;
+    background-color: snow;
+    cursor: pointer;
+}
 
 
 /* section-contact */
@@ -453,6 +473,7 @@
     border-radius: 15px;
     border: none;
     background-color: snow ;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 .bottom_message h3{
     background-color: snow;
