@@ -401,10 +401,8 @@
     padding: 10px;
 }
 .works_layout{
-    width: 100%;
+    width: 90%;
     max-width: 900px;
-    display: grid;
-    grid-template-columns: 50% 50%;
     margin: 20px auto;
     background-color: snow;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -436,6 +434,14 @@
     border: 2px solid #FFD2D2;
     background-color: snow;
     cursor: pointer;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.gallery img{
+    cursor: pointer;
+    width:100%;
 }
 
 
