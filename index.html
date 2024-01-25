@@ -123,11 +123,11 @@
         #dot_12{
             display: none;
         }
-        .gallery{
+        .about_layout{
             grid-template-columns: auto;
             grid-column: 1;
         }
-        .about_layout{
+        .skills_layout{
             grid-template-columns: auto;
             grid-column: 1;
         }
@@ -240,7 +240,9 @@
                 <div class="skills_title" data-aos="fade-right">works</div>
                 <div class="works_layout" data-aos="fade-left">
                     <div class="gallery">
-                        <img src="image/糖露坊.png" onclick="location.href='https://iamsherolu.github.io/dessert_shop/'">
+                        <div class="works_img">
+                            <img src="image/糖露坊.png" onclick="location.href='https://iamsherolu.github.io/dessert_shop/'">
+                        </div>
                         <div class="works_description" style="float: right;">
                             <div class="works_title">糖露坊</div>
                             <ul>
@@ -256,23 +258,41 @@
                         </div>
                     </div>
                     <div class="gallery">
-                        <img src="image/糖露坊.png">
+                        <div class="works_img">
+                            <img src="image/game.png">
+                        </div>
                         <div class="works_description" style="float: right;">
-                            <div class="works_title">糖露坊</div>
+                            <div class="works_title">Diverson Topia</div>
                             <ul>
-                                <li>此為甜點店網頁，內容包含首頁、最新消息、美味甜點、門市據點、關於我們以及購物籃</li>
+                                <li>內含三個小遊戲：包含剪刀石頭布、記憶力大考驗以及終極密碼</li>
                                 <li>係以純HTML、CSS以及JavaScript完成之</li>
                                 <li>為一響應式網頁</li>
-                                <li>目的：練習切版與JavaScript</li>
+                                <li>目的：加強練習JavaScript</li>
                             </ul>
                             <div class="works_btns">
-                                <div class="demo" onclick="location.href='https://iamsherolu.github.io/dessert_shop/'">demo</div>
-                                <div class="github_code" onclick="location.href='https://github.com/iamsherolu/dessert_shop'">GitHub Code</div>
+                                <div class="demo" onclick="location.href='https://iamsherolu.github.io/game/'">demo</div>
+                                <div class="github_code" onclick="location.href='https://github.com/iamsherolu/game'">GitHub Code</div>
                             </div>
                         </div>
                     </div>
-                    
-                    
+                    <div class="gallery">
+                        <div class="works_img">
+                            <img src="image/notes.png">
+                        </div>
+                        <div class="works_description" style="float: right;">
+                            <div class="works_title">前端筆記</div>
+                            <ul>
+                                <li>內含三個小遊戲：包含剪刀石頭布、記憶力大考驗以及終極密碼</li>
+                                <li>係以純HTML、CSS以及JavaScript完成之</li>
+                                <li>為一響應式網頁</li>
+                                <li>目的：加強練習JavaScript</li>
+                            </ul>
+                            <div class="works_btns">
+                                <div class="demo" onclick="location.href='https://iamsherolu.github.io/my_website/notes.html'">demo</div>
+                                <div class="github_code" onclick="location.href='https://github.com/iamsherolu/my_website/blob/main/notes.html'">GitHub Code</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="skills">
@@ -317,49 +337,6 @@
         </div>
     </section>
 
-    <!-- works -->
-    <!-- <section id="works">
-        <div class="title">Works</div>
-        <div class="works_layout">
-            <div class="works_content">
-                <img src="image/糖露坊.png">
-                <div class="works_title">糖露坊</div>
-                <div class="works_description"></div>
-                <div class="works_btns">
-                    <button class="demo" onclick="location.href='https://iamsherolu.github.io/dessert_shop/'">demo</button>
-                    <button class="github_code" onclick="location.href='https://github.com/iamsherolu/dessert_shop'">GitHub Code</button>
-                </div>
-            </div>
-            <div class="works_content">
-                <img src="image/game.png">
-                <div class="works_title">Diverson Topia</div>
-                <div class="works_description"></div>
-                <div class="works_btns">
-                    <button class="demo" onclick="location.href='https://iamsherolu.github.io/game/'">demo</button>
-                    <button class="github_code" onclick="location.href='https://github.com/iamsherolu/game'">GitHub Code</button>
-                </div>
-            </div>
-            <div class="works_content">
-                <img src="image/notes.png">
-                <div class="works_title">前端筆記</div>
-                <div class="works_description"></div>
-                <div class="works_btns">
-                    <button class="demo" onclick="location.href='https://iamsherolu.github.io/my_website/notes.html'">demo</button>
-                    <button class="github_code" onclick="location.href='https://github.com/iamsherolu/my_website'">GitHub Code</button>
-                </div>
-            </div>
-            <div class="works_content">
-                <img src="#">
-                <div class="works_title">YT切版</div>
-                <div class="works_description"></div>
-                <div class="works_btns">
-                    <button class="demo" onclick="location.href='https://iamsherolu.github.io/yt_exercise/'">demo</button>
-                    <button class="github_code" onclick="location.href='https://github.com/iamsherolu/yt_exercise'">GitHub Code</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <!-- contact -->
     <section id="contact">
         <div class="title" data-aos="fade-down">Contact</div>
@@ -382,7 +359,7 @@
     </section>
 
     <!-- footer -->
-    <footer class="footer fixed-bottom" id="footer">©Hsing jou lu 2023</footer>
+    <footer class="footer fixed-bottom" id="footer">©Hsing Jou Lu 2024</footer>
     
     <!-- 套用AOS動畫 -->
     <script>

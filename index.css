@@ -406,6 +406,8 @@
     margin: 20px auto;
     background-color: snow;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 .works_description{
     padding: 10px;
@@ -436,8 +438,9 @@
     cursor: pointer;
 }
 .gallery{
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 50% 50%;
+    white-space: normal; 
 }
 .gallery img{
     cursor: pointer;
