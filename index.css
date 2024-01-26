@@ -480,11 +480,34 @@
     width: 35px;
     height: 35px;
 }
-.arrow_left:hover{
-    background-color: gainsboro;
+.learning_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-weight: 600;
+    background-color: #f5f5dc;
+    text-align: center;
+    margin: 0px auto;
+    position: relative;
 }
-.arrow_right:hover{
-    background-color: gainsboro;
+.learning_layout{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+.add_icon{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.learning_thing{
+    background-color: snow;
+    display: none;
+    text-align: left;
+    padding: 20px 10px;
 }
 
 /* section-contact */

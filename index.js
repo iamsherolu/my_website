@@ -41,8 +41,8 @@ function plusSlides(n) {
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("gallery");
+  var i;
+  var slides = document.getElementsByClassName("gallery");
   if (n > slides.length) {
     slideIndex = 1
 }    
@@ -55,4 +55,9 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "grid";  
 }
 
-
+function open_layout_1(){
+    document.getElementById('learning_vue').style.display='block';
+}
+function open_layout_2(){
+    document.getElementById('learning_git').style.display='block';
+}
