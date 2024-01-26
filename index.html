@@ -36,7 +36,7 @@
             }
         }
         @media (max-width:768px) {
-            .nav_btn:not(:first-child){
+        .nav_btn:not(:first-child){
             display: none;
         }
         .topnav h2:hover{
@@ -135,6 +135,16 @@
             grid-template-columns: auto;
             grid-row: 2;
             grid-column: 1;
+        }
+        .arrow_left{
+            left: -3%;
+            top: 62%;
+            transform: translate(3%,-62%);
+        }
+        .arrow_right{
+            left: 103%;
+            top: 62%;
+            transform: translate(-103%,-62%);
         }
         }
         @media (min-width:769px) {
@@ -298,18 +308,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="arrow_left" onclick="pre()">
-                        <span class="material-symbols-outlined" style="color: snow;">
-                            chevron_left
-                        </span>
-                    </div>
-                    <div class="arrow_right" onclick="next()">
-                        <span class="material-symbols-outlined" style="color: snow;">
-                            chevron_right
-                        </span>
-                    </div>
+                </div>
+                <div class="arrow_left" onclick="plusSlides(-1, 0)" id="preSide">
+                    <span class="material-symbols-outlined" style="color: snow;">
+                        chevron_left
+                    </span>
+                </div>
+                <div class="arrow_right" onclick="plusSlides(1, 0)" id="nextSide">
+                    <span class="material-symbols-outlined" style="color: snow;">
+                        chevron_right
+                    </span>
                 </div>
             </div>
+            
             <div class="skills">
                 <div class="skills_title" data-aos="fade-right">skills</div>
                 <div class="skills_layout" data-aos="fade-left">

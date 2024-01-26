@@ -201,7 +201,7 @@
 #dot_2{
     width: 200px;
     height: 200px;
-    background-color: blanchedalmond;
+    background:linear-gradient(135deg,blanchedalmond,white,	#FF9797) ;
     border-radius: 0 0 200px 0 ;
     position: absolute;
     left: 0%;
@@ -211,7 +211,7 @@
 #dot_3{
     width: 30px;
     height: 30px;
-    background-color: blanchedalmond;
+    background:linear-gradient(135deg,blanchedalmond,white,	#FF9797) ;
     border-radius: 50%;
     position: absolute;
     left: 70%;
@@ -360,6 +360,7 @@
 .works{
     margin-top: 30px;
     margin-bottom: 30px;
+    position: relative;
 }
 .skills{
     margin-top: 30px;
@@ -402,7 +403,7 @@
 }
 .works_layout{
     width: 100%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 20px auto;
     font-family: 'M PLUS Rounded 1c', sans-serif;
     overflow-x: auto;
@@ -458,9 +459,9 @@
     justify-content: center;
     border-radius: 50%;
     position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translate(-100%,-50%);
+    left: 97%;
+    top: 65%;
+    transform: translate(-97%,-65%);
     cursor: pointer;
     width: 35px;
     height: 35px;
@@ -472,9 +473,9 @@
     justify-content: center;
     border-radius: 50%;
     position: absolute;
-    left: 0%;
-    top: 50%;
-    transform: translate(0%,-50%);
+    left: 3%;
+    top: 65%;
+    transform: translate(-3%,-65%);
     cursor: pointer;
     width: 35px;
     height: 35px;
