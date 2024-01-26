@@ -401,7 +401,7 @@
     padding: 10px;
 }
 .works_layout{
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 20px auto;
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -432,6 +432,9 @@
     background-color: #FFD2D2;
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .demo:hover,.github_code:hover{
     border: 2px solid #FFD2D2;
@@ -442,7 +445,7 @@
     display: inline-grid;
     grid-template-columns: 50% 50%;
     white-space: normal; 
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
 .gallery img{
     cursor: pointer;
@@ -475,6 +478,12 @@
     cursor: pointer;
     width: 35px;
     height: 35px;
+}
+.arrow_left:hover{
+    background-color: gainsboro;
+}
+.arrow_right:hover{
+    background-color: gainsboro;
 }
 
 /* section-contact */
