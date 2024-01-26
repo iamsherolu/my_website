@@ -30,3 +30,23 @@ text.innerHTML=text.innerText.split("").map(
     (char,i)=>
     `<span style="transform:rotate(${i*12}deg)">${char}</span> `   //讓circle_text上的文字都分別在一個<span>中
 ).join("")
+
+
+// JavaScript 代碼用於實現圖片輪播
+// const galleries = document.querySelectorAll('.gallery');
+// let currentIndex = 0;
+
+// function showGallery(index) {
+//     const translateValue = index * -100 + '%';
+//     galleries.forEach(gallery => {
+//         gallery.style.transform = 'translateX(' + translateValue + ')';
+//     });
+// }
+
+// function nextGallery() {
+//     currentIndex = (currentIndex + 1) % galleries.length;
+//     showGallery(currentIndex);
+// }
+
+// // 啟動自動輪播
+// setInterval(nextGallery, 3000);
