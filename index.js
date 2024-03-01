@@ -24,6 +24,7 @@ window.addEventListener('resize', function () {
     }
 });
 
+
 // intro的文字繞圓動畫
 const text= document.querySelector('.circle_text p');
 text.innerHTML=text.innerText.split("").map(
@@ -57,7 +58,11 @@ function showSlides(n) {
 
 function open_layout_1(){
     document.getElementById('learning_vue').style.display='block';
+    document.getElementById('vue_more_icon').style.display='none';
+    document.getElementById('vue_less_icon').style.display="block";
 }
 function open_layout_2(){
     document.getElementById('learning_git').style.display='block';
+    document.getElementById('git_more_icon').style.display='none';
+    document.getElementById('git_less_icon').style.display="block";
 }
